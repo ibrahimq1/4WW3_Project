@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <!-- HTML5 Compliant -->
 	<html>
 	<head>
