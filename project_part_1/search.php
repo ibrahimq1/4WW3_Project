@@ -5,12 +5,12 @@
 
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/style.css" />
-		<!-- CSS only -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Bootstrap CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 		
-		<title>4WW3 Project - Part_1 - AWS</title>
+		<title>4WW3 Project - Part_1 - Search</title>
 		<meta charset="utf8"/>
 		<meta name="author" content="Quazi Rafid Ibrahim, Frank Su" />
 		<meta name="description" content="CS 4WW3 Project Part 1" />
@@ -20,10 +20,13 @@
 	</head>
 
 	<body>
-	<h1> Initial Commit - CRONtest2 - CRON Deployed </h1>
-	<div>
-	<img style="width:40%" src="https://www.pressgazette.co.uk/wp-content/uploads/2020/11/shutterstock.jpg">
-	</div>
+	<h1> Search </h1>
+
+
+
+
+
+
 	</body>
 
 </html>
