@@ -26,16 +26,5 @@
 	<img style="width:40%" src="https://www.pressgazette.co.uk/wp-content/uploads/2020/11/shutterstock.jpg">
 	</div>
 	</body>
-
-=======
-<html>
-<head>
-	<title>4WW3 Project - Part_1 - AWS</title>
-
-</head>
-<body>
-<h1> Initial Commit - CRONtest3 - CRONDeployed </h1>
-</body>
->>>>>>> 4e00c239375cf262dd632b67ec53333c5e337e3a
 </html>
 
