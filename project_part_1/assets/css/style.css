@@ -1,0 +1,108 @@
+/**
+* Author: Quazi Rafid Ibrahim, Frank Su
+* main style.css sheet
+*
+*/
+
+/* -------------------------------------------
+    Root style
+----------------------------------------------*/
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+}
+  
+a {
+    color: #5c9f24;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: #74c92d;
+    text-decoration: none;
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+/* -------------------------------------------
+    Header & Navigation
+----------------------------------------------*/
+
+header{
+    background-color: #111111;
+}
+
+.logo{
+    color:white;
+    text-decoration: none;
+    line-height: 2em;
+    margin-left: 10%
+}
+
+.logoimg{
+    width:100% !important;
+    max-height: 80px;
+}
+
+nav {
+    margin: 0;
+    overflow: hidden;
+}
+
+nav ul {
+    margin:0;
+    padding:0;
+}
+
+nav ul li {
+    display: inline-block;
+    border:1px solid;
+   
+}
+
+nav ul li a {
+    color: white;
+    padding: 0.5em 0.5em;
+    display:block;
+    text-decoration: none;
+
+}
+
+.ebtn{
+    border:2px green solid;
+    border-radius: 30px;
+    
+}
+
+.ebtn-block{
+    display:inline-block;
+}
+
+.navbar{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end !important;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+
+/* -------------------------------------------
+    Footer & Copyright
+----------------------------------------------*/
+#footer {
+    background: #111111;
+    padding: 0 0 30px 0;
+    color: #fff;
+    font-size: 14px;
+  }
+
+#footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+}

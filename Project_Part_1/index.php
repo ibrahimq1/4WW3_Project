@@ -6,24 +6,77 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+		<!-- external main CSS stylesheet -->
 		<link rel="stylesheet" href="assets/css/style.css" />
-		<!-- CSS only -->
+
+		<!-- Bootstrap CSS --> 
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+		<!-- Metadata -->
 		<title>4WW3 Project - Part_1 - AWS</title>
 		<meta charset="utf8"/>
 		<meta name="author" content="Quazi Rafid Ibrahim, Frank Su" />
 		<meta name="description" content="CS 4WW3 Project Part 1" />
 		<meta name="keywords" content="web,programming,McMaster,4ww3 Project" />
-		<!-- tell search engines not to index this page -->
+		
+		<!-- Tell search engines not to index this page -->
 		<meta name="robots" content="noindex" />
+		
 	</head>
 
 	<body>
-	<h1> Initial Commit - CRONtest5 with frank - CRON Deployed </h1>
-	<div>
-	<img style="width:40%" src="https://www.pressgazette.co.uk/wp-content/uploads/2020/11/shutterstock.jpg">
-	</div>
+		<!-- Navigation Bar [will seperate later]-->
+		
+		<header>
+		<div class="container d-flex align-items-center justify-content-between">
+			<div class="d-flex">
+			<img class="logoimg" src="assets/img/basketball-ball.png"></img>
+			<h1><a class="logo" href="#">Moila</a></h1>
+			</div>
+			<nav id="navbar" class="navbar">
+				<ul>
+					<li><a href = "#"> Home </a></li>
+					<li><a href = "#"> Search Courts </a></li>
+					<li><a href = "#"> Results </a></li>
+					<li><a href = "#"> Example Individual Object </a></li>
+					<li><a href = "#"> Submit New Court </a></li>
+					<div class="ebtn-block">
+					<li class="ebtn"><a href = "#"> Register </a></li>
+					<li class="ebtn"><a href = "#"> Login </a></li>
+					</div>
+				</ul>
+			</nav>
+		<!-- End Navigation Bar -->
+		</header>
+
+
+		<!-- Actual Body Content -->
+
+		<div>
+			<h1> Content Goes here </h1>
+		</div>
+
+		<!-- End Actual Body Content -->
+
+
+		<!-- Footer [will sepearte later]-->
+		<footer id="footer" class="fixed-bottom">
+			<div class="container">
+			<div class="copyright">
+				&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
+			</div>
+			</div>
+		</footer>
+		<!-- End Footer -->
+
 	</body>
 </html>
 
+
+
+<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+>
