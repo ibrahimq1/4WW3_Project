@@ -16,6 +16,9 @@
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+		<!-- Font-Awesome Font library -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 		<!-- Metadata -->
 		<title>4WW3 Project - Part_1 - AWS</title>
 		<meta charset="utf8"/>
@@ -24,31 +27,34 @@
 		<meta name="keywords" content="web,programming,McMaster,4ww3 Project" />
 		
 		<!-- Tell search engines not to index this page -->
-		<meta name="robots" content="noindex" />
+		<meta name="robots" content="noindex"/>
 		
 	</head>
 
 	<body>
-		<!-- Navigation Bar [will seperate later]-->
+		<!-- Navigation Bar [will seperate later] no js allowed, so didn't implement hamburger menu-->
 		
 		<header>
 		<div class="container d-flex align-items-center justify-content-between">
-			<div class="d-flex">
+			<div class="container d-flex">
 			<img class="logoimg" src="assets/img/basketball-ball.png"></img>
-			<h1><a class="logo" href="#">Moila</a></h1>
+			<h1><a class="logotxt" href="#">Moila</a></h1>
 			</div>
+			
 			<nav id="navbar" class="navbar">
-				<ul>
-					<li><a href = "#"> Home </a></li>
-					<li><a href = "#"> Search Courts </a></li>
-					<li><a href = "#"> Results </a></li>
-					<li><a href = "#"> Example Individual Object </a></li>
-					<li><a href = "#"> Submit New Court </a></li>
-					<div class="ebtn-block">
-					<li class="ebtn"><a href = "#"> Register </a></li>
-					<li class="ebtn"><a href = "#"> Login </a></li>
-					</div>
-				</ul>
+				<div class="container">
+					<ul>
+						<li><a href = "#"> Home </a></li>
+						<li><a href = "#"> Search Courts </a></li>
+						<li><a href = "#"> Results </a></li>
+						<li><a href = "#"> Example Individual Object </a></li>
+						<li><a href = "#"> Submit New Court </a></li>
+						<div class="ebtn-block">
+						<li class="ebtn"><a href = "#"> Register </a></li>
+						<li class="ebtn"><a href = "#"> Login </a></li>
+						</div>
+					</ul>
+				<div>
 			</nav>
 		<!-- End Navigation Bar -->
 		</header>
@@ -66,9 +72,9 @@
 		<!-- Footer [will sepearte later]-->
 		<footer id="footer" class="fixed-bottom">
 			<div class="container">
-			<div class="copyright">
-				&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
-			</div>
+				<div class="copyright">
+					&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
+				</div>
 			</div>
 		</footer>
 		<!-- End Footer -->

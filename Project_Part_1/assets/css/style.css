@@ -35,7 +35,7 @@ header{
     background-color: #111111;
 }
 
-.logo{
+.logotxt{
     color:white;
     text-decoration: none;
     line-height: 2em;
@@ -45,6 +45,7 @@ header{
 .logoimg{
     width:100% !important;
     max-height: 80px;
+    max-width: 80px;
 }
 
 nav {
@@ -89,6 +90,24 @@ nav ul li a {
     justify-content: flex-end !important;
     padding-top: .5em;
     padding-bottom: .5em;
+}
+
+div.container .d-flex{
+    max-width: fit-content;
+    margin:0;
+
+}
+
+/*  Header & Navigation (Mobile) */
+
+@media only screen and (min-width: 375px) and (max-width: 767px) 
+{ 
+
+.navbar{
+ 
+}
+
+
 }
 
 
