@@ -16,11 +16,11 @@
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-		<!-- Font-Awesome Font library -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Bootstrap Icon library -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
 		<!-- Metadata -->
-		<title>4WW3 Project - Part_1 - AWS</title>
+		<title>4WW3 Project - Part_1 - Home and Search</title>
 		<meta charset="utf8"/>
 		<meta name="author" content="Quazi Rafid Ibrahim, Frank Su" />
 		<meta name="description" content="CS 4WW3 Project Part 1" />
@@ -36,7 +36,6 @@
 		
 		<header class="fixed-top d-flex align-items-center">
 			<div class="container d-flex align-items-center justify-content-between">
-				
 				<div class="d-flex">
 				<img class="logoimg" src="assets/img/basketball-ball.png"></img>
 				<h1><a class="logotxt" href="#">Moila</a></h1>
@@ -49,30 +48,24 @@
 						<li><a href = "#"> Results </a></li>
 						<li><a href = "#"> Example Individual Object </a></li>
 						<li><a href = "#"> Submit New Court </a></li>
-						<div class="login-block">
 						<li class="login-btn"><a href = "#"> Register </a></li>
 						<li class="login-btn"><a href = "#"> Login </a></li>
-						</div>
 					</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
 				</nav>
-			</div>
-			
-		
+			</div>	
 		</header>
 		<!-- End Navigation Bar -->
 
 		<!-- Actual Body Content -->
 		
-		<main id="main">
-			
-			<video autoplay muted loop id="mp4Video">
-				<source src="assets/img/ball.mp4" type="video/mp4">
-			</video>
+		<section id="main">
+				<video autoplay muted loop id="mp4Video">
+					<source src="assets/img/ball.mp4" type="video/mp4">
+				</video>
+				
+		</section>
 		
-		<main>
-	
-		
-
 		<!-- End Actual Body Content -->
 
 
