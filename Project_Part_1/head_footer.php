@@ -62,13 +62,17 @@
 		<!-- End Navigation Bar -->
 
 		<!-- Actual Body Content -->
-		<div>
+		
+		<main id="main">
 			
-			<video autoplay muted loop id="mp4Video">
-				<source src="assets/img/ball.mp4" type="video/mp4">
-			</video>
+			<div>
+				<h1> Content goes here <h1>
+			</div>
+		
+		<main>
+	
+		
 
-		</div>
 		<!-- End Actual Body Content -->
 
 

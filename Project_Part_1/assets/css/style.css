@@ -31,16 +31,18 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", sans-serif;
 }
 
+#main{
+    padding-top: 88px;
+    padding-bottom: 88px;
+    overflow: hidden;
+}
+
 /* -------------------------------------------
     Header & Navigation
 ----------------------------------------------*/
 
-header{
-    background-color: #111111 !important;
-}
-
 .fixed-top{
-    background-color: black !important;
+    background-color: #111111 !important;
 }
 
 .logotxt{
@@ -64,12 +66,14 @@ nav {
 nav ul {
     margin:0;
     padding:0;
+    display:flex;
+    list-style: none;
+    align-items:center;
 }
 
 nav ul li {
     display: inline-block;
     border:1px solid;
-   
 }
 
 nav ul li a {
@@ -77,24 +81,13 @@ nav ul li a {
     padding: 0.5em 0.5em;
     display:block;
     text-decoration: none;
-
 }
 
 .navbar{
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-end !important;
     padding-top: .5em;
     padding-bottom: .5em;
 }
 
-div.container .d-flex{
-    max-width: fit-content;
-    margin:0;
-
-}
 
 /*  Header & Navigation (Mobile) */
 
@@ -144,9 +137,10 @@ div.container .d-flex{
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+    z-index: -1;
   }
 
-  .vidcontent {
+.vidcontent {
     position: fixed;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
