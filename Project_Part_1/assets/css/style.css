@@ -14,13 +14,17 @@ body {
 }
   
 a {
-    color: #5c9f24;
+    color: white;
     text-decoration: none;
 }
   
 a:hover {
-    color: #74c92d;
+    color: #FF385C !important;
     text-decoration: none;
+}
+
+a:visited{
+    color: white;
 }
   
 h1, h2, h3, h4, h5, h6 {
@@ -32,14 +36,18 @@ h1, h2, h3, h4, h5, h6 {
 ----------------------------------------------*/
 
 header{
-    background-color: #111111;
+    background-color: #111111 !important;
+}
+
+.fixed-top{
+    background-color: black !important;
 }
 
 .logotxt{
     color:white;
     text-decoration: none;
     line-height: 2em;
-    margin-left: 10%
+    margin-left: 15%
 }
 
 .logoimg{
@@ -72,16 +80,6 @@ nav ul li a {
 
 }
 
-.ebtn{
-    border:2px green solid;
-    border-radius: 30px;
-    
-}
-
-.ebtn-block{
-    display:inline-block;
-}
-
 .navbar{
     position: relative;
     display: flex;
@@ -102,13 +100,61 @@ div.container .d-flex{
 
 @media only screen and (min-width: 375px) and (max-width: 767px) 
 { 
+    .logoimg{
+        display: none !important;
+    }
+    #mp4Video{
+        display:none;
+    }
+}
 
-.navbar{
- 
+/* -------------------------------------------
+    Buttons
+----------------------------------------------*/
+
+/* navbar buttons */
+
+.navbar .login-btn{
+    border:2px #FF385C solid;
+    border-radius: 30px;
+    
+}
+
+.navbar .login-btn:hover{
+    background: #FF385C;
+}
+
+.navbar .login-btn a:hover{
+    color:white !important;
+    font-weight: 400;
+}
+
+.navbar .login-block{
+    display:inline-block;
 }
 
 
-}
+/* -------------------------------------------
+    Top Video + Search
+----------------------------------------------*/
+
+#mp4Video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .vidcontent {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+
 
 
 /* -------------------------------------------
@@ -125,3 +171,5 @@ div.container .d-flex{
     text-align: center;
     padding-top: 30px;
 }
+
+

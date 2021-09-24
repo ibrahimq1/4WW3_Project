@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTML5 Compliant -->
-	<html>
+<html>
 	<head>
 
 		<!-- Required meta tags -->
@@ -34,38 +34,41 @@
 	<body>
 		<!-- Navigation Bar [will seperate later] no js allowed, so didn't implement hamburger menu-->
 		
-		<header>
-		<div class="container d-flex align-items-center justify-content-between">
-			<div class="container d-flex">
-			<img class="logoimg" src="assets/img/basketball-ball.png"></img>
-			<h1><a class="logotxt" href="#">Moila</a></h1>
-			</div>
-			
-			<nav id="navbar" class="navbar">
-				<div class="container">
+		<header class="fixed-top d-flex align-items-center">
+			<div class="container d-flex align-items-center justify-content-between">
+				
+				<div class="d-flex">
+				<img class="logoimg" src="assets/img/basketball-ball.png"></img>
+				<h1><a class="logotxt" href="#">Moila</a></h1>
+				</div>
+
+				<nav id="navbar" class="navbar">
 					<ul>
 						<li><a href = "#"> Home </a></li>
 						<li><a href = "#"> Search Courts </a></li>
 						<li><a href = "#"> Results </a></li>
 						<li><a href = "#"> Example Individual Object </a></li>
 						<li><a href = "#"> Submit New Court </a></li>
-						<div class="ebtn-block">
-						<li class="ebtn"><a href = "#"> Register </a></li>
-						<li class="ebtn"><a href = "#"> Login </a></li>
+						<div class="login-block">
+						<li class="login-btn"><a href = "#"> Register </a></li>
+						<li class="login-btn"><a href = "#"> Login </a></li>
 						</div>
 					</ul>
-				<div>
-			</nav>
-		<!-- End Navigation Bar -->
+				</nav>
+			</div>
+			
+		
 		</header>
-
+		<!-- End Navigation Bar -->
 
 		<!-- Actual Body Content -->
-
 		<div>
-			<h1> Content Goes here </h1>
-		</div>
+			
+			<video autoplay muted loop id="mp4Video">
+				<source src="assets/img/ball.mp4" type="video/mp4">
+			</video>
 
+		</div>
 		<!-- End Actual Body Content -->
 
 
@@ -84,5 +87,7 @@
 
 
 
-<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
->
+<!-- 
+<div>Icons made by <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+Video by Pavel Danilyuk from Pexels
+-->
