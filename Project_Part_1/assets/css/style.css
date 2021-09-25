@@ -8,9 +8,10 @@
     Root style
 ----------------------------------------------*/
 
-body {
+html,body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
+    height:100%;
 }
   
 a {
@@ -35,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 88px;
     padding-bottom: 88px;
     overflow: hidden;
+    height:100%;
 }
 
 /* -------------------------------------------
@@ -107,17 +109,22 @@ nav ul li a {
       display: none;
     }
   }
-  
+
 /* -------------------------------------------
     Buttons
 ----------------------------------------------*/
 
 /* navbar buttons */
 
+#pinkbg{
+    color: #fff;
+    background-color: #FF385C;
+    border-color: #FF385C;
+}
+
 .navbar .login-btn{
     border:2px #FF385C solid;
     border-radius: 30px;
-    
 }
 
 .navbar .login-btn:hover{
@@ -129,6 +136,11 @@ nav ul li a {
     font-weight: 400;
 }
 
+.input-group-text select {
+    word-wrap: normal;
+    border: none;
+    background: #E9ECEF;
+}
 
 /* -------------------------------------------
     Top Video + Search

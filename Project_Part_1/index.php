@@ -60,10 +60,63 @@
 		<!-- Actual Body Content -->
 		
 		<section id="main">
-				<video autoplay muted loop id="mp4Video">
-					<source src="assets/img/ball.mp4" type="video/mp4">
-				</video>
-				
+			<video autoplay muted loop id="mp4Video">
+				<source src="assets/img/ball.mp4" type="video/mp4">
+			</video>
+			
+			<div class="container h-100">
+				<div class="row h-100">
+					<div class="col-md-3"></div>
+					<div class="col-md-6 align-self-center">
+						
+						<form>
+							<div class="input-group mb-3">
+								<span title="Use current location" class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+								<input type="text" class="form-control" placeholder="Search by Location">
+								<div class="input-group-append d-flex">
+									<button class="input-group-text btn btn-primary" title="Search" id="pinkbg" type="submit"><i class="bi bi-search"></i></button>
+								</div>
+							</div>
+							<div class="flex-row d-flex justify-content-center">
+								<div class="input-field-rating">
+									<div class="input-group-text">
+										<select data-trigger="" name="any">
+											<option placeholder="" value="">Rating</option>
+											<option>1+</option>
+											<option>2+</option>
+											<option>3+</option>
+											<option>4+</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>
+								<div class="input-field-popularity">
+									<div class="input-group-text">
+										<select data-trigger="" name="any">
+											<option placeholder="" value="">Popularity</option>
+											<option>Mostly Empty</option>
+											<option>Popular</option>
+											<option>Very Popular</option>
+										</select>
+									</div>
+								</div>
+								<div class="input-field-currently_playing">
+									<div class="input-group-text">
+										<select data-trigger="" name="any">
+											<option placeholder="" value="">Currently Playing</option>
+											<option>0</option>
+											<option>2+</option>
+											<option>5+</option>
+											<option>10+</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+			</div>
 		</section>
 		
 		<!-- End Actual Body Content -->
