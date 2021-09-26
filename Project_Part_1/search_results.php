@@ -118,66 +118,61 @@
 					<div class="col-md-3"></div>
 				</div>
 			</div>
-			<div class="container-fuild h-100" style="padding-bottom:80px;">
+			<div class="container-fuild h-100">
 				<div class="row h-100">
-					<div class="col-md-6 d-flex" style="border-right:2px #FF385C solid">
-					<div class="row">
-							<div class="card" style="width:33%; height:50%;">
+					<div class="col-md-6 d-flex align-content-end" style="border-right:2px #FF385C solid">
+						<div class="row">
+							<div class="card" id="card-style">
 								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 								<div class="card-body">
 									<h5 class="card-title">Title</h5>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" class="btn btn-primary" id="pinkbg">Go somewhere</a>
+									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
 							</div>
-							<div class="card" style="width:33%; height:50%;">
+							<div class="card" id="card-style">
 								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 								<div class="card-body">
 									<h5 class="card-title">Title</h5>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" class="btn btn-primary" id="pinkbg">Go somewhere</a>
+									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
 							</div>
-							<div class="card" style="width:33%; height:50%;">
+							<div class="card" id="card-style">
 								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 								<div class="card-body">
 									<h5 class="card-title">Title</h5>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" class="btn btn-primary" id="pinkbg">Go somewhere</a>
+									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
 							</div>
-							<div class="card" style="width:33%; height:50%;">
+							<div class="card" id="card-style">
 								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 								<div class="card-body">
 									<h5 class="card-title">Title</h5>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" class="btn btn-primary" id="pinkbg">Go somewhere</a>
+									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
 							</div>
-							<div class="card" style="width:33%; height:50%;">
+							<div class="card" id="card-style">
 								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 								<div class="card-body">
 									<h5 class="card-title">Title</h5>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" class="btn btn-primary" id="pinkbg">Go somewhere</a>
+									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
 							</div>
 						</div>
-
 					</div>
-					<div class="col-md-6">
-					<img src="assets/img/map-img.png">
+					<div class="col-md-6 ">
+						<div class="row ">
+							<img src="assets/img/map-img.png">
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 			
-
-
-		
-		<main>
-	
-		
 
 		<!-- End Actual Body Content -->
 

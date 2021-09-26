@@ -152,7 +152,7 @@ nav ul li a {
 ----------------------------------------------*/
 
 #mp4Video {
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
@@ -193,7 +193,15 @@ nav ul li a {
     Search Results Page
 ----------------------------------------------*/
 
+#card-style{
+    width:33%; max-height:50%;
+}
 
+@media (max-width: 991px) {
+    #card-style{
+        width:50%; max-height:40%;
+    }
+}
 /* -------------------------------------------
     Footer & Copyright
 ----------------------------------------------*/
