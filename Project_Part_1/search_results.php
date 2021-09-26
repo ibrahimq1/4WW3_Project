@@ -54,6 +54,7 @@
 						<li class="login-btn"><a href = "#"> Login </a></li>
 						</div>
 					</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
 				</nav>
 			</div>
 			
