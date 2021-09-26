@@ -194,14 +194,25 @@ nav ul li a {
 ----------------------------------------------*/
 
 #card-style{
-    width:33%; max-height:50%;
+    width:33.33%; 
+    max-height:52%; 
+}
+
+.card-header{
+    margin-bottom: -41px !important;
+    z-index: 1 !important;
+    background: gold !important;
+    margin-left: 30%;
+    text-align: center;
 }
 
 @media (max-width: 991px) {
     #card-style{
-        width:50%; max-height:40%;
+        width:50%; 
+        max-height:40%;
     }
 }
+
 /* -------------------------------------------
     Footer & Copyright
 ----------------------------------------------*/

@@ -120,12 +120,19 @@
 			</div>
 			<div class="container-fuild h-100">
 				<div class="row h-100">
-					<div class="col-md-6 d-flex align-content-end" style="border-right:2px #FF385C solid">
-						<div class="row">
+					<div class="col-md-6 d-flex align-content-end" style="border-right:1px #FF385C solid">
+						<div class="row g-0">
 							<div class="card" id="card-style">
+								<div class="card-header">Very Popular</div>
 								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 								<div class="card-body">
 									<h5 class="card-title">Title</h5>
+									<span class="bi bi-star-fill"></span>
+									<span class="bi bi-star-fill"></span>
+									<span class="bi bi-star-fill"></span>
+									<span class="bi bi-star-half"></span>
+									<span class="bi bi-star"></span>
+									<p>Currently Playing: 5+</p>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
@@ -134,6 +141,12 @@
 								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 								<div class="card-body">
 									<h5 class="card-title">Title</h5>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<p>Currently Playing: 0</p>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
@@ -142,6 +155,12 @@
 								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 								<div class="card-body">
 									<h5 class="card-title">Title</h5>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<p>Currently Playing: 0</p>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
@@ -150,6 +169,12 @@
 								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 								<div class="card-body">
 									<h5 class="card-title">Title</h5>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<p>Currently Playing: 0</p>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
@@ -158,6 +183,12 @@
 								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 								<div class="card-body">
 									<h5 class="card-title">Title</h5>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<p>Currently Playing: 0</p>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
