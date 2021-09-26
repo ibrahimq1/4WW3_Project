@@ -36,6 +36,7 @@
 		
 		<header class="fixed-top d-flex align-items-center">
 			<div class="container d-flex align-items-center justify-content-between">
+				
 				<div class="d-flex">
 				<img class="logoimg" src="assets/img/basketball-ball.png"></img>
 				<h1><a class="logotxt" href="#">Moila</a></h1>
@@ -44,31 +45,30 @@
 				<nav id="navbar" class="navbar">
 					<ul>
 						<li><a href = "#"> Home </a></li>
-						<li><a href = "/Project_Part_1/search_results.php"> Search Courts </a></li>
+						<li><a href = "#"> Search Courts </a></li>
 						<li><a href = "#"> Results </a></li>
 						<li><a href = "#"> Example Individual Object </a></li>
 						<li><a href = "#"> Submit New Court </a></li>
+						<div class="login-block">
 						<li class="login-btn"><a href = "#"> Register </a></li>
 						<li class="login-btn"><a href = "#"> Login </a></li>
+						</div>
 					</ul>
-				<i class="bi bi-list mobile-nav-toggle"></i>
 				</nav>
-			</div>	
+			</div>
+			
+		
 		</header>
 		<!-- End Navigation Bar -->
 
 		<!-- Actual Body Content -->
 		
 		<section id="main">
-			<div>
-			<video autoplay muted loop id="mp4Video">
-				<source src="assets/img/ball.mp4" type="video/mp4">
-			</video>
-			<div>
-			<div class="container" id="vh100">
-				<div class="row" id="vh100">
+			<div class="container" style="padding-top:50px; padding-bottom:50px;">
+				<div class="row">
 					<div class="col-md-3"></div>
 					<div class="col-md-6 align-self-center">
+						
 						<form>
 							<div class="input-group mb-3">
 								<span title="Use current location" class="input-group-text"><i class="bi bi-geo-alt"></i></span>
@@ -117,8 +117,67 @@
 					<div class="col-md-3"></div>
 				</div>
 			</div>
+			<div class="container-fuild h-100" style="padding-bottom:80px;">
+				<div class="row h-100">
+					<div class="col-md-6 d-flex" style="border-right:2px #FF385C solid">
+					<div class="row">
+							<div class="card" style="width:33%; height:50%;">
+								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+								<div class="card-body">
+									<h5 class="card-title">Title</h5>
+									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									<a href="#" class="btn btn-primary" id="pinkbg">Go somewhere</a>
+								</div>
+							</div>
+							<div class="card" style="width:33%; height:50%;">
+								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+								<div class="card-body">
+									<h5 class="card-title">Title</h5>
+									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									<a href="#" class="btn btn-primary" id="pinkbg">Go somewhere</a>
+								</div>
+							</div>
+							<div class="card" style="width:33%; height:50%;">
+								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+								<div class="card-body">
+									<h5 class="card-title">Title</h5>
+									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									<a href="#" class="btn btn-primary" id="pinkbg">Go somewhere</a>
+								</div>
+							</div>
+							<div class="card" style="width:33%; height:50%;">
+								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+								<div class="card-body">
+									<h5 class="card-title">Title</h5>
+									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									<a href="#" class="btn btn-primary" id="pinkbg">Go somewhere</a>
+								</div>
+							</div>
+							<div class="card" style="width:33%; height:50%;">
+								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+								<div class="card-body">
+									<h5 class="card-title">Title</h5>
+									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									<a href="#" class="btn btn-primary" id="pinkbg">Go somewhere</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-6">
+					<img src="assets/img/map-img.png">
+					</div>
+				</div>
+			</div>
 		</section>
+			
+
+
 		
+		<main>
+	
+		
+
 		<!-- End Actual Body Content -->
 
 

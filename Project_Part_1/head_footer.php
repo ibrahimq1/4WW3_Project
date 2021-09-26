@@ -16,11 +16,11 @@
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-		<!-- Font-Awesome Font library -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Bootstrap Icon library -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
 		<!-- Metadata -->
-		<title>4WW3 Project - Part_1 - AWS</title>
+		<title>4WW3 Project - Part_1 - Home and Search</title>
 		<meta charset="utf8"/>
 		<meta name="author" content="Quazi Rafid Ibrahim, Frank Su" />
 		<meta name="description" content="CS 4WW3 Project Part 1" />
@@ -63,13 +63,13 @@
 
 		<!-- Actual Body Content -->
 		
-		<main id="main">
+		<section id="main">
 			
 			<div>
 				<h1> Content goes here <h1>
 			</div>
 		
-		<main>
+		<section>
 	
 		
 

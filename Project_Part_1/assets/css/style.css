@@ -11,7 +11,8 @@
 html,body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
-    height:100%;
+    min-height:100vh !important;
+    width:100%;
 }
   
 a {
@@ -20,7 +21,7 @@ a {
 }
   
 a:hover {
-    color: #FF385C !important;
+    color: white !important;
     text-decoration: none;
 }
 
@@ -33,10 +34,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main{
-    padding-top: 88px;
-    padding-bottom: 88px;
-    overflow: hidden;
-    height:100%;
+    min-height:100vh;
+    padding-top:85px;
+    padding-bottom:80px;
+}
+
+#vh100{
+    min-height:100vh !important;
 }
 
 /* -------------------------------------------
@@ -45,6 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .fixed-top{
     background-color: #111111 !important;
+    max-height:85px;
 }
 
 .logotxt{
@@ -183,6 +188,12 @@ nav ul li a {
 }
 */
 
+
+/* -------------------------------------------
+    Search Results Page
+----------------------------------------------*/
+
+
 /* -------------------------------------------
     Footer & Copyright
 ----------------------------------------------*/
@@ -198,4 +209,7 @@ nav ul li a {
     padding-top: 30px;
 }
 
+.fixed-bottom{
+    max-height:80px !important;
+}
 
