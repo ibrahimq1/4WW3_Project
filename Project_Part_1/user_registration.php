@@ -95,7 +95,7 @@
             </div>
           </div>
           <div class="form-group">
-            <button class="btn btn-lg btn-primary btn-block" id="submit-button">Sign Up</button>
+            <button class="btn btn-lg btn-dark btn-block" id="submit-button">Sign Up</button>
           </div>
 
         </form>
