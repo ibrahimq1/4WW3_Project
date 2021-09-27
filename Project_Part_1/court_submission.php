@@ -36,6 +36,7 @@
 		
 		<header class="fixed-top d-flex align-items-center">
 			<div class="container d-flex align-items-center justify-content-between">
+				
 				<div class="d-flex">
 				<img class="logoimg" src="assets/img/basketball-ball.png"></img>
 				<h1><a class="logotxt" href="#">Moila</a></h1>
@@ -43,81 +44,35 @@
 
 				<nav id="navbar" class="navbar">
 					<ul>
-						<li><a href = "#"> Home </a></li>
+						<li><a href = "/Project_Part_1/"> Home </a></li>
 						<li><a href = "/Project_Part_1/search_results.php"> Search Courts </a></li>
 						<li><a href = "/Project_Part_1/individual_court.php"> Example Individual Object </a></li>
-						<li><a href = "/Project_Part_1/court_submission.php"> Submit New Court </a></li>
+						<li><a href = "#"> Submit New Court </a></li>
+						<div class="login-block">
 						<li class="login-btn"><a href = "/Project_Part_1/user_registration.php"> Register </a></li>
 						<li class="login-btn"><a href = "#"> Login </a></li>
+						</div>
 					</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
 				</nav>
-			</div>	
+			</div>
+			
+		
 		</header>
 		<!-- End Navigation Bar -->
 
 		<!-- Actual Body Content -->
 		
 		<section id="main">
+			
 			<div>
-			<video autoplay muted loop id="mp4Video">
-				<source src="assets/img/ball.mp4" type="video/mp4">
-			</video>
-			<div>
-			<div class="container" id="vh100">
-				<div class="row" id="vh100">
-					<div class="col-md-3"></div>
-					<div class="col-md-6 align-self-center">
-						<form>
-							<div class="input-group mb-3">
-								<span title="Use current location" class="input-group-text"><i class="bi bi-geo-alt"></i></span>
-								<input type="text" class="form-control" placeholder="Search by Location">
-								<div class="input-group-append d-flex">
-									<button class="input-group-text btn btn-primary" title="Search" id="pinkbg" type="submit"><i class="bi bi-search"></i></button>
-								</div>
-							</div>
-							<div class="flex-row d-flex justify-content-center">
-								<div class="input-field-rating">
-									<div class="input-group-text">
-										<select data-trigger="" name="any">
-											<option placeholder="" value="">Rating</option>
-											<option>1+</option>
-											<option>2+</option>
-											<option>3+</option>
-											<option>4+</option>
-											<option>5</option>
-										</select>
-									</div>
-								</div>
-								<div class="input-field-popularity">
-									<div class="input-group-text">
-										<select data-trigger="" name="any">
-											<option placeholder="" value="">Popularity</option>
-											<option>Mostly Empty</option>
-											<option>Popular</option>
-											<option>Very Popular</option>
-										</select>
-									</div>
-								</div>
-								<div class="input-field-currently_playing">
-									<div class="input-group-text">
-										<select data-trigger="" name="any">
-											<option placeholder="" value="">Currently Playing</option>
-											<option>0</option>
-											<option>2+</option>
-											<option>5+</option>
-											<option>10+</option>
-										</select>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="col-md-3"></div>
-				</div>
+				<h1> Court Submission <h1>
 			</div>
-		</section>
 		
+		<section>
+	
+		
+
 		<!-- End Actual Body Content -->
 
 
