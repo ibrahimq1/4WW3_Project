@@ -44,7 +44,7 @@
 
 				<nav id="navbar" class="navbar">
 					<ul>
-						<li><a href = "#"> Home </a></li>
+						<li><a href = "/Project_Part_1/"> Home </a></li>
 						<li><a href = "#"> Search Courts </a></li>
 						<li><a href = "#"> Results </a></li>
 						<li><a href = "#"> Example Individual Object </a></li>
