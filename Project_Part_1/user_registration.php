@@ -63,13 +63,12 @@
   </header>
   <!-- End Navigation Bar -->
 
-  <!-- Actual Body Content -->
-
+  <!-- Registration form content -->
   <section id="main">
     <div>
       <h1 class="reg-header">Sign Up</h1>
       <div class="reg-body">
-        <form action="/register" method="post">
+        <form>
           <div class="form-group">
             <input class="form-control" type="text" name="userName" placeholder="username">
           </div>
@@ -81,11 +80,11 @@
           </div>
           <div class="form-group">
             <label for="countries">Choose your Country:</label>
-            <select id="countries" name="countries">
-              <option value="volvo">Canada</option>
-              <option value="saab">United States</option>
-              <option value="fiat">China</option>
-              <option value="audi">Sweden</option>
+            <select id="countries" name="country">
+              <option value="Canada">Canada</option>
+              <option value="United States<">United States</option>
+              <option value="China">China</option>
+              <option value="Sweden">Sweden</option>
             </select>
             <label for="form-gender">Choose your gender</label>
             <div id="form-gender">
@@ -95,18 +94,13 @@
             </div>
           </div>
           <div class="form-group">
-            <button class="btn btn-lg btn-dark btn-block" id="submit-button">Sign Up</button>
+            <button class="btn btn-lg btn-dark btn-block" id="submit-button" type="submit">Sign Up</button>
           </div>
 
         </form>
       </div>
     </div>
     <section>
-
-
-
-      <!-- End Actual Body Content -->
-
 
       <!-- Footer [will sepearte later]-->
       <footer id="footer" class="fixed-bottom">
