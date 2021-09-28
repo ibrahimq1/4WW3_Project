@@ -79,7 +79,7 @@
 							<div class="flex-row d-flex justify-content-center">
 								<div class="input-field-rating">
 									<div class="input-group-text">
-										<select data-trigger="" name="any">
+										<select data-trigger="" name="Rating">
 											<option placeholder="" value="">Rating</option>
 											<option>1+</option>
 											<option>2+</option>
@@ -91,18 +91,18 @@
 								</div>
 								<div class="input-field-popularity">
 									<div class="input-group-text">
-										<select data-trigger="" name="any">
+										<select data-trigger="" name="Popularity">
 											<option placeholder="" value="">Popularity</option>
-											<option>Mostly Empty</option>
+											<option>Mostly_Empty</option>
 											<option>Popular</option>
-											<option>Very Popular</option>
+											<option>Very_Popular</option>
 										</select>
 									</div>
 								</div>
 								<div class="input-field-currently_playing">
 									<div class="input-group-text">
-										<select data-trigger="" name="any">
-											<option placeholder="" value="">Currently Playing</option>
+										<select data-trigger="" name="Currently_Playing">
+											<option placeholder="" value="">Currently_Playing</option>
 											<option>0</option>
 											<option>2+</option>
 											<option>5+</option>
