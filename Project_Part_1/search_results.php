@@ -48,10 +48,9 @@
 						<li><a href = "#"> Search Courts </a></li>
 						<li><a href = "/Project_Part_1/individual_court.php"> Example Individual Object </a></li>
 						<li><a href = "/Project_Part_1/court_submission.php"> Submit New Court </a></li>
-						<div class="login-block">
 						<li class="login-btn"><a href = "/Project_Part_1/user_registration.php"> Register </a></li>
 						<li class="login-btn"><a href = "#"> Login </a></li>
-						</div>
+
 					</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
 				</nav>

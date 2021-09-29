@@ -49,10 +49,8 @@
 						<li><a href = "#"> Results </a></li>
 						<li><a href = "#"> Example Individual Object </a></li>
 						<li><a href = "#"> Submit New Court </a></li>
-						<div class="login-block">
 						<li class="login-btn"><a href = "#"> Register </a></li>
 						<li class="login-btn"><a href = "#"> Login </a></li>
-						</div>
 					</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
 				</nav>
