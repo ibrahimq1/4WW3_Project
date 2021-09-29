@@ -106,12 +106,26 @@ nav ul li a {
     transition: 0.5s;
   }
 
+/* Temporary since we can't use javascript to toggle hamburger menu */
+
   @media (max-width: 991px) {
     .mobile-nav-toggle {
       display: block;
     }
     .navbar ul {
-      display: none;
+      display: inline-block;
+    }
+    .mobile-nav-toggle{
+        display:none;
+    }
+    .logoimg{
+        display:none;
+    }
+    .logotxt{
+        display:none
+    }
+    nav > ul > li > a {
+        font-size: 0.9rem  !important;
     }
   }
 
@@ -146,9 +160,13 @@ nav ul li a {
     border: none;
     background: #E9ECEF;
 }
-
+@media (max-width: 991px) {
+    .input-group-text{
+        padding: .2rem .2rem !important;
+    }
+}
 /* -------------------------------------------
-    Top Video + Search
+    Main Video + Search
 ----------------------------------------------*/
 
 #mp4Video {
@@ -165,13 +183,37 @@ nav ul li a {
 }
 
 .vidcontent {
-    position: fixed;
+    position: relative;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
     width: 100%;
-    padding: 20px;
+    height:100%;
+}
 
+
+@keyframes colormover {
+    0% {
+      background-color: #001F3F;
+    }
+    90% {
+      background-color: #FF385C;
+    }
+    100%{
+        background-color: #FF385C;
+    }
+  }
+
+.letsfindcourts{
+    margin-bottom:140px; 
+    padding:20px; 
+    opacity:0.8; 
+    text-align:center;
+}
+
+.letsfindcourts-text{
+    font-size:4rem; 
+    color:white;
+    animation: zoomInUp 2s;
 }
 
 /*
@@ -210,6 +252,9 @@ nav ul li a {
     #card-style{
         width:50%; 
         max-height:40%;
+    }
+    .letsfindcourts-text{
+        font-size:3rem; 
     }
 }
 

@@ -14,10 +14,14 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 		
 		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
 		<!-- Bootstrap Icon library -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+		<!-- Animate.css library !-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 		<!-- Metadata -->
 		<title>4WW3 Project - Part_1 - Home and Search</title>
@@ -59,16 +63,18 @@
 		<!-- Actual Body Content -->
 		
 		<section id="main">
-			<div>
-			<video autoplay muted loop id="mp4Video">
+	
+			<video autoplay muted loop id="mp4Video" class="overlay">
 				<source src="assets/img/ball.mp4" type="video/mp4">
 			</video>
-			<div>
+	
 			<div class="container" id="vh100">
 				<div class="row" id="vh100">
 					<div class="col-md-3"></div>
 					<div class="col-md-6 align-self-center">
-						<form>
+						<div class="letsfindcourts"> <h1 class="letsfindcourts-text">Let's find courts!</h1> 
+						</div>
+						<form style="padding-bottom: 300px">
 							<div class="input-group mb-3">
 								<span title="Use current location" class="input-group-text"><i class="bi bi-geo-alt"></i></span>
 								<input type="text" class="form-control" placeholder="Search by Location">
