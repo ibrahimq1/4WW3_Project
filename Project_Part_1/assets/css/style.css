@@ -20,11 +20,6 @@ a {
     text-decoration: none;
 }
   
-a:hover {
-    color: white !important;
-    text-decoration: none;
-}
-
 a:visited{
     color: white;
 }
