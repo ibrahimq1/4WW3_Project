@@ -78,7 +78,7 @@
 					</div>
 				</div>
 
-				<!-- second row contains actual individual object (basketball court) with comments -->
+				<!-- second column contains actual individual object (basketball court) with comments -->
 				<div class="col-md-9">
 					<div class="thumbnail">
 						<img src="assets/img/ballcourt1.jpg">
@@ -109,6 +109,7 @@
 							</div>
 						</div>
 
+						<!-- Another individual comment -->
 						<div class="row">
 							<div class="col-md-12">
 								<strong>Rafid Ibrahim</strong>

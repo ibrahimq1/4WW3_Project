@@ -1,90 +1,122 @@
 <!DOCTYPE html>
 <!-- HTML5 Compliant -->
 <html>
-	<head>
 
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		
-		<!-- external main CSS stylesheet -->
-		<link rel="stylesheet" href="assets/css/style.css" />
+<head>
 
-		<!-- Bootstrap CSS --> 
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-		
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<!-- Bootstrap Icon library -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<!-- external main CSS stylesheet -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/court_submission.css" />
 
-		<!-- Metadata -->
-		<title>4WW3 Project - Part_1 - Home and Search</title>
-		<meta charset="utf8"/>
-		<meta name="author" content="Quazi Rafid Ibrahim, Frank Su" />
-		<meta name="description" content="CS 4WW3 Project Part 1" />
-		<meta name="keywords" content="web,programming,McMaster,4ww3 Project" />
-		
-		<!-- Tell search engines not to index this page -->
-		<meta name="robots" content="noindex"/>
-		
-	</head>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-	<body>
-		<!-- Navigation Bar [will seperate later] no js allowed, so didn't implement hamburger menu-->
-		
-		<header class="fixed-top d-flex align-items-center">
-			<div class="container d-flex align-items-center justify-content-between">
-				
-				<div class="d-flex">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+	<!-- Bootstrap Icon library -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+	<!-- Metadata -->
+	<title>4WW3 Project - Part_1 - Home and Search</title>
+	<meta charset="utf8" />
+	<meta name="author" content="Quazi Rafid Ibrahim, Frank Su" />
+	<meta name="description" content="CS 4WW3 Project Part 1" />
+	<meta name="keywords" content="web,programming,McMaster,4ww3 Project" />
+
+	<!-- Tell search engines not to index this page -->
+	<meta name="robots" content="noindex" />
+
+</head>
+
+<body>
+	<!-- Navigation Bar [will seperate later] no js allowed, so didn't implement hamburger menu-->
+
+	<header class="fixed-top d-flex align-items-center">
+		<div class="container d-flex align-items-center justify-content-between">
+
+			<div class="d-flex">
 				<img class="logoimg" src="assets/img/basketball-ball.png"></img>
 				<h1><a class="logotxt" href="#">Moila</a></h1>
-				</div>
+			</div>
 
-				<nav id="navbar" class="navbar">
-					<ul>
-						<li><a href = "/Project_Part_1/"> Home </a></li>
-						<li><a href = "/Project_Part_1/search_results.php"> Search Courts </a></li>
-						<li><a href = "/Project_Part_1/individual_court.php"> Example Individual Object </a></li>
-						<li><a href = "#"> Submit New Court </a></li>
-						<li class="login-btn"><a href = "/Project_Part_1/user_registration.php"> Register </a></li>
-						<li class="login-btn"><a href = "#"> Login </a></li>
-					</ul>
+			<nav id="navbar" class="navbar">
+				<ul>
+					<li><a href="/Project_Part_1/"> Home </a></li>
+					<li><a href="/Project_Part_1/search_results.php"> Search Courts </a></li>
+					<li><a href="/Project_Part_1/individual_court.php"> Example Individual Object </a></li>
+					<li><a href="#"> Submit New Court </a></li>
+					<li class="login-btn"><a href="/Project_Part_1/user_registration.php"> Register </a></li>
+					<li class="login-btn"><a href="#"> Login </a></li>
+				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
-				</nav>
-			</div>
-			
-		
-		</header>
-		<!-- End Navigation Bar -->
-
-		<!-- Actual Body Content -->
-		
-		<section id="main">
-			
-			<div>
-				<h1> Court Submission <h1>
-			</div>
-		
-		<section>
-	
-		
-
-		<!-- End Actual Body Content -->
+			</nav>
+		</div>
 
 
-		<!-- Footer [will sepearte later]-->
-		<footer id="footer" class="fixed-bottom">
-			<div class="container">
-				<div class="copyright">
-					&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
+	</header>
+	<!-- End Navigation Bar -->
+
+	<!-- Actual Body Content -->
+
+	<section id="main">
+
+		<div class="container">
+			<div class="row">
+				<h1 style="text-align: center; margin-top: 20px;">Add a New Ball Court</h1>
+				<div style="width:50%; margin: 30px auto;">
+					<form action="" method="POST">
+						<div class="form-group">
+							<label for="name">Name</label>
+							<input class="form-control" type="text" placeholder="name goes here" name="name">
+						</div>
+						<div class="form-group">
+							<label for="image">Image</label>
+							<input id="image" type="file" name="image" accept="*" required>
+						</div>
+						<div class="form-group">
+							<label for="description">Description</label>
+							<input class="form-control" type="text" placeholder="description goes here" name="description">
+						</div>
+						<div class="form-group">
+							<label for="numberPlaying">Number of People Playing</label>
+							<input class="form-control" type="number" name="numberPlaying" placeholder="0">
+						</div>
+						<div class="form-group">
+							<label for="location">Location</label>
+							<input type="text" class="form-control" name="location" id="location" placeholder="Yosemite">
+						</div>
+						<div class="form-group">
+							<button class="btn btn-lg btn-primary btn-block">Submit</button>
+						</div>
+					</form>
 				</div>
 			</div>
-		</footer>
-		<!-- End Footer -->
+		</div>
 
-	</body>
+		<section>
+
+
+
+			<!-- End Actual Body Content -->
+
+
+			<!-- Footer [will sepearte later]-->
+			<footer id="footer" class="fixed-bottom">
+				<div class="container">
+					<div class="copyright">
+						&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
+					</div>
+				</div>
+			</footer>
+			<!-- End Footer -->
+
+</body>
+
 </html>
 
 
