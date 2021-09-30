@@ -68,13 +68,13 @@
 				<source src="assets/img/ball.mp4" type="video/mp4">
 			</video>
 	
-			<div class="container" id="vh100">
-				<div class="row" id="vh100">
+			<div class="container">
+				<div class="row">
 					<div class="col-md-3"></div>
 					<div class="col-md-6 align-self-center">
 						<div class="letsfindcourts"> <h1 class="letsfindcourts-text">Let's find courts!</h1> 
 						</div>
-						<form style="padding-bottom: 300px">
+						<form>
 							<div class="input-group mb-3">
 								<span title="Use current location" class="input-group-text" id="mobview"><i class="bi bi-geo-alt"></i></span>
 								<input type="text" class="form-control" placeholder="Search by Location">
