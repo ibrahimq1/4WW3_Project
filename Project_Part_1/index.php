@@ -76,7 +76,7 @@
 						</div>
 						<form style="padding-bottom: 300px">
 							<div class="input-group mb-3">
-								<span title="Use current location" class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+								<span title="Use current location" class="input-group-text" id="mobview"><i class="bi bi-geo-alt"></i></span>
 								<input type="text" class="form-control" placeholder="Search by Location">
 								<div class="input-group-append d-flex">
 									<button class="input-group-text btn btn-primary" title="Search" id="pinkbg" type="submit"><i class="bi bi-search"></i></button>

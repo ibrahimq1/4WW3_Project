@@ -164,6 +164,12 @@ nav ul li a {
     .input-group-text{
         padding: .2rem .2rem !important;
     }
+    #mobview{
+        padding: .5rem  .5rem !important;
+    }
+    #pinkbg{
+        padding: .5rem  .5rem !important;
+    }
 }
 /* -------------------------------------------
     Main Video + Search
