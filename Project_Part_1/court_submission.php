@@ -72,7 +72,7 @@
 					<form action="" method="POST">
 						<div class="form-group">
 							<label for="name">Name</label>
-							<input class="form-control" type="text" placeholder="name goes here" name="name">
+							<input class="form-control" type="text" placeholder="Ex: John Doe" name="name">
 						</div>
 						<div class="form-group">
 							<label for="image">Image</label>
@@ -80,7 +80,7 @@
 						</div>
 						<div class="form-group">
 							<label for="description">Description</label>
-							<input class="form-control" type="text" placeholder="description goes here" name="description">
+							<input class="form-control" type="text" placeholder="Description" name="description">
 						</div>
 						<div class="form-group">
 							<label for="numberPlaying">Number of People Playing</label>
@@ -91,7 +91,7 @@
 							<input type="text" class="form-control" name="location" id="location" placeholder="Yosemite">
 						</div>
 						<div class="form-group">
-							<button class="btn btn-lg btn-primary btn-block">Submit</button>
+							<button class="btn btn-lg btn-primary btn-block" id="pinkbg">Submit</button>
 						</div>
 					</form>
 				</div>

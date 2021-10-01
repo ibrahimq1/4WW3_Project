@@ -79,7 +79,7 @@
 					<form>
 						<div class="input-group mb-3">
 							<span title="Use current location" class="input-group-text" id="mobview"><i class="bi bi-geo-alt"></i></span>
-							<input type="text" class="form-control" placeholder="Search by Location">
+							<input type="text" class="form-control" name="location" placeholder="Search by Location">
 							<div class="input-group-append d-flex">
 								<button class="input-group-text btn btn-primary" title="Search" id="pinkbg" type="submit"><i class="bi bi-search"></i></button>
 							</div>
@@ -87,7 +87,7 @@
 						<div class="flex-row d-flex justify-content-center">
 							<div class="input-field-rating">
 								<div class="input-group-text">
-									<select data-trigger="" name="Rating">
+									<select data-trigger="" name="rating">
 										<option placeholder="" value="">Rating</option>
 										<option>1+</option>
 										<option>2+</option>
@@ -99,7 +99,7 @@
 							</div>
 							<div class="input-field-popularity">
 								<div class="input-group-text">
-									<select data-trigger="" name="Popularity">
+									<select data-trigger="" name="popularity">
 										<option placeholder="" value="">Popularity</option>
 										<option>Mostly_Empty</option>
 										<option>Popular</option>
@@ -109,7 +109,7 @@
 							</div>
 							<div class="input-field-currently_playing">
 								<div class="input-group-text">
-									<select data-trigger="" name="Currently_Playing">
+									<select data-trigger="" name="currently_playing">
 										<option placeholder="" value="">Currently_Playing</option>
 										<option>0</option>
 										<option>2+</option>

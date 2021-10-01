@@ -69,13 +69,13 @@
       <div class="reg-body">
         <form>
           <div class="form-group">
-            <input class="form-control" type="text" name="userName" placeholder="username">
+            <input class="form-control" type="text" name="userName" placeholder="Username">
           </div>
           <div class="form-group">
-            <input class="form-control" type="password" name="password" placeholder="password">
+            <input class="form-control" type="password" name="password" placeholder="Password">
           </div>
           <div class="form-group">
-            <input class="form-control" type="email" name="email" placeholder="email">
+            <input class="form-control" type="email" name="email" placeholder="E-mail">
           </div>
           <div class="form-group">
             <label for="countries">Choose your Country:</label>
@@ -93,7 +93,7 @@
             </div>
           </div>
           <div class="form-group">
-            <button class="btn btn-lg btn-dark btn-block" id="submit-button" type="submit">Sign Up</button>
+            <button class="btn btn-lg btn-dark btn-block" id="pinkbg"type="submit">Sign Up</button>
           </div>
 
         </form>

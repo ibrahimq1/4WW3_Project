@@ -73,8 +73,8 @@
 				<div class="col-md-3">
 					<p class="lead" style="margin-top: 50px; font-size: 30px"><b>Location</b></p>
 					<img src="assets/img/map-img.png" class="img-thumbnail">
-					<div><a class="btn btn-xs btn-success" style="margin-bottom: 10px; margin-top: 10px">Update</a>
-						<h5>Currently <strong>15</strong> people playing!</h4>
+					<div><a class="btn btn-xs btn-success" id="pinkbg" style="margin-bottom: 10px; margin-top: 10px">Update</a>
+						<h4>Currently <strong>15</strong> people playing!</h4>
 					</div>
 				</div>
 
@@ -82,10 +82,10 @@
 				<div class="col-md-9">
 					<div class="thumbnail">
 						<img src="assets/img/ballcourt1.jpg">
-						<div class="card">
+						<div class="card" style="padding-left:10px">
 							<h4 style="margin-top: 10px; color: #00BFFF"><a>Baller's Paradise Court</a></h4>
 
-							<p><strong>only for the best of the best. </strong></p>
+							<p><strong>Only for the best of the best. </strong></p>
 							<p>
 								<em>Submitted By: Frank Su</em>
 							</p>
@@ -97,7 +97,12 @@
 
 					<!-- Comment section -->
 					<div class="well">
-						<a class="btn btn-success" href="">Add New Comment</a>
+						<form>
+							<button class="btn btn-success" type="submit" id="pinkbg">Add New Comment</button>
+							<div class="input-group mb-3" style="padding-top:20px;">
+								<input type="text" class="form-control" name="comment" style="padding-bottom:100px" placeholder="Write your comment here">
+							</div>
+						</form>
 						<hr>
 
 						<!-- An individual comment has author name, comment, and date commented -->
@@ -122,7 +127,7 @@
 
 			</div>
 		</div>
-		</div>
+		
 
 		<section>
 
