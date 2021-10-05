@@ -116,6 +116,12 @@
 						<div class="row">
 							<div class="col-md-12">
 								<strong>Frank Su</strong>
+								</br>
+								<span class="bi bi-star-fill"></span>
+								<span class="bi bi-star-fill"></span>
+								<span class="bi bi-star-fill"></span>
+								<span class="bi bi-star"></span>
+								<span class="bi bi-star"></span>
 								<span class="float-end">3 days ago</span>
 								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia perspiciatis repellat odit ipsa pariatur quisquam a laboriosam culpa maxime? Itaque!</p>
 							</div>
@@ -125,6 +131,12 @@
 						<div class="row">
 							<div class="col-md-12">
 								<strong>Rafid Ibrahim</strong>
+								</br>
+								<span class="bi bi-star-fill"></span>
+								<span class="bi bi-star-fill"></span>
+								<span class="bi bi-star-fill"></span>
+								<span class="bi bi-star-half"></span>
+								<span class="bi bi-star"></span>	
 								<span class="float-end">14 days ago</span>
 								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia perspiciatis repellat odit ipsa pariatur quisquam a laboriosam culpa maxime? Itaque!</p>
 							</div>
