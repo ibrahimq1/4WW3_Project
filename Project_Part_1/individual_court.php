@@ -102,19 +102,25 @@
 				</div>
 
 				<!-- second column contains actual individual object (basketball court) with comments -->
-				<div class="col-md-9">
+				<!-- Schema.org place microdata -->
+				<div itemscope itemtype="https://schema.org/Place" class="col-md-9">
 					<div class="thumbnail">
-						<img src="assets/img/ballcourt1.jpg">
+						<img itemprop="photo" src="assets/img/ballcourt1.jpg">
 						<div class="card" style="padding-left:10px">
 							<h4 style="margin-top: 10px; color: #00BFFF"><a>Baller's Paradise Court</a></h4>
 
-							<p><strong>Only for the best of the best. </strong></p>
+							<p itemprop="slogan"><strong>Only for the best of the best. </strong></p>
 							<p>
 								<em>Submitted By: Frank Su</em>
 							</p>
-							<p>
-								<em>Location: 123 Western Road</em>
-							</p>
+							<!-- Schema.org Place lat/long geolocation microdata -->
+							<div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+								<p>
+									<em itemprop="address">Location: 123 Western Road, L8S3M1</em>
+								<p>Latitude: <em itemprop="latitude">43.26501</em></p>
+								<p>Longitude <em itemprop="longitude">-79.93867</em></p>
+								</p>
+							</div>
 						</div>
 					</div>
 
@@ -129,32 +135,36 @@
 						<hr>
 
 						<!-- An individual comment has author name, comment, and date commented -->
-						<div class="row">
+						<div class="row" itemscope itemtype="https://schema.org/Review">
 							<div class="col-md-12">
-								<strong>Frank Su</strong>
+								<strong itemprop="author">Frank Su</strong>
 								</br>
 								<span class="bi bi-star-fill"></span>
 								<span class="bi bi-star-fill"></span>
 								<span class="bi bi-star-fill"></span>
 								<span class="bi bi-star"></span>
 								<span class="bi bi-star"></span>
-								<span class="float-end">3 days ago</span>
-								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia perspiciatis repellat odit ipsa pariatur quisquam a laboriosam culpa maxime? Itaque!</p>
+								<!-- microdata for review rating and body -->
+								<meta itemprop="reviewRating" content="3">
+								<span class="float-end" itemprop="datePublished">2021-04-03</span>
+								<p itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia perspiciatis repellat odit ipsa pariatur quisquam a laboriosam culpa maxime? Itaque!</p>
 							</div>
 						</div>
 
 						<!-- Another individual comment -->
-						<div class="row">
+						<div class="row" itemscope itemtype="https://schema.org/Review">
 							<div class="col-md-12">
-								<strong>Rafid Ibrahim</strong>
+								<strong itemprop="author">Rafid Ibrahim</strong>
 								</br>
 								<span class="bi bi-star-fill"></span>
 								<span class="bi bi-star-fill"></span>
 								<span class="bi bi-star-fill"></span>
 								<span class="bi bi-star-half"></span>
 								<span class="bi bi-star"></span>
-								<span class="float-end">14 days ago</span>
-								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia perspiciatis repellat odit ipsa pariatur quisquam a laboriosam culpa maxime? Itaque!</p>
+								<!-- microdata for review rating and body -->
+								<meta itemprop="reviewRating" content="3.5">
+								<span class="float-end" itemprop="datePublished">2021-09-01</span>
+								<p itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia perspiciatis repellat odit ipsa pariatur quisquam a laboriosam culpa maxime? Itaque!</p>
 							</div>
 						</div>
 					</div>
