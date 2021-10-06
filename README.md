@@ -24,6 +24,7 @@ against the "Lighthouse" browser extension from chrome as profressor suggested.
 
 
 **Additional Task 2 Answers**
+
 i. Describe briefly the different versions of graphics provided in step 2(a);
 include a sample of HTML code and explain how the different selectors work
 together.
