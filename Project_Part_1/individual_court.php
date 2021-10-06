@@ -98,14 +98,23 @@
 					<img src="assets/img/map-img.png" class="img-thumbnail">
 					<div><a class="btn btn-xs btn-success" id="pinkbg" style="margin-bottom: 10px; margin-top: 10px">Update</a>
 						<h4>Currently <strong>15</strong> people playing!</h4>
-					</div>
+						<video controls style="width:100%; margin-top:30px;" poster="assets/img/mobbg.png">
+								<source src="assets/img/ball.mp4"/>
+						</video>		
+					</div>		
+	
 				</div>
-
+	
 				<!-- second column contains actual individual object (basketball court) with comments -->
 				<!-- Schema.org place microdata -->
 				<div itemscope itemtype="https://schema.org/Place" class="col-md-9">
 					<div class="thumbnail">
-						<img itemprop="photo" src="assets/img/ballcourt1.jpg">
+						<picture>
+							<source media="(min-width: 800px)" srcset="assets/img/ballcourt1.jpg, assets/img/ballcourt1-2x.jpg 2x">
+							<source media="(min-width: 450px)" srcset="assets/img/ballcourt1-512.jpg, assets/img/ballcourt1-512-2x.jpg 2x">
+							<img itemprop="photo"src="assets/img/ballcourt1.jpg" srcset="assets/img/ballcourt1-512.jpg" alt="cool basketball court">
+						</picture>
+
 						<div class="card" style="padding-left:10px">
 							<h4 style="margin-top: 10px; color: #00BFFF"><a>Baller's Paradise Court</a></h4>
 
@@ -118,7 +127,7 @@
 								<p>
 									<em itemprop="address">Location: 123 Western Road, L8S3M1</em>
 								<p>Latitude: <em itemprop="latitude">43.26501</em></p>
-								<p>Longitude <em itemprop="longitude">-79.93867</em></p>
+								<p>Longitude: <em itemprop="longitude">-79.93867</em></p>
 								</p>
 							</div>
 						</div>

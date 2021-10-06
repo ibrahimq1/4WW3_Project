@@ -92,6 +92,10 @@
 							<input class="form-control" type="number" name="numberPlaying" placeholder="0">
 						</div>
 						<div class="form-group">
+							<label for="video">Video</label>
+							<input id="image" type="file" name="image" accept="*" required>
+						</div>
+						<div class="form-group">
 							<label for="location">Location</label>
 							<input type="text" class="form-control" name="location" id="location" placeholder="Latitute, Longitude">
 						</div>

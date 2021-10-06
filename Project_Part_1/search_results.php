@@ -52,7 +52,7 @@
 				<nav id="navbar" class="navbar">
 					<ul>
 						<li><a href = "/Project_Part_1/"> Search </a></li>
-						<li><a href = "Project_Part_1/search_results.php"> Results </a></li>
+						<li><a href = "/Project_Part_1/search_results.php"> Results </a></li>
 						<li><a href = "/Project_Part_1/individual_court.php"> Example Individual Object </a></li>
 						<li><a href = "/Project_Part_1/court_submission.php"> Submit New Court </a></li>
 						<li class="login-btn"><a href = "/Project_Part_1/user_registration.php"> Register </a></li>

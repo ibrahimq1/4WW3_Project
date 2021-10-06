@@ -38,6 +38,7 @@ h1, h2, h3, h4, h5, h6 {
     min-height:100vh !important;
 }
 
+
 /* -------------------------------------------
     Header & Navigation
 ----------------------------------------------*/
@@ -113,9 +114,11 @@ nav ul li a {
     .mobile-nav-toggle{
         display:none;
     }
+
     .logoimg{
         display:none;
     }
+    
     .logotxt{
         display:none
     }
