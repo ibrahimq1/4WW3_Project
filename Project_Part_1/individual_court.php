@@ -41,6 +41,13 @@
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:site_name" content="Moila" />
 
+	<!-- Twitter card tags (hardcoded for now, should be dynamically updated from db in future)-->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Baller's Paradise Court" />
+	<meta name="twitter:description" content="Only for the best of the best." />
+	<meta name="twitter:site" content="@Moila" />
+	<meta name="twitter:image" content="assets/img/basketball-ball.png" />
+
 	<!-- Tell search engines not to index this page -->
 	<meta name="robots" content="noindex" />
 
