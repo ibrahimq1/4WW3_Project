@@ -32,6 +32,15 @@
 	<meta name="description" content="CS 4WW3 Project Part 1" />
 	<meta name="keywords" content="web,programming,McMaster,4ww3 Project" />
 
+	<!-- Open Graph Protocol Metadata (hardcoded for now, should be dynamically updated from db in future)-->
+	<meta property="og:title" content="Baller's Paradise Court" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://moila.app/Project_Part_1/individual_court.php" />
+	<meta property="og:image" content="assets/img/basketball-ball.png" />
+	<meta property="og:description" content="Only for the best of the best." />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:site_name" content="Moila" />
+
 	<!-- Tell search engines not to index this page -->
 	<meta name="robots" content="noindex" />
 
@@ -136,7 +145,7 @@
 								<span class="bi bi-star-fill"></span>
 								<span class="bi bi-star-fill"></span>
 								<span class="bi bi-star-half"></span>
-								<span class="bi bi-star"></span>	
+								<span class="bi bi-star"></span>
 								<span class="float-end">14 days ago</span>
 								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia perspiciatis repellat odit ipsa pariatur quisquam a laboriosam culpa maxime? Itaque!</p>
 							</div>
@@ -146,7 +155,7 @@
 
 			</div>
 		</div>
-		
+
 
 		<section>
 
