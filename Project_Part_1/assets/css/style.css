@@ -171,6 +171,13 @@ nav ul li a {
         opacity:0.8; 
         text-align:center;
     }
+    #mp4Video{
+        visibility: hidden;
+    }
+    .mobbg{
+        background-image: url("/Project_Part_1/assets/img/mobbg.png");
+        background-size:100vh no-repeat;
+    }
 }
 /* -------------------------------------------
     Main Video + Search

@@ -48,8 +48,8 @@
 
 			<nav id="navbar" class="navbar">
 				<ul>
-					<li><a href="#"> Home </a></li>
-					<li><a href="/Project_Part_1/search_results.php"> Search Courts </a></li>
+					<li><a href="#"> Search </a></li>
+					<li><a href="/Project_Part_1/search_results.php"> Results </a></li>
 					<li><a href="/Project_Part_1/individual_court.php"> Example Individual Object </a></li>
 					<li><a href="/Project_Part_1/court_submission.php"> Submit New Court </a></li>
 					<li class="login-btn"><a href="/Project_Part_1/user_registration.php"> Register </a></li>
@@ -63,7 +63,7 @@
 
 	<!-- Actual Body Content -->
 
-	<section id="main">
+	<section class="mobbg" id="main">
 
 		<video autoplay muted loop id="mp4Video" class="overlay">
 			<source src="assets/img/ball.mp4" type="video/mp4">
@@ -74,7 +74,7 @@
 				<div class="col-md-3"></div>
 				<div class="col-md-6 align-self-center">
 					<div class="letsfindcourts">
-						<h1 class="letsfindcourts-text">Let's find courts!</h1>
+						<h1 class="letsfindcourts-text">Welcome to Moila!</h1>
 					</div>
 					<form>
 						<div class="input-group mb-3">

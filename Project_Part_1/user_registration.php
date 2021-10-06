@@ -53,8 +53,8 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="/Project_Part_1/"> Home </a></li>
-          <li><a href="/Project_Part_1/search_results.php"> Search Courts </a></li>
+          <li><a href="/Project_Part_1/"> Search</a></li>
+          <li><a href="/Project_Part_1/search_results.php"> Results </a></li>
           <li><a href="/Project_Part_1/individual_court.php"> Example Individual Object </a></li>
           <li><a href="/Project_Part_1/court_submission.php"> Submit New Court </a></li>
           <li class="login-btn"><a href="#"> Register </a></li>
@@ -71,7 +71,7 @@
 
   <!-- Registration form content -->
   <section id="main">
-    <div>
+    <div class="container">
       <h1 class="reg-header">Sign Up</h1>
       <div class="reg-body">
         <form>

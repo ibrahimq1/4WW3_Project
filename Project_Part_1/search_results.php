@@ -51,8 +51,8 @@
 
 				<nav id="navbar" class="navbar">
 					<ul>
-						<li><a href = "/Project_Part_1/"> Home </a></li>
-						<li><a href = "#"> Search Courts </a></li>
+						<li><a href = "/Project_Part_1/"> Search </a></li>
+						<li><a href = "Project_Part_1/search_results.php"> Results </a></li>
 						<li><a href = "/Project_Part_1/individual_court.php"> Example Individual Object </a></li>
 						<li><a href = "/Project_Part_1/court_submission.php"> Submit New Court </a></li>
 						<li class="login-btn"><a href = "/Project_Part_1/user_registration.php"> Register </a></li>
@@ -128,7 +128,7 @@
 					<div class="col-md-6 d-flex align-content-end" style="border-right:1px #FF385C solid">
 						<div class="row g-0">
 							<div class="card" id="card-style">
-								<div class="card-header">Very Popular</div>
+								<div class="card-header">Popular</div>
 								<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 								<div class="card-body">
 									<h5 class="card-title">Title</h5>
@@ -139,7 +139,7 @@
 									<span class="bi bi-star"></span>
 									<p>Currently Playing: 5+</p>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
+									<a href="/Project_Part_1/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
 							</div>
 							<div class="card" id="card-style">
@@ -153,7 +153,7 @@
 									<span class="bi bi-star"></span>
 									<p>Currently Playing: 0</p>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
+									<a href="/Project_Part_1/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
 							</div>
 							<div class="card" id="card-style">
@@ -167,7 +167,7 @@
 									<span class="bi bi-star"></span>
 									<p>Currently Playing: 0</p>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
+									<a href="/Project_Part_1/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
 							</div>
 							<div class="card" id="card-style">
@@ -181,7 +181,7 @@
 									<span class="bi bi-star"></span>
 									<p>Currently Playing: 0</p>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
+									<a href="/Project_Part_1/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
 							</div>
 							<div class="card" id="card-style">
@@ -195,7 +195,7 @@
 									<span class="bi bi-star"></span>
 									<p>Currently Playing: 0</p>
 									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" class="btn btn-primary" id="pinkbg">Let's go!</a>
+									<a href="/Project_Part_1/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 								</div>
 							</div>
 						</div>

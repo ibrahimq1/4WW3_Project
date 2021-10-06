@@ -51,8 +51,8 @@
 
 			<nav id="navbar" class="navbar">
 				<ul>
-					<li><a href="/Project_Part_1/"> Home </a></li>
-					<li><a href="/Project_Part_1/search_results.php"> Search Courts </a></li>
+					<li><a href="/Project_Part_1/"> Search </a></li>
+					<li><a href="/Project_Part_1/search_results.php"> Results </a></li>
 					<li><a href="/Project_Part_1/individual_court.php"> Example Individual Object </a></li>
 					<li><a href="#"> Submit New Court </a></li>
 					<li class="login-btn"><a href="/Project_Part_1/user_registration.php"> Register </a></li>
@@ -72,7 +72,7 @@
 
 		<div class="container">
 			<div class="row">
-				<h1 style="text-align: center; margin-top: 20px;">Add a New Ball Court</h1>
+				<h1 style="text-align: center; margin-top: 50px;">Add a New Ball Court</h1>
 				<div style="width:50%; margin: 30px auto;">
 					<form action="" method="POST">
 						<div class="form-group">
@@ -93,7 +93,7 @@
 						</div>
 						<div class="form-group">
 							<label for="location">Location</label>
-							<input type="text" class="form-control" name="location" id="location" placeholder="Yosemite">
+							<input type="text" class="form-control" name="location" id="location" placeholder="Latitute, Longitude">
 						</div>
 						<div class="form-group">
 							<button class="btn btn-lg btn-primary btn-block" id="pinkbg">Submit</button>
