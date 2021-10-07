@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 	<!-- Metadata -->
-	<title>4WW3 Project - Part_1 - Home and Search</title>
+	<title>Moila</title>
 	<meta charset="utf8" />
 	<meta name="author" content="Quazi Rafid Ibrahim, Frank Su" />
 	<meta name="description" content="CS 4WW3 Project Part 1" />
@@ -34,6 +34,9 @@
 
 	<!-- Tell search engines not to index this page -->
 	<meta name="robots" content="noindex" />
+
+	<!-- favicon -->
+	<link rel=icon href=/favicon.png>
 
 </head>
 

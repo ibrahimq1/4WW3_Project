@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 	<!-- Metadata -->
-	<title>4WW3 Project - Part_1 - Home and Search</title>
+	<title>Moila</title>
 	<meta charset="utf8" />
 	<meta name="author" content="Quazi Rafid Ibrahim, Frank Su" />
 	<meta name="description" content="CS 4WW3 Project Part 1" />
@@ -50,6 +50,9 @@
 
 	<!-- Tell search engines not to index this page -->
 	<meta name="robots" content="noindex" />
+
+	<!-- favicon -->
+	<link rel=icon href=/favicon.png>
 
 </head>
 
@@ -99,12 +102,12 @@
 					<div><a class="btn btn-xs btn-success" id="pinkbg" style="margin-bottom: 10px; margin-top: 10px">Update</a>
 						<h4>Currently <strong>15</strong> people playing!</h4>
 						<video controls style="width:100%; margin-top:30px;" poster="assets/img/mobbg.png">
-								<source src="assets/img/ball.mp4"/>
-						</video>		
-					</div>		
-	
+							<source src="assets/img/ball.mp4" />
+						</video>
+					</div>
+
 				</div>
-	
+
 				<!-- second column contains actual individual object (basketball court) with comments -->
 				<!-- Schema.org place microdata -->
 				<div itemscope itemtype="https://schema.org/Place" class="col-md-9">
@@ -112,7 +115,7 @@
 						<picture>
 							<source media="(min-width: 800px)" srcset="assets/img/ballcourt1.jpg, assets/img/ballcourt1-2x.jpg 2x">
 							<source media="(min-width: 450px)" srcset="assets/img/ballcourt1-512.jpg, assets/img/ballcourt1-512-2x.jpg 2x">
-							<img itemprop="photo"src="assets/img/ballcourt1.jpg" srcset="assets/img/ballcourt1-512.jpg" alt="cool basketball court">
+							<img itemprop="photo" src="assets/img/ballcourt1.jpg" srcset="assets/img/ballcourt1-512.jpg" alt="cool basketball court">
 						</picture>
 
 						<div class="card" style="padding-left:10px">

@@ -1,97 +1,99 @@
 <!DOCTYPE html>
 <!-- HTML5 Compliant -->
 <html>
-	<head>
 
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		
-		<!-- external main CSS stylesheet -->
-		<link rel="stylesheet" href="assets/css/style.css" />
+<head>
 
-		<!-- Bootstrap CSS -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<!-- Google Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
-		<!-- Bootstrap Icon library -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<!-- external main CSS stylesheet -->
+	<link rel="stylesheet" href="assets/css/style.css" />
 
-		<!-- Animate.css library !-->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-		<!-- Metadata -->
-		<title>4WW3 Project - Part_1 - Home and Search</title>
-		<meta charset="utf8" />
-		<meta name="author" content="Quazi Rafid Ibrahim, Frank Su" />
-		<meta name="description" content="CS 4WW3 Project Part 1" />
-		<meta name="keywords" content="web,programming,McMaster,4ww3 Project" />
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+	<!-- Bootstrap Icon library -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
-		<!-- Tell search engines not to index this page -->
-		<meta name="robots" content="noindex" />
+	<!-- Animate.css library !-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-	</head>
+	<!-- Metadata -->
+	<title>Moila</title>
+	<meta charset="utf8" />
+	<meta name="author" content="Quazi Rafid Ibrahim, Frank Su" />
+	<meta name="description" content="CS 4WW3 Project Part 1" />
+	<meta name="keywords" content="web,programming,McMaster,4ww3 Project" />
 
-		
-	</head>
+	<!-- Tell search engines not to index this page -->
+	<meta name="robots" content="noindex" />
 
-	<body>
-		<!-- Navigation Bar [will seperate later] no js allowed, so didn't implement hamburger menu-->
-		
-		<header class="fixed-top d-flex align-items-center">
-			<div class="container d-flex align-items-center justify-content-between">
-				
-				<div class="d-flex">
+</head>
+
+
+</head>
+
+<body>
+	<!-- Navigation Bar [will seperate later] no js allowed, so didn't implement hamburger menu-->
+
+	<header class="fixed-top d-flex align-items-center">
+		<div class="container d-flex align-items-center justify-content-between">
+
+			<div class="d-flex">
 				<img class="logoimg" src="assets/img/basketball-ball.png"></img>
 				<h1><a class="logotxt" href="#">Moila</a></h1>
-				</div>
+			</div>
 
-				<nav id="navbar" class="navbar">
-					<ul>
-						<li><a href = "/Project_Part_1/index.php"> Search</a></li>
-						<li><a href = "/Project_Part_1/search_results.php"> Results </a></li>
-						<li><a href = "#"> Example Individual Object </a></li>
-						<li><a href = "#"> Submit New Court </a></li>
-						<li class="login-btn"><a href = "#"> Register </a></li>
-						<li class="login-btn"><a href = "#"> Login </a></li>
-					</ul>
+			<nav id="navbar" class="navbar">
+				<ul>
+					<li><a href="/Project_Part_1/index.php"> Search</a></li>
+					<li><a href="/Project_Part_1/search_results.php"> Results </a></li>
+					<li><a href="#"> Example Individual Object </a></li>
+					<li><a href="#"> Submit New Court </a></li>
+					<li class="login-btn"><a href="#"> Register </a></li>
+					<li class="login-btn"><a href="#"> Login </a></li>
+				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
-				</nav>
-			</div>
-			
-		
-		</header>
-		<!-- End Navigation Bar -->
+			</nav>
+		</div>
 
-		<!-- Actual Body Content -->
-		
-		<section id="main">
-			
-			<div>
-				<h1> Content goes here <h1>
-			</div>
-		
+
+	</header>
+	<!-- End Navigation Bar -->
+
+	<!-- Actual Body Content -->
+
+	<section id="main">
+
+		<div>
+			<h1> Content goes here <h1>
+		</div>
+
 		<section>
-	
-		
-
-		<!-- End Actual Body Content -->
 
 
-		<!-- Footer [will sepearte later]-->
-		<footer id="footer" class="fixed-bottom">
-			<div class="container">
-				<div class="copyright">
-					&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
+
+			<!-- End Actual Body Content -->
+
+
+			<!-- Footer [will sepearte later]-->
+			<footer id="footer" class="fixed-bottom">
+				<div class="container">
+					<div class="copyright">
+						&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
+					</div>
 				</div>
-			</div>
-		</footer>
-		<!-- End Footer -->
+			</footer>
+			<!-- End Footer -->
 
-	</body>
+</body>
+
 </html>
 
 

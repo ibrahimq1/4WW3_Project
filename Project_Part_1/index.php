@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 	<!-- Metadata -->
-	<title>4WW3 Project - Part_1 - Home and Search</title>
+	<title>Moila</title>
 	<meta charset="utf8" />
 	<meta name="author" content="Quazi Rafid Ibrahim, Frank Su" />
 	<meta name="description" content="CS 4WW3 Project Part 1" />
@@ -33,6 +33,9 @@
 
 	<!-- Tell search engines not to index this page -->
 	<meta name="robots" content="noindex" />
+
+	<!-- favicon -->
+	<link rel=icon href=/favicon.png>
 
 </head>
 
@@ -47,7 +50,7 @@
 				<picture>
 					<source media="(min-width: 800px)" srcset="assets/img/basketball-ball.png, assets/img/basketball-ball-2x.png">
 					<source media="(min-width: 450px)" srcset="assets/img/basketball-ball-256.png, assets/img/basketball-ball-256-2x.png">
-					<img class="logoimg"src="assets/img/basketball-ball.png" srcset="assets/img/basketball-ball-256.png" alt="moila basketball logo image">
+					<img class="logoimg" src="assets/img/basketball-ball.png" srcset="assets/img/basketball-ball-256.png" alt="moila basketball logo image">
 				</picture>
 
 
