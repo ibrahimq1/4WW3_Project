@@ -35,7 +35,7 @@
 	<meta name="robots" content="noindex" />
 
 	<!-- favicon -->
-	<link rel=icon href=/favicon.png>
+	<link rel=icon typ="image/x-icon" href=favicon.ico>
 
 </head>
 
