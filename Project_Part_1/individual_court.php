@@ -59,8 +59,7 @@
 	<link rel="apple-touch-startup-image" href="assets/img/mobbg.png" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<meta name="viewport" content="width = device-width, initial-scale = 2.3, user-scalable = no" />
-	<meta name="viewport" content="width = device-width, initial-scale = 2.3, minimum-scale = 1, maximum-scale = 5" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
 
 </head>
 
