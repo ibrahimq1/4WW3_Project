@@ -73,46 +73,46 @@
   <!-- End Navigation Bar -->
 
   <!-- Registration form content -->
-  <section id="main">
-    <div class="container">
-      <h1 class="reg-header">Sign Up</h1>
-      <div class="reg-body">
-        <form>
-          <div class="form-group">
-            <input class="form-control" type="text" name="userName" placeholder="Username">
-          </div>
-          <div class="form-group">
-            <input class="form-control" type="password" name="password" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <input class="form-control" type="email" name="email" placeholder="E-mail">
-          </div>
-          <div class="form-group">
-            <label for="countries">Choose your Country:</label>
-            <select id="countries" name="country">
-              <option value="Canada">Canada</option>
-              <option value="United States<">United States</option>
-              <option value="China">China</option>
-              <option value="Sweden">Sweden</option>
-            </select>
-            <label for="form-gender">Choose your gender</label>
-            <div id="form-gender">
-              <input type="radio" name="gender" value="male"> Male
-              <input type="radio" name="gender" value="female"> Female
-              <input type="radio" name="gender" value="other"> Other
+    <section id="main">
+      <div class="container">
+        <h1 class="reg-header">Sign Up</h1>
+        <div class="reg-body">
+          <form>
+            <div class="form-group">
+              <input class="form-control" type="text" name="userName" placeholder="Username">
             </div>
-          </div>
-          <div class="form-group">
-            <button class="btn btn-lg btn-dark btn-block" id="pinkbg" type="submit">Sign Up</button>
-          </div>
+            <div class="form-group">
+              <input class="form-control" type="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="email" name="email" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+              <label for="countries">Choose your Country:</label>
+              <select id="countries" name="country">
+                <option value="Canada">Canada</option>
+                <option value="United States<">United States</option>
+                <option value="China">China</option>
+                <option value="Sweden">Sweden</option>
+              </select>
+              <label for="form-gender">Choose your gender</label>
+              <div id="form-gender">
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+              </div>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-lg btn-dark btn-block" id="pinkbg" type="submit">Sign Up</button>
+            </div>
 
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
-    <section>
+    </section>
 
       <!-- Footer [will sepearte later]-->
-      <footer id="footer" class="fixed-bottom">
+      <footer id="footer" class="">
         <div class="container">
           <div class="copyright">
             &copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>

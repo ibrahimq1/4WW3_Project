@@ -31,7 +31,8 @@ h1, h2, h3, h4, h5, h6 {
 #main{
     min-height: inherit;
     padding-top:85px;
-    padding-bottom:80px;
+    /*padding-bottom:80px;*/
+    min-height: 100vh;
 }
 
 #vh100{
@@ -284,7 +285,12 @@ nav ul li a {
     padding: 0 0 30px 0;
     color: #fff;
     font-size: 14px;
+    position:static;
+    bottom:0;
+    width:100%;
 }
+
+
 
 #footer .copyright {
     text-align: center;
