@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTML5 Compliant -->
-<html>
+<html lang="en">
 
 <head>
 
@@ -44,9 +44,12 @@
 
 	<header class="fixed-top d-flex align-items-center">
 		<div class="container d-flex align-items-center justify-content-between">
-
-			<div class="d-flex">
-				<img class="logoimg" src="assets/img/basketball-ball.png"></img>
+			<div class="d-flex">	
+				<picture>
+					<source media="(min-width: 800px)" srcset="assets/img/basketball-ball.png, assets/img/basketball-ball-2x.png">
+					<source media="(min-width: 450px)" srcset="assets/img/basketball-ball-256.png, assets/img/basketball-ball-256-2x.png">
+					<img class="logoimg" width="100%" height="100%" src="assets/img/basketball-ball.png" srcset="assets/img/basketball-ball-256.png" alt="moila basketball logo image">
+				</picture>
 				<h1><a class="logotxt" href="#">Moila</a></h1>
 			</div>
 

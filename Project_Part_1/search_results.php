@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!-- HTML5 Compliant -->
-<html>
+<html lang="en">
 
 <head>
 
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- external main CSS stylesheet -->
 	<link rel="stylesheet" href="assets/css/style.css" />
@@ -47,9 +47,12 @@
 
 	<header class="fixed-top d-flex align-items-center">
 		<div class="container d-flex align-items-center justify-content-between">
-
 			<div class="d-flex">
-				<img class="logoimg" src="assets/img/basketball-ball.png"></img>
+				<picture>
+					<source media="(min-width: 800px)" srcset="assets/img/basketball-ball.png, assets/img/basketball-ball-2x.png">
+					<source media="(min-width: 450px)" srcset="assets/img/basketball-ball-256.png, assets/img/basketball-ball-256-2x.png">
+					<img class="logoimg" width="100%" height="100%" src="assets/img/basketball-ball.png" srcset="assets/img/basketball-ball-256.png" alt="moila basketball logo image">
+				</picture>
 				<h1><a class="logotxt" href="#">Moila</a></h1>
 			</div>
 
@@ -133,7 +136,7 @@
 					<div class="row g-0">
 						<div class="card" id="card-style">
 							<div class="card-header">Popular</div>
-							<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star-fill"></span>
@@ -147,7 +150,7 @@
 							</div>
 						</div>
 						<div class="card" id="card-style">
-							<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star"></span>
@@ -161,7 +164,7 @@
 							</div>
 						</div>
 						<div class="card" id="card-style">
-							<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star"></span>
@@ -175,7 +178,7 @@
 							</div>
 						</div>
 						<div class="card" id="card-style">
-							<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star"></span>
@@ -189,7 +192,7 @@
 							</div>
 						</div>
 						<div class="card" id="card-style">
-							<img class="card-img-top" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star"></span>
@@ -206,7 +209,7 @@
 				</div>
 				<div class="col-md-6 ">
 					<div class="row g-0">
-						<img src="assets/img/map-img.png">
+						<img width="100%" height="100%" alt="google map" src="assets/img/map-img.png">
 					</div>
 				</div>
 			</div>
