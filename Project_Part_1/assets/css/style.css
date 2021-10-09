@@ -7,6 +7,13 @@
 /* -------------------------------------------
     Root style
 ----------------------------------------------*/
+/*
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  }
+*/
 
 html,body {
     font-family: "Open Sans", sans-serif;
@@ -32,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
     min-height: inherit;
     padding-top:85px;
     /*padding-bottom:80px;*/
-    min-height: 100vh;
+    min-height:100vh;
 }
 
 #vh100{

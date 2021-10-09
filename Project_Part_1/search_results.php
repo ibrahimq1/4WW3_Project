@@ -128,8 +128,8 @@
 			</div>
 		</div>
 		<div class="container-fuild h-100">
-			<div class="row h-100">
-				<div class="col-md-6 d-flex align-content-end" style="border-right:1px #FF385C solid">
+			<div class="row h-100 g-0">
+				<div class="col-md-6 d-flex align-content-end">
 					<div class="row g-0">
 						<div class="card" id="card-style">
 							<div class="card-header">Popular</div>
@@ -205,7 +205,7 @@
 					</div>
 				</div>
 				<div class="col-md-6 ">
-					<div class="row ">
+					<div class="row g-0">
 						<img src="assets/img/map-img.png">
 					</div>
 				</div>
