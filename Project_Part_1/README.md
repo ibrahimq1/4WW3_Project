@@ -80,4 +80,4 @@ Computer Science 4WW3_Projects
 	- Video by Pavel Danilyuk from Pexels (Background video)
 	- ballcourt1.jpg taken from https://www.courtsoftheworld.com/blog/top-5-basketball-courts-in-toronto/
 
-	Any opensource frameworks used? Yes. Bootstrap. https://getbootstrap.com/
+	Any opensource frameworks used? Yes. Bootstrap. https://getbootstrap.com/ and https://animate.style/

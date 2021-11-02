@@ -1,0 +1,332 @@
+/**
+* Author: Quazi Rafid Ibrahim, Frank Su
+* main style.css sheet
+*
+*/
+
+/* -------------------------------------------
+    Root style
+----------------------------------------------*/
+/*
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  }
+*/
+
+html,body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+    min-height:100% !important;
+    width:100%;
+}
+  
+a {
+    color: white;
+    text-decoration: none;
+}
+  
+a:visited{
+    color: white;
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+#main{
+    min-height: inherit;
+    padding-top:85px;
+    /*padding-bottom:80px;*/
+    min-height:100vh;
+}
+
+#vh100{
+    min-height:100vh !important;
+}
+
+
+/* -------------------------------------------
+    Header & Navigation
+----------------------------------------------*/
+
+.fixed-top{
+    background-color: #111111 !important;
+    max-height:85px;
+}
+
+.logotxt{
+    color:white;
+    text-decoration: none;
+    line-height: 2em;
+    margin-left: 15%
+}
+
+.logoimg{
+    width:100% !important;
+    max-height: 80px;
+    max-width: 80px;
+}
+
+nav {
+    margin: 0;
+    overflow: hidden;
+}
+
+nav ul {
+    margin:0;
+    padding:0;
+    display:flex;
+    list-style: none;
+    align-items:center;
+}
+
+nav ul li {
+    display: inline-block;
+    border:1px solid;
+}
+
+nav ul li a {
+    color: white;
+    padding: 0.5em 0.5em;
+    display:block;
+    text-decoration: none;
+}
+
+.navbar{
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+
+/*  Header & Navigation (Mobile) */
+.mobile-nav-toggle {
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+  }
+
+/* Temporary since we can't use javascript to toggle hamburger menu */
+
+  @media (max-width: 991px) {
+    .mobile-nav-toggle {
+      display: block;
+    }
+    .navbar ul {
+      display: inline-block;
+    }
+    .mobile-nav-toggle{
+        display:none;
+    }
+
+    .logoimg{
+        display:none;
+    }
+    
+    .logotxt{
+        display:none
+    }
+    nav > ul > li > a {
+        font-size: 0.9rem  !important;
+    }
+  }
+
+/* -------------------------------------------
+    Buttons
+----------------------------------------------*/
+
+/* navbar buttons */
+
+#pinkbg{
+    color: #fff;
+    background-color: #FF385C;
+    border-color: #FF385C;
+}
+
+.navbar .login-btn{
+    border:2px #FF385C solid;
+    border-radius: 30px;
+}
+
+.navbar .login-btn:hover{
+    background: #FF385C;
+}
+
+.navbar .login-btn a:hover{
+    color:white !important;
+    font-weight: 400;
+}
+
+.input-group-text select {
+    word-wrap: normal;
+    border: none;
+    background: #E9ECEF;
+}
+
+.mobview{
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .input-group-text{
+        padding: .2rem .2rem !important;
+    }
+    .mobview{
+        padding: .5rem  .5rem !important;
+        cursor: pointer;
+    }
+    #pinkbg{
+        padding: .5rem  .5rem !important;
+    }
+    .letsfindcourts{
+        margin-bottom:5em !important; 
+        padding-top:100px;
+        opacity:0.8; 
+        text-align:center;
+    }
+    #mp4Video{
+        visibility: hidden;
+    }
+    .mobbg{
+        background-image: url("/Project_Part_1/assets/img/mobbg.png");
+        background-size:100vh no-repeat;
+    }
+}
+/* -------------------------------------------
+    Main Video + Search
+----------------------------------------------*/
+
+#mp4Video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    width: auto;
+    height: auto;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.vidcontent {
+    position: relative;
+    bottom: 0;
+    color: #f1f1f1;
+    width: 100%;
+    height:100%;
+}
+
+
+@keyframes colormover {
+    0% {
+      background-color: #001F3F;
+    }
+    90% {
+      background-color: #FF385C;
+    }
+    100%{
+        background-color: #FF385C;
+    }
+  }
+
+.letsfindcourts{
+    margin-bottom:10em; 
+    padding-top:100px;
+    opacity:0.8; 
+    text-align:center;
+}
+
+.letsfindcourts-text{
+    font-size:4rem; 
+    color:white;
+    animation: zoomInUp 2s;
+}
+
+/*
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  mix-blend-mode: overlay;
+  z-index: -1;
+  opacity: 0.5;
+}
+*/
+
+
+/* -------------------------------------------
+    Search Results Page
+----------------------------------------------*/
+
+#card-style{
+    width:33.33%; 
+    max-height:52%; 
+}
+
+.card-header{
+    margin-bottom: -41px !important;
+    z-index: 1 !important;
+    background: gold !important;
+    margin-left: 30%;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    #card-style{
+        width:50%; 
+        max-height:40%;
+    }
+    .letsfindcourts-text{
+        font-size:3rem; 
+    }
+    html, body {margin: 0; height: 100%;}
+
+    #map{
+        width:100%;
+        height:500px !important;
+    }
+}
+
+/* -------------------------------------------
+    Map Style
+----------------------------------------------*/
+
+
+#map {
+    width: 100%;
+    height:100%;
+  }
+
+/* -------------------------------------------
+    Footer & Copyright
+----------------------------------------------*/
+#footer {
+    background: #111111;
+    padding: 0 0 30px 0;
+    color: #fff;
+    font-size: 14px;
+    position:static;
+    bottom:0;
+    width:100%;
+}
+
+
+
+#footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.fixed-bottom{
+    max-height:80px !important;
+}
+
+
