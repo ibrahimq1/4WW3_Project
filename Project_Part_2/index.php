@@ -139,7 +139,7 @@
 	<!-- JS GetuserLocation Map -->
 	<script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly"
-      async
+      async="false"
     ></script>
 	<script src="./assets/js/mapthings.js"></script>
 
