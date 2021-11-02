@@ -46,7 +46,7 @@
 
 	<header class="fixed-top d-flex align-items-center">
 		<div class="container d-flex align-items-center justify-content-between">
-			<div class="d-flex">		
+			<div class="d-flex">
 				<picture>
 					<source media="(min-width: 800px)" srcset="assets/img/basketball-ball.png, assets/img/basketball-ball-2x.png">
 					<source media="(min-width: 450px)" srcset="assets/img/basketball-ball-256.png, assets/img/basketball-ball-256-2x.png">
@@ -81,29 +81,43 @@
 				<h1 style="text-align: center; margin-top: 50px;">Add a New Ball Court</h1>
 				<div style="width:50%; margin: 30px auto;">
 					<form action="" method="POST">
+
+						<!-- Use regex to enforce that name should be Firstname Lastname, with space in between and capitalized first and last names -->
 						<div class="form-group">
-							<label for="name">Name</label>
-							<input class="form-control" type="text" placeholder="Ex: John Doe" name="name">
+							<label for="name">Name (Capitalize first and last name with space in between)</label>
+							<input class="form-control" type="text" placeholder="Ex: John Doe" name="name" pattern="^[A-Z][a-z]+\s[A-Z][a-z]+$">
 						</div>
+
+						<!-- Client side cannot strictly prevent uploading a file of a certain type, but can change what the filter
+								 option is displayed when the file explorer window pops up -->
 						<div class="form-group">
-							<label for="image">Image</label>
-							<input id="image" type="file" name="image" accept="*" required>
+							<label for="image" style="margin-bottom: 5px">Image</label>
+							<div><input id="image" type="file" name="image" accept="image/*" required></div>
 						</div>
+
+						<!-- for description, sepcify a max length of 100 chars -->
 						<div class="form-group">
-							<label for="description">Description</label>
-							<input class="form-control" type="text" placeholder="Description" name="description">
+							<label for="description">Description (max 100 characters)</label>
+							<input class="form-control" type="text" placeholder="Description" name="description" maxlength="100">
 						</div>
+
+						<!-- Form validation for number of people playing has a minimum of 0 -->
 						<div class="form-group">
 							<label for="numberPlaying">Number of People Playing</label>
-							<input class="form-control" type="number" name="numberPlaying" placeholder="0">
+							<input class="form-control" type="number" name="numberPlaying" placeholder="0" min="0">
 						</div>
+
+						<!-- Client side cannot strictly prevent uploading a file of a certain type, but can change what the filter
+								 option is displayed when the file explorer window pops up -->
 						<div class="form-group">
-							<label for="video">Video</label>
-							<input id="image" type="file" name="video" accept="*" required>
+							<label for="video" style="margin-bottom: 5px">Video</label>
+							<div><input id="image" type="file" name="video" accept="video/*" required></div>
 						</div>
+
+						<!-- Use regex to enforce that Location should be in format Longitude, Latitude (comma in between, with single whitespace) -->
 						<div class="form-group">
-							<label for="location">Location</label>
-							<input type="text" class="form-control" name="location" id="location" placeholder="Latitute, Longitude">
+							<label for="location">Location (Latitude first then longitude, seperate with a comma and space right after)</label>
+							<input type="text" class="form-control" name="location" id="location" placeholder="Ex: 43.260, -79.930" pattern="^(-?\d+(\.\d+)?),\s+(-?\d+(\.\d+)?)$">
 						</div>
 						<div class="form-group">
 							<button class="btn btn-lg btn-primary btn-block" id="pinkbg">Submit</button>
@@ -115,18 +129,18 @@
 
 	</section>
 
-			<!-- End Actual Body Content -->
+	<!-- End Actual Body Content -->
 
 
-			<!-- Footer [will sepearte later]-->
-			<footer id="footer" class="">
-				<div class="container">
-					<div class="copyright">
-						&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
-					</div>
-				</div>
-			</footer>
-			<!-- End Footer -->
+	<!-- Footer [will sepearte later]-->
+	<footer id="footer" class="">
+		<div class="container">
+			<div class="copyright">
+				&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
 
 </body>
 
