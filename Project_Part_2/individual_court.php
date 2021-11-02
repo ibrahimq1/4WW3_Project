@@ -108,7 +108,8 @@
 				<!-- first column contains google maps pic (just a png for now)-->
 				<div class="col-md-3">
 					<p class="lead" style="margin-top: 50px; font-size: 30px"><b>Location</b></p>
-					<img src="assets/img/map-img.png" alt="google map" class="img-thumbnail">
+					<!-- <img src="assets/img/map-img.png" alt="google map" class="img-thumbnail"> -->
+					<div id="map" style="height:300px"></div>
 					<div><a class="btn btn-xs btn-success" id="pinkbg" style="margin-bottom: 10px; margin-top: 10px">Update</a>
 						<h4>Currently <strong>15</strong> people playing!</h4>
 						<video controls style="width:100%; margin-top:30px;" poster="assets/img/mobbg.png">
@@ -197,11 +198,14 @@
 
 
 		<section>
-
-
-
 			<!-- End Actual Body Content -->
-
+			
+			<!-- JS GetuserLocation Map -->
+			<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly"
+			async
+			></script>
+			<script src="./assets/js/mapthings.js"></script>
 
 			<!-- Footer [will sepearte later]-->
 			<footer id="footer" class="">

@@ -145,7 +145,7 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 5+</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_1/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_Part_2/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						<div class="card" id="card-style">
@@ -159,7 +159,7 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 0</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_1/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_Part_2/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						<div class="card" id="card-style">
@@ -173,7 +173,7 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 0</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_1/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_Part_2/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						<div class="card" id="card-style">
@@ -187,7 +187,7 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 0</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_1/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_Part_2/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						<div class="card" id="card-style">
@@ -201,7 +201,7 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 0</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_1/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_Part_2/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 					</div>
