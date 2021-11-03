@@ -1,4 +1,6 @@
-	// Initialize and add the map
+	var mapmarkers = new Array();
+  
+  // Initialize and add the map
 	function initMap() {
 		// The location of Uluru
         
@@ -7,6 +9,7 @@
 		const map = new google.maps.Map(document.getElementById("map"), {
 			zoom: 12,
 			center: uluru,
+      gestureHandling: "greedy",
 		});
         setMarkers(map);
     }
@@ -15,7 +18,7 @@
     '<div id="content">' +
     '<div id="siteNotice">' +
     "</div>" +
-    '<h3 id="firstHeading" class="firstHeading"><a href="http://localhost/Project_Part_2/individual_court.php">Title</b></a></h3>' +
+    '<h3 id="firstHeading" class="firstHeading"><a href="./individual_court.php">Title</b></a></h3>' +
     '<div id="bodyContent">' +
     '<p>Title, Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.' +
     "</p>" +
@@ -24,11 +27,11 @@
 
     // Title, Lat, Long, z-index, info
     const locations = [
-        ["Title", 43.2570368, -79.9113616, 4, contentString],
-        ["Title", 43.1570368, -79.9423716, 5, contentString],
-        ["Title", 43.1270368, -79.9513216, 3, contentString],
-        ["Title", 43.1747368, -79.913616, 2, contentString],
-        ["Title", 43.1570368, -79.9613216, 1, contentString],
+        ["Title0", 43.2570368, -79.9113616, 4, contentString],
+        ["Title1", 43.1570368, -79.9423716, 5, contentString],
+        ["Title2", 43.1270368, -79.9513216, 3, contentString],
+        ["Title3", 43.1747368, -79.9136126, 2, contentString],
+        ["Title4", 43.1570368, -79.9613216, 1, contentString],
       ];
 
 
@@ -73,10 +76,33 @@
                 shouldFocus: false,
                 });
             });
+            
+            mapmarkers.push(marker);
+
+            // marker.addListener('mouseover', function() {
+            //     infowindow.open(map, this);
+            // });
+            
+            // marker.addListener('mouseout', function() {
+            //     infowindow.close();
+            // });
           }
     }
 
-    var x = document.getElementById("userloc");
+    // Map markers bounce on card image selection
+    
+    for (let i = 0; i < locations.length; i++) {
+        document.getElementById('card' + i).onmouseover = function(event){
+          mapmarkers[i].setAnimation(google.maps.Animation.BOUNCE);
+        }
+
+        document.getElementById('card' + i).onmouseout = function(event){
+          mapmarkers[i].setAnimation(null);
+        }
+    }
+
+
+  var x = document.getElementById("userloc");
 	var y = document.getElementById("searchString");
 	function getLocation() {
 		if (navigator.geolocation) {

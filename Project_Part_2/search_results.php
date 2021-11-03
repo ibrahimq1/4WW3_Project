@@ -135,7 +135,7 @@
 					<div class="row g-0">
 						<div class="card" id="card-style">
 							<div class="card-header">Popular</div>
-							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+							<img class="card-img-top" id="card0" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star-fill"></span>
@@ -145,11 +145,11 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 5+</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_2/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						<div class="card" id="card-style">
-							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+							<img class="card-img-top" id="card1" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star"></span>
@@ -159,11 +159,11 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 0</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_2/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						<div class="card" id="card-style">
-							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+							<img class="card-img-top" id="card2" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star"></span>
@@ -173,11 +173,11 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 0</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_2/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						<div class="card" id="card-style">
-							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+							<img class="card-img-top" id="card3" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star"></span>
@@ -187,11 +187,11 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 0</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_2/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						<div class="card" id="card-style">
-							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+							<img class="card-img-top" id="card4" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star"></span>
@@ -201,7 +201,7 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 0</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_2/search_results.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 					</div>
