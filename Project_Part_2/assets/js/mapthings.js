@@ -90,7 +90,7 @@
     }
 
     // Map markers bounce on card image selection
-    
+
     for (let i = 0; i < locations.length; i++) {
         document.getElementById('card' + i).onmouseover = function(event){
           mapmarkers[i].setAnimation(google.maps.Animation.BOUNCE);
@@ -104,6 +104,7 @@
 
   var x = document.getElementById("userloc");
 	var y = document.getElementById("searchString");
+
 	function getLocation() {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(showPosition);
@@ -113,6 +114,6 @@
 		}
 
 	function showPosition(position) {
-		y.value = position.coords.latitude + "," + position.coords.longitude
-		console.log(position.coords.latitude + "," + position.coords.longitude)
+		y.value = position.coords.latitude + "," + position.coords.longitude;
+		console.log(position.coords.latitude + "," + position.coords.longitude);
 	}
