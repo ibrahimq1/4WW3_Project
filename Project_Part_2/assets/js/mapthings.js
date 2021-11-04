@@ -18,9 +18,15 @@
     '<div id="content">' +
     '<div id="siteNotice">' +
     "</div>" +
+    '<img id="card4" style="padding-bottom:10px; margin-left:0;" width="100%" height="auto" src="assets/img/ballcourt1.jpg" alt="Card image cap">' +
     '<h3 id="firstHeading" class="firstHeading"><a href="./individual_court.php">Title</b></a></h3>' +
-    '<div id="bodyContent">' +
-    '<p>Title, Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.' +
+    '<span class="bi bi-star-fill"></span>' +
+		'<span class="bi bi-star-fill"></span>' +
+		'<span class="bi bi-star-fill"></span>' +
+		'<span class="bi bi-star-half"></span>' +
+		'<span class="bi bi-star"></span>' +
+    '<div id="bodyContent" style="padding-top:10px">' +
+    '<p>Title, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' +
     "</p>" +
     "</div>" +
     "</div>";
