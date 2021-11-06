@@ -37,6 +37,8 @@
 
   <!-- favicon -->
   <link rel=icon typ="image/x-icon" href=favicon.ico>
+  <!-- link to js file -->
+  <script src="assets/js/formValidation.js"></script>
 
 </head>
 
@@ -80,12 +82,12 @@
     <div class="container">
       <h1 class="reg-header">Sign Up</h1>
       <div class="reg-body">
-        <form>
+        <form name="userRegistration" onsubmit="return validateForm(this)">
           <div class="form-group">
-            <input class="form-control" type="text" name="userName" placeholder="Username">
+            <input class="form-control" type="text" name="userName" placeholder="Username (no whitespaces)">
           </div>
           <div class="form-group">
-            <input class="form-control" type="password" name="password" placeholder="Password">
+            <input class="form-control" type="password" name="password" placeholder="Password (min 6 chars, with at least 1 capital and 1 number)">
           </div>
           <div class="form-group">
             <input class="form-control" type="email" name="email" placeholder="E-mail">
@@ -100,7 +102,7 @@
             </select>
             <label for="form-gender">Choose your gender</label>
             <div id="form-gender">
-              <input type="radio" name="gender" value="male"> Male
+              <input type="radio" name="gender" value="male" required="required"> Male
               <input type="radio" name="gender" value="female"> Female
               <input type="radio" name="gender" value="other"> Other
             </div>
