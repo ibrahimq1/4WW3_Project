@@ -129,7 +129,7 @@
 							<img itemprop="photo" src="assets/img/ballcourt1.jpg" srcset="assets/img/ballcourt1-512.jpg" alt="cool basketball court">
 						</picture>
 
-						<div class="card" style="padding-left:10px">
+						<div class="well" style="padding-left:10px">
 							<h4 style="margin-top: 10px; color: #00BFFF"><a>Baller's Paradise Court</a></h4>
 
 							<p itemprop="slogan"><strong>Only for the best of the best. </strong></p>

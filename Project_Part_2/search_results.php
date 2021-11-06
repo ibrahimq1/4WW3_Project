@@ -133,9 +133,9 @@
 			<div class="row h-100 g-0">
 				<div class="col-md-6 d-flex align-content-end">
 					<div class="row g-0">
-						<div class="card" id="card-style">
+						<div class="card" id="card0">
 							<div class="card-header">Popular</div>
-							<img class="card-img-top" id="card0" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star-fill"></span>
@@ -148,8 +148,8 @@
 								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
-						<div class="card" id="card-style">
-							<img class="card-img-top" id="card1" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+						<div class="card" id="card1">
+							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star"></span>
@@ -162,8 +162,8 @@
 								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
-						<div class="card" id="card-style">
-							<img class="card-img-top" id="card2" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+						<div class="card" id="card2">
+							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star"></span>
@@ -176,8 +176,8 @@
 								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
-						<div class="card" id="card-style">
-							<img class="card-img-top" id="card3" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+						<div class="card" id="card3">
+							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star"></span>
@@ -190,8 +190,8 @@
 								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
-						<div class="card" id="card-style">
-							<img class="card-img-top" id="card4" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+						<div class="card" id="card4">
+							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title">Title</h5>
 								<span class="bi bi-star"></span>
@@ -203,6 +203,19 @@
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
+						</div>
+						<div aria-label="...">
+						<ul class="pagination" style="float:right; padding:10px; margin-bottom:0;" >
+							<li class="page-item">
+							<span class="page-link">Previous</span>
+							</li>
+							<li class="page-item active"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item">
+							<a class="page-link" href="#">Next</a>
+							</li>
+						</ul>
 						</div>
 					</div>
 				</div>
