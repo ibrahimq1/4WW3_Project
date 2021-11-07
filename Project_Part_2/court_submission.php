@@ -74,7 +74,7 @@
 
 	<!-- Actual Body Content -->
 
-	<section id="main">
+	<section id="main" class="animate__animated animate__slideInDown">
 
 		<div class="container">
 			<div class="row">
@@ -84,8 +84,9 @@
 
 						<!-- Use regex to enforce that name should be Firstname Lastname, with space in between and capitalized first and last names -->
 						<div class="form-group">
-							<label for="name">Name (Capitalize first and last name with space in between)</label>
-							<input class="form-control" type="text" placeholder="Ex: John Doe" name="name" pattern="^[A-Z][a-z]+\s[A-Z][a-z]+$">
+							<label for="name">Name (Capitalize first and last name with space in between)</label> 
+							<span id="name_span"><i class="bi bi-check-circle-fill" style="color:green;"></i></span>
+							<input required class="form-control" type="text" placeholder="Ex: John Doe" name="name" pattern="^[A-Z][a-z]+\s[A-Z][a-z]+$">
 						</div>
 
 						<!-- Client side cannot strictly prevent uploading a file of a certain type, but can change what the filter
@@ -98,7 +99,7 @@
 						<!-- for description, sepcify a max length of 100 chars -->
 						<div class="form-group">
 							<label for="description">Description (max 100 characters)</label>
-							<input class="form-control" type="text" placeholder="Description" name="description" maxlength="100">
+							<input required class="form-control" type="text" placeholder="Description" name="description" maxlength="100">
 						</div>
 
 						<!-- Form validation for number of people playing has a minimum of 0 -->
@@ -111,13 +112,13 @@
 								 option is displayed when the file explorer window pops up -->
 						<div class="form-group">
 							<label for="video" style="margin-bottom: 5px">Video</label>
-							<div><input id="image" type="file" name="video" accept="video/*" required></div>
+							<div><input id="image" type="file" name="video" accept="video/*"></div>
 						</div>
 
 						<!-- Use regex to enforce that Location should be in format Longitude, Latitude (comma in between, with single whitespace) -->
 						<div class="form-group">
 							<label for="location">Location (Latitude first then longitude, seperate with a comma and space right after)</label>
-							<input type="text" class="form-control" name="location" id="location" placeholder="Ex: 43.260, -79.930" pattern="^(-?\d+(\.\d+)?),\s+(-?\d+(\.\d+)?)$">
+							<input required type="text" class="form-control" name="location" id="location" placeholder="Ex: 43.260, -79.930" pattern="^(-?\d+(\.\d+)?),\s+(-?\d+(\.\d+)?)$">
 						</div>
 						<div class="form-group">
 							<button class="btn btn-lg btn-primary btn-block" id="pinkbg">Submit</button>

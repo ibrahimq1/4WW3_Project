@@ -1,3 +1,4 @@
+//Geolocation grabbing for current location
 var x = document.getElementById("userloc");
 var y = document.getElementById("searchString");
 
@@ -11,5 +12,4 @@ var y = document.getElementById("searchString");
 
 	function showPosition(position) {
 		y.value = position.coords.latitude + "," + position.coords.longitude;
-		console.log(position.coords.latitude + "," + position.coords.longitude);
 	}

@@ -79,7 +79,7 @@
 		<div class="container" style="padding-top:50px; padding-bottom:50px;">
 			<div class="row">
 				<div class="col-md-3"></div>
-				<div class="col-md-6 align-self-center">
+				<div class="col-md-6 align-self-center animate__animated animate__slideInDown">
 
 					<form>
 						<div class="input-group mb-3">
@@ -131,7 +131,7 @@
 		</div>
 		<div class="container-fuild h-100">
 			<div class="row h-100 g-0">
-				<div class="col-md-6 d-flex align-content-end">
+				<div class="col-md-6 d-flex align-content-end animate__animated animate__slideInLeft">
 					<div class="row g-0">
 						<div class="card" id="card0">
 							<div class="card-header">Popular</div>
@@ -219,7 +219,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 animate__animated animate__slideInRight">
 					<div class="h-100">  
 						<!-- <img width="100%" height="100%" alt="google map" src="assets/img/map-img.png"> -->
 						<div id="map"></div>
