@@ -82,9 +82,9 @@
     <div class="container">
       <h1 class="reg-header">Sign Up</h1>
       <div class="reg-body">
-        <form name="userRegistration" onsubmit="return validateForm(this)">
+        <form name="userRegistration" onsubmit="return validateForm(this)" method="post" action="/Project_Part_3/scripts/save_user.php">
           <div class="form-group">
-            <input  class="form-control" type="text" name="userName" placeholder="Username (no whitespaces)">
+            <input class="form-control" type="text" name="userName" placeholder="Username (no whitespaces)">
             <div id="nameerror"> </div>
           </div>
           <div class="form-group">
@@ -105,7 +105,7 @@
             </select>
             <label for="form-gender">Choose your gender</label>
             <div id="form-gender">
-              <input type="radio" name="gender" value="male" > Male
+              <input type="radio" name="gender" value="male"> Male
               <input type="radio" name="gender" value="female"> Female
               <input type="radio" name="gender" value="other" checked> Other
             </div>
