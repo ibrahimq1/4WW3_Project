@@ -18,20 +18,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // for username, it shouldn't have any whitespaces
     if (!empty($username) && !preg_match('/\s/', $username)) {
       // create DB connection
-      $tablename = "users";
+      $databasename = "4ww3 part 3";
       $dbhost = getenv('DB_HOST');
       $dbuser = getenv('DB_USER');
       $dbpassword = getenv('DB_PASSWORD');
-      echo $dbhost . "\n";
-      echo $dbuser . "\n";
-      echo $dbpassword . "\n";
 
-      $conn = new mysqli($dbhost, $dbuser, $dbpassword, $tablename);
+
+      $conn = new mysqli($dbhost, $dbuser, $dbpassword, $databasename);
       if ($conn->connect_error) {
-        echo "Error occured while connecting to database\n";
-        echo $dbhost . "\n";
-        echo $dbuser . "\n";
-        echo $dbpassword . "\n";
+        die("Connection failed while inserting data: " . $conn->connect_error);
+      }
+      // successfull connection
+      else {
+        echo "successfully connected to database";
       }
     } else {
       echo "Form contains invalid fields!";
