@@ -1,5 +1,8 @@
 <?php
 
+//load the dotenv helper file
+include "DotEnv.php";
+(new DotEnv(__DIR__ . "/.env"))->load();
 
 // check the type of the request being sent to server
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -16,8 +19,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($username) && !preg_match('/\s/', $username)) {
       // create DB connection
       $tablename = "users";
-      $dbhost = getenv("DB_HOST");
-      echo "database host is " . $dbhost;
+      $dbhost = getenv('DB_HOST');
+      $dbuser = getenv('DB_USER');
+      $dbpassword = getenv('DB_PASSWORD');
+      echo $dbhost . "\n";
+      echo $dbuser . "\n";
+      echo $dbpassword . "\n";
+
+      $conn = new mysqli($dbhost, $dbuser, $dbpassword, $tablename);
+      if ($conn->connect_error) {
+        echo "Error occured while connecting to database\n";
+        echo $dbhost . "\n";
+        echo $dbuser . "\n";
+        echo $dbpassword . "\n";
+      }
     } else {
       echo "Form contains invalid fields!";
     }
