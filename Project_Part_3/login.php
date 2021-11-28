@@ -65,8 +65,8 @@
           <li><a href="/Project_Part_3/search_results.php"> Results </a></li>
           <li><a href="/Project_Part_3/individual_court.php"> Example Individual Object </a></li>
           <li><a href="/Project_Part_3/court_submission.php"> Submit New Court </a></li>
-          <li class="login-btn"><a href="#"> Register </a></li>
-          <li class="login-btn"><a href="/Project_Part_3/login.php">Login</a></li>
+          <li class="login-btn"><a href="/Project_Part_3/user_registration.php"> Register </a></li>
+          <li class="login-btn"><a href="#"> Login </a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -77,7 +77,7 @@
   </header>
   <!-- End Navigation Bar -->
 
-  <!-- Registration form content -->
+  <!-- Login form content form content -->
   <section id="main" class="animate__animated animate__slideInDown">
     <!-- check to see if flash message is set, if so display it -->
     <?php session_start();
@@ -85,48 +85,41 @@
       vprintf("<div class='alert alert-danger' style='text-align: center;'>%s</div>", $_SESSION["flash-error"]);
       unset($_SESSION["flash-error"]);
     }
-    if (isset($_SESSION["flash-success"])) {
-      vprintf("<div class='alert alert-success' style='text-align: center;'>%s</div>", $_SESSION["flash-success"]);
-      unset($_SESSION["flash-success"]);
-    } ?>
+    if (isset($_COOKIE['rememberMe'])) {
+      $rememberUser = true;
+    }
+    ?>
     <div class="container">
 
-      <h1 class="reg-header">Sign Up</h1>
+      <h1 class="reg-header">Login</h1>
 
       <div class="reg-body">
-        <form name="userRegistration" method="post" action="/Project_Part_3/scripts/save_user.php">
+        <form name="login" method="post" action="/Project_Part_3/scripts/login_user.php">
           <div class="form-group">
-            <input class="form-control" type="text" name="userName" placeholder="Username (no whitespaces)">
-            <div id="nameerror"> </div>
+            <!-- if remember me was checked from previous login, prefill username with saved username from cookie -->
+            <input class="form-control" type="text" name="userName" placeholder="Username" value="<?php if (isset($rememberUser)) {
+                                                                                                    echo $_COOKIE['username'];
+                                                                                                  } ?>"">
+            <div id=" nameerror">
           </div>
-          <div class="form-group">
-            <input class="form-control" type="password" name="password" placeholder="Password (min 6 chars, with at least 1 capital and 1 number)">
-            <div id="passerror"> </div>
-          </div>
-          <div class="form-group">
-            <input class="form-control" type="email" name="email" placeholder="E-mail">
-            <div id="emailerror"> </div>
-          </div>
-          <div class="form-group">
-            <label for="countries">Choose your Country:</label>
-            <select id="countries" name="country">
-              <option value="Canada">Canada</option>
-              <option value="United States<">United States</option>
-              <option value="China">China</option>
-              <option value="Sweden">Sweden</option>
-            </select>
-            <label for="form-gender">Choose your gender</label>
-            <div id="form-gender">
-              <input type="radio" name="gender" value="male"> Male
-              <input type="radio" name="gender" value="female"> Female
-              <input type="radio" name="gender" value="other" checked> Other
-            </div>
-          </div>
-          <div class="form-group">
-            <button class="btn btn-lg btn-dark btn-block" id="pinkbg" type="submit">Sign Up</button>
-          </div>
-        </form>
       </div>
+      <div class="form-group">
+        <input class="form-control" type="password" name="password" placeholder="Password">
+        <div id="passerror"> </div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-lg btn-dark btn-block" id="pinkbg" type="submit">Login</button>
+      </div>
+      <div class="form-group">
+
+        <!-- if remember me was checked from previous login, have it remain checked -->
+        <input type="checkbox" name="rememberMe" <?php if (isset($rememberUser)) {
+                                                    echo 'checked="checked"';
+                                                  } ?>>
+        <label for="rememberMe">Remember Me</label>
+      </div>
+      </form>
+    </div>
     </div>
   </section>
 

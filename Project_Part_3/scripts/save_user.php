@@ -48,7 +48,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       // error connecting to database
       if ($conn->connect_error) {
-        die("Connection failed while inserting data: " . $conn->connect_error);
+        if (isset($_SESSION["flash-error"])) {
+          unset($_SESSION["flash-error"]);
+        }
+        $_SESSION["flash-error"] = ["message" => "There was an error connecting to the database... please try again!"];
+        header("Location: /Project_Part_3/user_registration.php");
+        die();
       }
       // successfull connection
       else {
@@ -103,5 +108,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
 } else {
-  echo "Invalid request method!";
+  if (isset($_SESSION["flash-error"])) {
+    unset($_SESSION["flash-error"]);
+  }
+  $_SESSION["flash-error"] = ["message" => "Invalid request method! Please try again..."];
+  header("Location: /Project_Part_3/user_registration.php");
+  die();
 }

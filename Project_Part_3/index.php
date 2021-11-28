@@ -60,7 +60,7 @@
 					<li><a href="/Project_Part_3/individual_court.php"> Example Individual Object </a></li>
 					<li><a href="/Project_Part_3/court_submission.php"> Submit New Court </a></li>
 					<li class="login-btn"><a href="/Project_Part_3/user_registration.php"> Register </a></li>
-					<li class="login-btn"><a href="#"> Login </a></li>
+					<li class="login-btn"><a href="/Project_Part_3/login.php">Login</a></li>
 				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
 			</nav>
@@ -71,7 +71,12 @@
 	<!-- Actual Body Content -->
 
 	<section class="mobbg" id="main">
+		<?php session_start();
 
+		if (isset($_SESSION["flash-success"])) {
+			vprintf("<div class='alert alert-success' style='text-align: center;'>%s</div>", $_SESSION["flash-success"]);
+			unset($_SESSION["flash-success"]);
+		} ?>
 		<video autoplay muted loop id="mp4Video" class="overlay">
 			<source src="assets/img/ball.mp4" type="video/mp4">
 		</video>
