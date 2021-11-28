@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $country = $_POST['country'];
     $gender = $_POST['gender'];
 
-    // now we can do the proper server side validation using our defined func tion
+    // now we can do the proper server side validation using our defined function
     if (validateForm($username, $password, $email, $country, $gender)) {
       // create DB connection using secrets in .env file
       $databasename = getenv('DB_NAME');
@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         else {
           $addUserSql = "INSERT INTO `users` (`username`, `password`, `email`, `country`, `gender`) VALUES ('$username', '$password', '$email', '$country', '$gender')";
 
-          // if successfully added to database, store success flash message in session
+          // if successfully added to database, store success flash message in session and redirect back to sign up
           if ($conn->query($addUserSql) === TRUE) {
             // store a flash message as session variable
             if (isset($_SESSION["flash-success"])) {
@@ -79,7 +79,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["flash-success"] = ["message" => "Successfully registered user " . $username . ". Welcome to Moila, please log in to utilize our site!"];
             header("Location: /Project_part_3/user_registration.php");
             die();
-          } else {
+          }
+          // else, store error flash message in session and redirect back to sign up
+          else {
             // store a flash message as session variable
             if (isset($_SESSION["flash-error"])) {
               unset($_SESSION["flash-error"]);
@@ -91,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
       }
     } else {
-      // store a flash message as session variable
+      // store error flash message as session variable
       if (isset($_SESSION["flash-error"])) {
         unset($_SESSION["flash-error"]);
       }
