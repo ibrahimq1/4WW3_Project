@@ -71,7 +71,7 @@
 
 	<header class="fixed-top d-flex align-items-center">
 		<div class="container d-flex align-items-center justify-content-between">
-			<div class="d-flex">		
+			<div class="d-flex">
 				<picture>
 					<source media="(min-width: 800px)" srcset="assets/img/basketball-ball.png, assets/img/basketball-ball-2x.png">
 					<source media="(min-width: 450px)" srcset="assets/img/basketball-ball-256.png, assets/img/basketball-ball-256-2x.png">
@@ -82,11 +82,11 @@
 
 			<nav id="navbar" class="navbar">
 				<ul>
-					<li><a href="/Project_Part_2/"> Search </a></li>
-					<li><a href="/Project_Part_2/search_results.php"> Results </a></li>
+					<li><a href="/Project_part_3/"> Search </a></li>
+					<li><a href="/Project_part_3/search_results.php"> Results </a></li>
 					<li><a href="#"> Example Individual Object </a></li>
-					<li><a href="/Project_Part_2/court_submission.php"> Submit New Court </a></li>
-					<li class="login-btn"><a href="/Project_Part_2/user_registration.php"> Register </a></li>
+					<li><a href="/Project_part_3/court_submission.php"> Submit New Court </a></li>
+					<li class="login-btn"><a href="/Project_part_3/user_registration.php"> Register </a></li>
 					<li class="login-btn"><a href="#"> Login </a></li>
 
 				</ul>
@@ -199,12 +199,9 @@
 
 		<section>
 			<!-- End Actual Body Content -->
-			
+
 			<!-- JS GetuserLocation Map -->
-			<script
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly"
-			async="false"
-			></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly" async="false"></script>
 			<script src="./assets/js/mapthings.js"></script>
 
 			<!-- Footer [will sepearte later]-->

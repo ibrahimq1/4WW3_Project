@@ -44,7 +44,7 @@
 
 	<header class="fixed-top d-flex align-items-center">
 		<div class="container d-flex align-items-center justify-content-between">
-			<div class="d-flex">	
+			<div class="d-flex">
 				<picture>
 					<source media="(min-width: 800px)" srcset="assets/img/basketball-ball.png, assets/img/basketball-ball-2x.png">
 					<source media="(min-width: 450px)" srcset="assets/img/basketball-ball-256.png, assets/img/basketball-ball-256-2x.png">
@@ -55,8 +55,8 @@
 
 			<nav id="navbar" class="navbar">
 				<ul>
-					<li><a href="/Project_Part_2/index.php"> Search</a></li>
-					<li><a href="/Project_Part_2/search_results.php"> Results </a></li>
+					<li><a href="/Project_part_3/index.php"> Search</a></li>
+					<li><a href="/Project_part_3/search_results.php"> Results </a></li>
 					<li><a href="#"> Example Individual Object </a></li>
 					<li><a href="#"> Submit New Court </a></li>
 					<li class="login-btn"><a href="#"> Register </a></li>

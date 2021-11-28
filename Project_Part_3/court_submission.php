@@ -57,11 +57,11 @@
 
 			<nav id="navbar" class="navbar">
 				<ul>
-					<li><a href="/Project_Part_2/"> Search </a></li>
-					<li><a href="/Project_Part_2/search_results.php"> Results </a></li>
-					<li><a href="/Project_Part_2/individual_court.php"> Example Individual Object </a></li>
+					<li><a href="/Project_part_3/"> Search </a></li>
+					<li><a href="/Project_part_3/search_results.php"> Results </a></li>
+					<li><a href="/Project_part_3/individual_court.php"> Example Individual Object </a></li>
 					<li><a href="#"> Submit New Court </a></li>
-					<li class="login-btn"><a href="/Project_Part_2/user_registration.php"> Register </a></li>
+					<li class="login-btn"><a href="/Project_part_3/user_registration.php"> Register </a></li>
 					<li class="login-btn"><a href="#"> Login </a></li>
 				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
@@ -84,7 +84,7 @@
 
 						<!-- Use regex to enforce that name should be Firstname Lastname, with space in between and capitalized first and last names -->
 						<div class="form-group">
-							<label for="name">Name (Capitalize first and last name with space in between)</label> 
+							<label for="name">Name (Capitalize first and last name with space in between)</label>
 							<span id="name_span"><i class="bi bi-check-circle-fill" style="color:green;"></i></span>
 							<input required class="form-control" type="text" placeholder="Ex: John Doe" name="name" pattern="^[A-Z][a-z]+\s[A-Z][a-z]+$">
 						</div>

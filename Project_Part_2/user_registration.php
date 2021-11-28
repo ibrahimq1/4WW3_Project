@@ -61,10 +61,10 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="/Project_Part_2/"> Search</a></li>
-          <li><a href="/Project_Part_2/search_results.php"> Results </a></li>
-          <li><a href="/Project_Part_2/individual_court.php"> Example Individual Object </a></li>
-          <li><a href="/Project_Part_2/court_submission.php"> Submit New Court </a></li>
+          <li><a href="/Project_part_3/"> Search</a></li>
+          <li><a href="/Project_part_3/search_results.php"> Results </a></li>
+          <li><a href="/Project_part_3/individual_court.php"> Example Individual Object </a></li>
+          <li><a href="/Project_part_3/court_submission.php"> Submit New Court </a></li>
           <li class="login-btn"><a href="#"> Register </a></li>
           <li class="login-btn"><a href="#"> Login </a></li>
 
@@ -84,7 +84,7 @@
       <div class="reg-body">
         <form name="userRegistration" onsubmit="return validateForm(this)">
           <div class="form-group">
-            <input  class="form-control" type="text" name="userName" placeholder="Username (no whitespaces)">
+            <input class="form-control" type="text" name="userName" placeholder="Username (no whitespaces)">
             <div id="nameerror"> </div>
           </div>
           <div class="form-group">
@@ -105,7 +105,7 @@
             </select>
             <label for="form-gender">Choose your gender</label>
             <div id="form-gender">
-              <input type="radio" name="gender" value="male" > Male
+              <input type="radio" name="gender" value="male"> Male
               <input type="radio" name="gender" value="female"> Female
               <input type="radio" name="gender" value="other" checked> Other
             </div>

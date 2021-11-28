@@ -58,11 +58,11 @@
 
 			<nav id="navbar" class="navbar">
 				<ul>
-					<li><a href="/Project_Part_2/"> Search </a></li>
-					<li><a href="/Project_Part_2/search_results.php"> Results </a></li>
-					<li><a href="/Project_Part_2/individual_court.php"> Example Individual Object </a></li>
-					<li><a href="/Project_Part_2/court_submission.php"> Submit New Court </a></li>
-					<li class="login-btn"><a href="/Project_Part_2/user_registration.php"> Register </a></li>
+					<li><a href="/Project_part_3/"> Search </a></li>
+					<li><a href="/Project_part_3/search_results.php"> Results </a></li>
+					<li><a href="/Project_part_3/individual_court.php"> Example Individual Object </a></li>
+					<li><a href="/Project_part_3/court_submission.php"> Submit New Court </a></li>
+					<li class="login-btn"><a href="/Project_part_3/user_registration.php"> Register </a></li>
 					<li class="login-btn"><a href="#"> Login </a></li>
 				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
@@ -145,7 +145,7 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 5+</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_part_3/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						<div class="card" id="card1">
@@ -159,7 +159,7 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 0</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_part_3/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						<div class="card" id="card2">
@@ -173,7 +173,7 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 0</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_part_3/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						<div class="card" id="card3">
@@ -187,7 +187,7 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 0</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_part_3/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						<div class="card" id="card4">
@@ -201,26 +201,26 @@
 								<span class="bi bi-star"></span>
 								<p>Currently Playing: 0</p>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_2/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<a href="/Project_part_3/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						<div aria-label="...">
-						<ul class="pagination" style="float:right; padding:10px; margin-bottom:0;" >
-							<li class="page-item">
-							<span class="page-link">Previous</span>
-							</li>
-							<li class="page-item active"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item">
-							<a class="page-link" href="#">Next</a>
-							</li>
-						</ul>
+							<ul class="pagination" style="float:right; padding:10px; margin-bottom:0;">
+								<li class="page-item">
+									<span class="page-link">Previous</span>
+								</li>
+								<li class="page-item active"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#">Next</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 animate__animated animate__slideInRight">
-					<div class="h-100">  
+					<div class="h-100">
 						<!-- <img width="100%" height="100%" alt="google map" src="assets/img/map-img.png"> -->
 						<div id="map"></div>
 					</div>
@@ -234,13 +234,10 @@
 	<!-- Scripts -->
 
 	<!-- Map Api -->
-	<script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly" async></script>
 	<script src="./assets/js/mapthings.js"></script>
 
-	
+
 
 	<!-- End Actual Body Content -->
 

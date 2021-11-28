@@ -1,10 +1,5 @@
 <?php
-require_once realpath(__DIR__ . "/vendor/autoload.php");
 
-use Dotenv\Dotenv;
-
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
 
 // check the type of the request being sent to server
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,6 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($username) && !preg_match('/\s/', $username)) {
       // create DB connection
       $tablename = "users";
+      $dbhost = getenv("DB_HOST");
+      echo "database host is " . $dbhost;
     } else {
       echo "Form contains invalid fields!";
     }
