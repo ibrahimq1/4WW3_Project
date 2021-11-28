@@ -79,8 +79,20 @@
 
   <!-- Registration form content -->
   <section id="main" class="animate__animated animate__slideInDown">
+    <!-- check to see if flash message is set, if so display it -->
+    <?php session_start();
+    if (isset($_SESSION["flash-error"])) {
+      vprintf("<div class='alert alert-danger' style='text-align: center;'>%s</div>", $_SESSION["flash-error"]);
+      unset($_SESSION["flash-error"]);
+    }
+    if (isset($_SESSION["flash-success"])) {
+      vprintf("<div class='alert alert-success' style='text-align: center;'>%s</div>", $_SESSION["flash-success"]);
+      unset($_SESSION["flash-success"]);
+    } ?>
     <div class="container">
+
       <h1 class="reg-header">Sign Up</h1>
+
       <div class="reg-body">
         <form name="userRegistration" onsubmit="validateForm(this)" method="post" action="/Project_Part_3/scripts/save_user.php">
           <div class="form-group">
