@@ -82,7 +82,7 @@
     <div class="container">
       <h1 class="reg-header">Sign Up</h1>
       <div class="reg-body">
-        <form name="userRegistration" onsubmit="return validateForm(this)" method="post" action="/Project_Part_3/scripts/save_user.php">
+        <form name="userRegistration" onsubmit="validateForm(this)" method="post" action="/Project_Part_3/scripts/save_user.php">
           <div class="form-group">
             <input class="form-control" type="text" name="userName" placeholder="Username (no whitespaces)">
             <div id="nameerror"> </div>
@@ -113,7 +113,6 @@
           <div class="form-group">
             <button class="btn btn-lg btn-dark btn-block" id="pinkbg" type="submit">Sign Up</button>
           </div>
-
         </form>
       </div>
     </div>
