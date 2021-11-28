@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           }
 
           $_SESSION["flash-error"] = ["message" => "Username " . $username . " already exists!"];
-          header("Location: /Project_part_3/user_registration.php");
+          header("Location: /Project_Part_3/user_registration.php");
           die();
         }
         // otherwise, we save the user in our database
@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               unset($_SESSION["flash-success"]);
             }
             $_SESSION["flash-success"] = ["message" => "Successfully registered user " . $username . ". Welcome to Moila, please log in to utilize our site!"];
-            header("Location: /Project_part_3/user_registration.php");
+            header("Location: /Project_Part_3/user_registration.php");
             die();
           }
           // else, store error flash message in session and redirect back to sign up
@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               unset($_SESSION["flash-error"]);
             }
             $_SESSION["flash-error"] = ["message" => "There was an error saving registered user to database!"];
-            header("Location: /Project_part_3/user_registration.php");
+            header("Location: /Project_Part_3/user_registration.php");
             die();
           }
         }
@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         unset($_SESSION["flash-error"]);
       }
       $_SESSION["flash-error"] = ["message" => "The form contains invalid fields! Please try again..."];
-      header("Location: /Project_part_3/user_registration.php");
+      header("Location: /Project_Part_3/user_registration.php");
       die();
     }
   }

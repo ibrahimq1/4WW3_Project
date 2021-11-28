@@ -55,8 +55,8 @@
 
 			<nav id="navbar" class="navbar">
 				<ul>
-					<li><a href="/Project_part_3/index.php"> Search</a></li>
-					<li><a href="/Project_part_3/search_results.php"> Results </a></li>
+					<li><a href="/Project_Part_3/index.php"> Search</a></li>
+					<li><a href="/Project_Part_3/search_results.php"> Results </a></li>
 					<li><a href="#"> Example Individual Object </a></li>
 					<li><a href="#"> Submit New Court </a></li>
 					<li class="login-btn"><a href="#"> Register </a></li>
