@@ -76,7 +76,16 @@
 	<!-- Actual Body Content -->
 
 	<section id="main">
-
+		<!-- check for any flash messages to display -->
+		<?php
+		if (isset($_SESSION["flash-error"])) {
+			vprintf("<div class='alert alert-danger' style='text-align: center;'>%s</div>", $_SESSION["flash-error"]);
+			unset($_SESSION["flash-error"]);
+		}
+		if (isset($_SESSION["flash-success"])) {
+			vprintf("<div class='alert alert-success' style='text-align: center;'>%s</div>", $_SESSION["flash-success"]);
+			unset($_SESSION["flash-success"]);
+		} ?>
 		<div class="container">
 			<div class="row">
 
@@ -126,6 +135,18 @@
 					<div class="well">
 						<form name="addComment" method="post" action="/Project_Part_3/scripts/add_comment.php">
 							<button class="btn btn-success" type="submit" id="pinkbg">Add New Comment</button>
+							<div class="input-field-rating">
+								<div class="input-group-text">
+									<select data-trigger="" name="rating">
+										<option placeholder="" value="">Rating</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</div>
 							<div class="input-group mb-3" style="padding-top:20px;">
 								<input type="text" class="form-control" name="comment" style="padding-bottom:100px" placeholder="Write your comment here">
 							</div>
