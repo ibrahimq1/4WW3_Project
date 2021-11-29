@@ -67,6 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           $addCourtSql = "INSERT INTO `submitted_courts` (`userId`, `name`, `description`, `playerCount`, `latitude`, `longitude`, `audioRef`, `videoRef`) VALUES ('$userId', '$name', '$description', $playerCount, $latitude, $longitude, '$audioRef', 'none')";
           if ($conn->query($addCourtSql) === TRUE) {
             echo "New record created successfully";
+            header("Location: /Project_Part_3/court_submission.php");
           } else {
             echo "Error: " . $addCourtSql . "<br>" . $conn->error;
           }
