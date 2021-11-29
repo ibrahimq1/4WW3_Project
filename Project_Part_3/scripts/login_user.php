@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           if (isset($_SESSION["flash-success"])) {
             unset($_SESSION["flash-success"]);
           }
-          $_SESSION["flash-success"] = ["message" => "Successfully logged in user " . $username];
+          $_SESSION["flash-success"] = ["message" => "Successfully logged in as user " . $username];
           header("Location: /Project_Part_3/");
           die();
         }

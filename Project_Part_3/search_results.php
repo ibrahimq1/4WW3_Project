@@ -43,35 +43,8 @@
 </head>
 
 <body>
-	<!-- Navigation Bar [will seperate later] no js allowed, so didn't implement hamburger menu-->
-
-	<header class="fixed-top d-flex align-items-center">
-		<div class="container d-flex align-items-center justify-content-between">
-			<div class="d-flex">
-				<picture>
-					<source media="(min-width: 800px)" srcset="assets/img/basketball-ball.png, assets/img/basketball-ball-2x.png">
-					<source media="(min-width: 450px)" srcset="assets/img/basketball-ball-256.png, assets/img/basketball-ball-256-2x.png">
-					<img class="logoimg" width="100%" height="100%" src="assets/img/basketball-ball.png" srcset="assets/img/basketball-ball-256.png" alt="moila basketball logo image">
-				</picture>
-				<h1><a class="logotxt" href="#">Moila</a></h1>
-			</div>
-
-			<nav id="navbar" class="navbar">
-				<ul>
-					<li><a href="/Project_Part_3/"> Search </a></li>
-					<li><a href="/Project_Part_3/search_results.php"> Results </a></li>
-					<li><a href="/Project_Part_3/individual_court.php"> Example Individual Object </a></li>
-					<li><a href="/Project_Part_3/court_submission.php"> Submit New Court </a></li>
-					<li class="login-btn"><a href="/Project_Part_3/user_registration.php"> Register </a></li>
-					<li class="login-btn"><a href="/Project_Part_3/login.php">Login</a></li>
-				</ul>
-				<i class="bi bi-list mobile-nav-toggle"></i>
-			</nav>
-		</div>
-
-
-	</header>
-	<!-- End Navigation Bar -->
+	<!-- header included from another file -->
+	<?php include 'header.php'; ?>
 
 	<!-- Actual Body Content -->
 
@@ -242,15 +215,8 @@
 	<!-- End Actual Body Content -->
 
 
-	<!-- Footer [will sepearte later]-->
-	<footer id="footer" class="">
-		<div class="container">
-			<div class="copyright">
-				&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
-			</div>
-		</div>
-	</footer>
-	<!-- End Footer -->
+	<!-- footer included from another file -->
+	<?php include 'footer.php'; ?>
 
 </body>
 
