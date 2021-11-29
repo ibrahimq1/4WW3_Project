@@ -67,6 +67,7 @@
           <li><a href="/Project_Part_3/court_submission.php"> Submit New Court </a></li>
           <li class="login-btn"><a href="/Project_Part_3/user_registration.php"> Register </a></li>
           <li class="login-btn"><a href="#"> Login </a></li>
+          <li class="login-btn"><a href="/Project_Part_3/scripts/logout_user.php"> Logout </a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -89,38 +90,46 @@
       $rememberUser = true;
     }
     ?>
-    <div class="container">
 
-      <h1 class="reg-header">Login</h1>
+    <!-- if user is already logged in, we don't show the login form -->
+    <?php if (!isset($_SESSION['userLoggedIn'])) { ?>
+      <div class="container">
 
-      <div class="reg-body">
-        <form name="login" method="post" action="/Project_Part_3/scripts/login_user.php">
-          <div class="form-group">
-            <!-- if remember me was checked from previous login, prefill username with saved username from cookie -->
-            <input class="form-control" type="text" name="userName" placeholder="Username" value="<?php if (isset($rememberUser)) {
-                                                                                                    echo $_COOKIE['username'];
-                                                                                                  } ?>"">
+        <h1 class="reg-header">Login</h1>
+
+        <div class="reg-body">
+          <form name="login" method="post" action="/Project_Part_3/scripts/login_user.php">
+            <div class="form-group">
+              <!-- if remember me was checked from previous login, prefill username with saved username from cookie -->
+              <input class="form-control" type="text" name="userName" placeholder="Username" value="<?php if (isset($rememberUser)) {
+                                                                                                      echo $_COOKIE['username'];
+                                                                                                    } ?>"">
             <div id=" nameerror">
-          </div>
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="password" name="password" placeholder="Password">
-        <div id="passerror"> </div>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-lg btn-dark btn-block" id="pinkbg" type="submit">Login</button>
-      </div>
-      <div class="form-group">
+            </div>
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="password" name="password" placeholder="Password">
+          <div id="passerror"> </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-lg btn-dark btn-block" id="pinkbg" type="submit">Login</button>
+        </div>
+        <div class="form-group">
 
-        <!-- if remember me was checked from previous login, have it remain checked -->
-        <input type="checkbox" name="rememberMe" <?php if (isset($rememberUser)) {
-                                                    echo 'checked="checked"';
-                                                  } ?>>
-        <label for="rememberMe">Remember Me</label>
+          <!-- if remember me was checked from previous login, have it remain checked -->
+          <input type="checkbox" name="rememberMe" <?php if (isset($rememberUser)) {
+                                                      echo 'checked="checked"';
+                                                    } ?>>
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        </form>
       </div>
-      </form>
-    </div>
-    </div>
+      </div>
+
+      <!-- if user is logged in, show a banner saying you're logged in -->
+    <?php } else {
+      echo "<div class='alert alert-success' style='text-align: center;'>You are already logged in!</div>";
+    } ?>
   </section>
 
   <!-- Footer [will sepearte later]-->
