@@ -382,6 +382,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionMigrationHub(array $args = [])
  * @method \Aws\MigrationHubConfig\MigrationHubConfigClient createMigrationHubConfig(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMigrationHubConfig(array $args = [])
+ * @method \Aws\MigrationHubRefactorSpaces\MigrationHubRefactorSpacesClient createMigrationHubRefactorSpaces(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionMigrationHubRefactorSpaces(array $args = [])
  * @method \Aws\MigrationHubStrategyRecommendations\MigrationHubStrategyRecommendationsClient createMigrationHubStrategyRecommendations(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMigrationHubStrategyRecommendations(array $args = [])
  * @method \Aws\Mobile\MobileClient createMobile(array $args = [])
@@ -585,7 +587,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.204.6';
+    const VERSION = '3.205.0';
 
     /** @var array Arguments for creating clients */
     private $args;

@@ -1,6 +1,7 @@
-
 <!-- header included from another file -->
-<?php include 'header.php'; ?><!DOCTYPE html>
+<?php include 'header.php'; ?>
+
+<!DOCTYPE html>
 <!-- HTML5 Compliant -->
 <html lang="en">
 
@@ -65,11 +66,12 @@
 
 </head>
 
-
 </head>
 
 <body>
-	
+
+
+
 
 	<!-- Actual Body Content -->
 
@@ -122,7 +124,7 @@
 
 					<!-- Comment section -->
 					<div class="well">
-						<form>
+						<form name="addComment" method="post" action="/Project_Part_3/scripts/add_comment.php">
 							<button class="btn btn-success" type="submit" id="pinkbg">Add New Comment</button>
 							<div class="input-group mb-3" style="padding-top:20px;">
 								<input type="text" class="form-control" name="comment" style="padding-bottom:100px" placeholder="Write your comment here">
@@ -177,15 +179,7 @@
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly" async="false"></script>
 			<script src="./assets/js/mapthings.js"></script>
 
-			<!-- Footer [will sepearte later]-->
-			<footer id="footer" class="">
-				<div class="container">
-					<div class="copyright">
-						&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
-					</div>
-				</div>
-			</footer>
-			<!-- End Footer -->
+			<?php include "footer.php" ?>
 
 </body>
 

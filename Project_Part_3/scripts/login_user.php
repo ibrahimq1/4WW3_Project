@@ -63,6 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           }
           // if remember me wasn't checked, we unset the cookies that might have been saved if it was checked
           // from previous login
+
           else {
             setcookie('rememberMe', true, 1, "/");
             setcookie('username', $username, 1, "/");
