@@ -1,6 +1,6 @@
+
 <!-- header included from another file -->
-<?php include 'header.php'; ?>
-<!DOCTYPE html>
+<?php include 'header.php'; ?><!DOCTYPE html>
 <!-- HTML5 Compliant -->
 <html lang="en">
 
@@ -69,7 +69,7 @@
 </head>
 
 <body>
-
+	
 
 	<!-- Actual Body Content -->
 
