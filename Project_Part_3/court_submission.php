@@ -57,7 +57,13 @@
 				<div class="row">
 					<h1 style="text-align: center; margin-top: 50px;">Add a New Ball Court</h1>
 					<div style="width:50%; margin: 30px auto;">
-						<form action="" method="POST">
+						<form action="/Project_Part_3/scripts/upload-to-s3.php" method="post" enctype="multipart/form-data">
+							<!-- <h2>PHP Upload File</h2>
+							<label for="file_name">Filename:</label>
+							<input type="file" name="anyfile" id="anyfile">
+							<input type="submit" name="submit" value="Upload">
+							<p><strong>Note:</strong> Only .jpg, .jpeg, .gif, .png formats allowed to a max size of 5 MB.</p> -->
+
 
 							<!-- Use regex to enforce that name should be Firstname Lastname, with space in between and capitalized first and last names -->
 							<div class="form-group">
@@ -70,7 +76,7 @@
 								 option is displayed when the file explorer window pops up -->
 							<div class="form-group">
 								<label for="image" style="margin-bottom: 5px">Image</label>
-								<div><input id="image" type="file" name="image" accept="image/*" required></div>
+								<div><input id="anyfile" type="file" name="anyfile" accept="image/*" required></div>
 							</div>
 
 							<!-- for description, sepcify a max length of 100 chars -->
@@ -86,12 +92,13 @@
 							</div>
 
 							<!-- Client side cannot strictly prevent uploading a file of a certain type, but can change what the filter
-								 option is displayed when the file explorer window pops up -->
+								 option is displayed when the file explorer window pops up 
 							<div class="form-group">
 								<label for="video" style="margin-bottom: 5px">Video</label>
-								<div><input id="image" type="file" name="video" accept="video/*"></div>
+								<div><input id="anyfile2" type="file" name="anyfile2"></div>
 							</div>
-
+							-->
+							
 							<!-- Use regex to enforce that Location should be in format Longitude, Latitude (comma in between, with single whitespace) -->
 							<div class="form-group">
 								<label for="location">Location (Latitude first then longitude, seperate with a comma and space right after)</label>
