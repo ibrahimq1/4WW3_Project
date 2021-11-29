@@ -50,7 +50,7 @@
 
 	<section id="main" class="animate__animated animate__slideInDown">
 		<?php
-
+		
 		if (isset($_SESSION['userLoggedIn'])) {
 		?>
 			<div class="container">
@@ -58,13 +58,7 @@
 					<h1 style="text-align: center; margin-top: 50px;">Add a New Ball Court</h1>
 					<div style="width:50%; margin: 30px auto;">
 						<form action="/Project_Part_3/scripts/upload-to-s3.php" method="post" enctype="multipart/form-data">
-							<!-- <h2>PHP Upload File</h2>
-							<label for="file_name">Filename:</label>
-							<input type="file" name="anyfile" id="anyfile">
-							<input type="submit" name="submit" value="Upload">
-							<p><strong>Note:</strong> Only .jpg, .jpeg, .gif, .png formats allowed to a max size of 5 MB.</p> -->
-
-
+	
 							<!-- Use regex to enforce that name should be Firstname Lastname, with space in between and capitalized first and last names -->
 							<div class="form-group">
 								<label for="name">Name (Capitalize first and last name with space in between)</label>
@@ -98,7 +92,7 @@
 								<div><input id="anyfile2" type="file" name="anyfile2"></div>
 							</div>
 							-->
-							
+
 							<!-- Use regex to enforce that Location should be in format Longitude, Latitude (comma in between, with single whitespace) -->
 							<div class="form-group">
 								<label for="location">Location (Latitude first then longitude, seperate with a comma and space right after)</label>
