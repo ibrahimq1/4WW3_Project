@@ -50,7 +50,14 @@
 
 	<section id="main" class="animate__animated animate__slideInDown">
 		<?php
-		
+		if (isset($_SESSION["flash-error"])) {
+			vprintf("<div class='alert alert-danger' style='text-align: center;'>%s</div>", $_SESSION["flash-error"]);
+			unset($_SESSION["flash-error"]);
+			}
+			if (isset($_SESSION["flash-success"])) {
+			vprintf("<div class='alert alert-success' style='text-align: center;'>%s</div>", $_SESSION["flash-success"]);
+			unset($_SESSION["flash-success"]);
+			}
 		if (isset($_SESSION['userLoggedIn'])) {
 		?>
 			<div class="container">

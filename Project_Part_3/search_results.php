@@ -47,6 +47,35 @@
 	<?php include 'header.php'; ?>
 
 	<!-- Actual Body Content -->
+	<?php 
+
+	include "./scripts/DotEnv.php";
+	(new DotEnv(__DIR__ . "./scripts/.env"))->load();
+	
+	// DB connect to store
+    $databasename = getenv('DB_NAME');
+    $dbhost = getenv('DB_HOST');
+    $dbuser = getenv('DB_USER');
+    $dbpassword = getenv('DB_PASSWORD');
+    $conn = new mysqli($dbhost, $dbuser, $dbpassword, $databasename);
+
+    // error connecting to database
+    if ($conn->connect_error) {
+        if (isset($_SESSION["flash-error"])) {
+          unset($_SESSION["flash-error"]);
+        }
+        $_SESSION["flash-error"] = ["message" => "There was an error connecting to the database... please try again!"];
+        header("Location: /Project_Part_3/court_submission.php");
+        die();
+      }	
+
+	  $sql = "SELECT * FROM submitted_courts";
+	  $result = $conn->query($sql);
+
+	  //echo "<pre>";
+	  //print_r($result->fetch_assoc());
+
+	?>
 
 	<section id="main">
 		<div class="container" style="padding-top:50px; padding-bottom:50px;">
@@ -106,77 +135,34 @@
 			<div class="row h-100 g-0">
 				<div class="col-md-6 d-flex align-content-end animate__animated animate__slideInLeft">
 					<div class="row g-0">
-						<div class="card" id="card0">
-							<div class="card-header">Popular</div>
-							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
+
+					<?php 
+						if ($result->num_rows > 0){
+							while($row = $result->fetch_assoc()) { ?>
+						
+
+						<div class="card" id=<?php echo "card" . $row['id'] ?> >
+							<!-- div class="card-header">Popular</div> !-->
+							<img class="card-img-top" width="100%" height="100%" src= <?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?> alt="Card image cap">
 							<div class="card-body">
-								<h5 class="card-title">Title</h5>
+								<h5 class="card-title"><?php echo $row["name"] ?></h5>
 								<span class="bi bi-star-fill"></span>
 								<span class="bi bi-star-fill"></span>
 								<span class="bi bi-star-fill"></span>
 								<span class="bi bi-star-half"></span>
 								<span class="bi bi-star"></span>
-								<p>Currently Playing: 5+</p>
-								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_3/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
+								<p><?php echo "Currently Playing: " . $row['playerCount'] ?></p>
+								<p class="card-text"> <?php  echo $row['description'] ?> </p>
+								<a href="/Project_Part_3/individual_court.php" class="btn btn-primary" id="pinkbg">Let\'s go!</a>
 							</div>
 						</div>
-						<div class="card" id="card1">
-							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Title</h5>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<p>Currently Playing: 0</p>
-								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_3/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
-							</div>
-						</div>
-						<div class="card" id="card2">
-							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Title</h5>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<p>Currently Playing: 0</p>
-								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_3/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
-							</div>
-						</div>
-						<div class="card" id="card3">
-							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Title</h5>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<p>Currently Playing: 0</p>
-								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_3/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
-							</div>
-						</div>
-						<div class="card" id="card4">
-							<img class="card-img-top" width="100%" height="100%" src="assets/img/ballcourt1.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Title</h5>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<p>Currently Playing: 0</p>
-								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<a href="/Project_Part_3/individual_court.php" class="btn btn-primary" id="pinkbg">Let's go!</a>
-							</div>
-						</div>
+						
+						<?php }
+						}	else {
+								echo "<td colspan='2'> No data available </td>";
+							} 
+						?>
+
 						<div aria-label="...">
 							<ul class="pagination" style="float:right; padding:10px; margin-bottom:0;">
 								<li class="page-item">
