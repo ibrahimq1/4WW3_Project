@@ -24,6 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(isset($_FILES["anyfile"]) && isset($_POST['name']) && isset($_POST['description']) && isset($_POST['name']) && isset($_POST['numberPlaying']) && isset($_POST['location']) && ($_FILES["anyfile"]["error"] == 0)){
     $allowed = array("jpg" => "image/jpg", "jpeg" => "image/jpeg", "gif" => "image/gif", "png" => "image/png");
     $filename = $_FILES["anyfile"]["name"];
+    $filename = str_replace(' ', '', $filename);
     $filetype = $_FILES["anyfile"]["type"];
     $filesize = $_FILES["anyfile"]["size"];
     // Validate file extension
