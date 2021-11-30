@@ -2,34 +2,37 @@
 //load the dotenv helper file
 include "DotEnv.php";
 (new DotEnv(__DIR__ . "/.env"))->load();
-
 session_start();
+$request_data = json_decode(file_get_contents("php://input"));
+
 // check request method
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($request_data) {
   // first check if user is logged in
   if (isset($_SESSION['userLoggedIn'])) {
-    if (isset($_POST["rating"]) && isset($_POST["comment"])) {
-      $username = $_SESSION['username'];
-      $rating = $_POST["rating"];
-      $comment = $_POST["comment"];
+    if (isset($request_data->rating) &&  isset($request_data->comment)) {
+      $rating = $request_data->rating;
+      $comment = $request_data->comment;
 
-      // if either rating or comment is empty, redirect back with error message
-      if (empty($comment)) {
-        if (isset($_SESSION["flash-error"])) {
-          unset($_SESSION["flash-error"]);
-        }
-        $_SESSION["flash-error"] = ["message" => "You cannot submit an empty comment!"];
-        header("Location: /Project_Part_3/individual_court.php");
+      // if rating was passed as string "Rating", means that no number was selected
+      if ($rating === "Rating") {
+        $response['response_status'] = 'error';
+        $response['response_code'] = "400 Bad Request";
+        $response['response_description'] = "You must include a rating with your review!";
+        echo json_encode($response);
         die();
       }
-      if (empty($rating)) {
-        if (isset($_SESSION["flash-error"])) {
-          unset($_SESSION["flash-error"]);
-        }
-        $_SESSION["flash-error"] = ["message" => "Please add a rating to your comment!"];
-        header("Location: /Project_Part_3/individual_court.php");
+
+      // if comment was passed as empty string, that means that the comment was blank
+      if ($comment === "") {
+        $response['response_status'] = 'error';
+        $response['response_code'] = "400 Bad Request";
+        $response['response_description'] = "You must include a comment with your review!";
+        echo json_encode($response);
         die();
       }
+
+      $courtId = $request_data->courtId;
+      $username = $_SESSION['username'];
 
       // create DB connection using secrets in .env file
       $databasename = getenv('DB_NAME');
@@ -40,57 +43,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       // error connecting to database
       if ($conn->connect_error) {
-        if (isset($_SESSION["flash-error"])) {
-          unset($_SESSION["flash-error"]);
-        }
-        $_SESSION["flash-error"] = ["message" => "There was an error connecting to the database... please try again!"];
-        header("Location: /Project_Part_3/individual_court.php");
-        die();
+        die("Error connecting to database!");
       }
 
-      // successfull database connection
+      // successfull connection
       else {
-        $addCommentSql = "INSERT INTO `comments` (`comment`, `rating`, `username`) VALUES ('$comment', '$rating', '$username')";
+        $insertCommentSql = "INSERT INTO `comments` (`comment`, `rating`, `username`, `courtId`) VALUES ('$comment', '$rating', '$username', '$courtId')";
 
-        // if successfully added to database, store success flash message in session and redirect back to sign up
-        if ($conn->query($addCommentSql) === TRUE) {
-          // store a flash message as session variable
-          if (isset($_SESSION["flash-success"])) {
-            unset($_SESSION["flash-success"]);
-          }
-          $_SESSION["flash-success"] = ["message" => "Successfully added a comment!"];
-          header("Location: /Project_Part_3/individual_court.php");
-          die();
+        // when there's error saving comment into database, return error response
+        if (!$conn->query($insertCommentSql) === true) {
+          $response['response_status'] = 'error';
+          $response['response_code'] = "400 Bad Request";
+          $response['response_description'] = "Error: " . $insertCommentSql . "<br>" . $conn->error;
         }
-        // else, store error flash message in session and redirect back to sign up
+        // successful saving comment into database, return success response
         else {
-          // store a flash message as session variable
-          if (isset($_SESSION["flash-error"])) {
-            unset($_SESSION["flash-error"]);
-          }
-          $_SESSION["flash-error"] = ["message" => "There was an error saving the added comment to the database... please try again!"];
-          header("Location: /Project_Part_3/individual_court.php");
-          die();
+          $response['response_status'] = 'success';
+          $response['response_code'] = "200 OK";
+          $response['response_description'] = "New comment successfully added to database!";
         }
+        $conn->close();
+        echo json_encode($response);
       }
     }
   }
   // cannot add review if user is not logged in
   else {
-    if (isset($_SESSION["flash-error"])) {
-      unset($_SESSION["flash-error"]);
-    }
-    $_SESSION["flash-error"] = ["message" => "You must be logged in to add a review!"];
-    header("Location: /Project_Part_3/individual_court.php");
-    die();
+    echo "must be logged in to post review!";
   }
 }
 // invalid request, redirect back to individual court
 else {
-  if (isset($_SESSION["flash-error"])) {
-    unset($_SESSION["flash-error"]);
-  }
-  $_SESSION["flash-error"] = ["message" => "Invalid request method! Please try again..."];
-  header("Location: /Project_Part_3/individual_court.php");
-  die();
+  $response['response_status'] = 'error';
+  $response['response_code'] = "400 Bad Request";
+  $response['response_description'] = "invalid access";
 }

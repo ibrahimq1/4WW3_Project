@@ -64,20 +64,19 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
 
+	<!-- AJAX script -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/handleCommentsAJAX.js"></script>
 </head>
 
 </head>
 
-<?php 
+<?php
 
 include "./scripts/DotEnv.php";
 (new DotEnv(__DIR__ . "/./scripts/.env"))->load();
 
-
-  //echo "<pre>";
-  //print_r($result->fetch_assoc());
-
-  if(isset($_GET['court'])){
+if (isset($_GET['court'])) {
 
 	// DB connect to store
 	$databasename = getenv('DB_NAME');
@@ -89,29 +88,27 @@ include "./scripts/DotEnv.php";
 	// error connecting to database
 	if ($conn->connect_error) {
 		if (isset($_SESSION["flash-error"])) {
-		unset($_SESSION["flash-error"]);
+			unset($_SESSION["flash-error"]);
 		}
 		$_SESSION["flash-error"] = ["message" => "There was an error connecting to the database... please try again!"];
 		header("Location: /Project_Part_3/court_submission.php");
 		die();
-	}	
+	}
 
 	$courtID = $_GET['court'];
 
-	if(empty($courtID)){
+	if (empty($courtID)) {
 		echo "<p> Court not found </p>";
 		exit();
-	}
-	else{
+	} else {
 		$sql = "SELECT * FROM submitted_courts WHERE id=$courtID";
 		$result = $conn->query($sql);
 	}
 
 	//uncomment to see data
-	//echo "<pre>";
-	//print_r($result->fetch_assoc());
-
-  }
+	// echo "<pre>";
+	// print_r($result->fetch_assoc());
+}
 // example Project_Part_3/individual_court.php?court=8
 
 ?>
@@ -178,11 +175,12 @@ include "./scripts/DotEnv.php";
 
 					<!-- Comment section -->
 					<div class="well">
-						<form name="addComment" method="post" action="/Project_Part_3/scripts/add_comment.php">
-							<button class="btn btn-success" type="submit" id="pinkbg">Add New Comment</button>
+						<div name="addComment">
+							<!-- when button is clicked, call AJAX script to post data to server -->
+							<button class="btn btn-success" type="submit" id="pinkbg" onclick="handleCommentSubmission(<?php echo $_GET['court']; ?>)">Add New Comment</button>
 							<div class="input-field-rating">
 								<div class="input-group-text">
-									<select data-trigger="" name="rating">
+									<select data-trigger="" name="courtRating" id="courtRating">
 										<option placeholder="" value="">Rating</option>
 										<option>1</option>
 										<option>2</option>
@@ -193,9 +191,9 @@ include "./scripts/DotEnv.php";
 								</div>
 							</div>
 							<div class="input-group mb-3" style="padding-top:20px;">
-								<input type="text" class="form-control" name="comment" style="padding-bottom:100px" placeholder="Write your comment here">
+								<input type="text" class="form-control" name="comment" id="comment" style="padding-bottom:100px" placeholder="Write your comment here">
 							</div>
-						</form>
+						</div>
 						<hr>
 
 						<!-- An individual comment has author name, comment, and date commented -->
