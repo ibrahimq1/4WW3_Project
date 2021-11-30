@@ -50,7 +50,7 @@
 	<?php 
 
 	include "./scripts/DotEnv.php";
-	(new DotEnv(__DIR__ . "./scripts/.env"))->load();
+	(new DotEnv(__DIR__ . "/./scripts/.env"))->load();
 	
 	// DB connect to store
     $databasename = getenv('DB_NAME');
