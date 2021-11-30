@@ -43,7 +43,11 @@ if ($request_data) {
 
       // error connecting to database
       if ($conn->connect_error) {
-        die("Error connecting to database!");
+        $response['response_status'] = 'error';
+        $response['response_code'] = "400 Bad Request";
+        $response['response_description'] = "There was an error connecting to the database!";
+        echo json_encode($response);
+        die();
       }
 
       // successfull connection
@@ -77,4 +81,5 @@ else {
   $response['response_status'] = 'error';
   $response['response_code'] = "400 Bad Request";
   $response['response_description'] = "invalid access";
+  echo json_encode($response);
 }

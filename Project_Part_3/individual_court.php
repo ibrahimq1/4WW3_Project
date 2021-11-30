@@ -118,16 +118,8 @@ if (isset($_GET['court'])) {
 	<!-- Actual Body Content -->
 
 	<section id="main">
-		<!-- check for any flash messages to display -->
-		<?php
-		if (isset($_SESSION["flash-error"])) {
-			vprintf("<div class='alert alert-danger' style='text-align: center;'>%s</div>", $_SESSION["flash-error"]);
-			unset($_SESSION["flash-error"]);
-		}
-		if (isset($_SESSION["flash-success"])) {
-			vprintf("<div class='alert alert-success' style='text-align: center;'>%s</div>", $_SESSION["flash-success"]);
-			unset($_SESSION["flash-success"]);
-		} ?>
+		<!-- flash message is displayed using JQuery if errors occur from submitting comments through AJAX -->
+		<div class='alert alert-danger' style='text-align: center; display: none; width: 100%' id='flash-error'></div>
 		<div class="container">
 			<div class="row">
 
