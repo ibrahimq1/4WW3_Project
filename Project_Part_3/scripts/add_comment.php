@@ -61,11 +61,36 @@ if ($request_data) {
           $response['response_code'] = "400 Bad Request";
           $response['response_description'] = "Error: " . $insertCommentSql . "<br>" . $conn->error;
         }
-        // successful saving comment into database, return success response
+        // successful saving comment into database, we then need to update the rating of the submitted court associated
+        // with the comment
         else {
-          $response['response_status'] = 'success';
-          $response['response_code'] = "200 OK";
-          $response['response_description'] = "New comment successfully added to database!";
+          $getCurrentRatingSql = "SELECT rating from submitted_courts WHERE id=" . $courtId;
+
+          // get the current rating of the court from
+          if ($result = $conn->query($getCurrentRatingSql)) {
+            while ($row = $result->fetch_row()) {
+              $currentRating = $row[0];
+            }
+
+            // if rating was not set yet (court has no reviews), simply set the new rating
+            if (empty($currentRating)) {
+              $updateRatingSql = "UPDATE submitted_courts SET rating=" . $rating . " WHERE id=" . $courtId;
+            }
+            // otherwise, we have to take the rolling average and apply new rating
+            else {
+              $newRating = ($currentRating + $rating) / 2;
+              $updateRatingSql = "UPDATE submitted_courts SET rating=" . $newRating . " WHERE id=" . $courtId;
+            }
+            if ($conn->query($updateRatingSql)) {
+              $response['response_status'] = 'success';
+              $response['response_code'] = "200 OK";
+              $response['response_description'] = "New comment successfully added to database!";
+            } else {
+              $response['response_status'] = 'error';
+              $response['response_code'] = "400 Bad Request";
+              $response['response_description'] = "Error: " . $insertCommentSql . "<br>" . $conn->error;
+            }
+          }
         }
         $conn->close();
         echo json_encode($response);

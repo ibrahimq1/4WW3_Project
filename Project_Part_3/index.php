@@ -49,9 +49,14 @@
 		<?php
 
 		if (isset($_SESSION["flash-success"])) {
-			vprintf("<div class='alert alert-success' style='text-align: center;'>%s</div>", $_SESSION["flash-success"]);
+			vprintf("<div class='alert alert-success' style='text-align: center; position: relative; z-index: 10'>%s</div>", $_SESSION["flash-success"]);
 			unset($_SESSION["flash-success"]);
-		} ?>
+		}
+		if (isset($_SESSION["flash-error"])) {
+			vprintf("<div class='alert alert-error' style='text-align: center; position: relative; z-index: 10'>%s</div>", $_SESSION["flash-error"]);
+			unset($_SESSION["flash-error"]);
+		}
+		?>
 		<video autoplay muted loop id="mp4Video" class="overlay">
 			<source src="assets/img/ball.mp4" type="video/mp4">
 		</video>
@@ -66,7 +71,7 @@
 					<form method="get" action="/Project_Part_3/scripts/retrieve_courts.php">
 						<div class="input-group mb-3">
 							<span title="Use current location" onclick="getLocation()" class="input-group-text mobview" id="userloc"><i class="bi bi-geo-alt"></i></span>
-							<input type="text" class="form-control" id="searchString" name="location" placeholder="Search by Location">
+							<input type="text" class="form-control" id="searchString" name="location" placeholder="Search by latitude and longitude (i.e. -70.34,90.64)">
 							<div class="input-group-append d-flex">
 								<button class="input-group-text btn btn-primary" title="Search" id="pinkbg" type="submit"><i class="bi bi-search"></i></button>
 							</div>
