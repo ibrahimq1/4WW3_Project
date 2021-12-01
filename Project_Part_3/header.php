@@ -14,7 +14,6 @@
       <ul>
         <li><a href="/Project_Part_3/"> Search </a></li>
         <li><a href="/Project_Part_3/search_results.php"> Results </a></li>
-        <li><a href="/Project_Part_3/individual_court.php"> Example Individual Object </a></li>
         <li><a href="/Project_Part_3/court_submission.php"> Submit New Court </a></li>
         <li class="login-btn"><a href="/Project_Part_3/user_registration.php"> Register </a></li>
         <?php session_start();
