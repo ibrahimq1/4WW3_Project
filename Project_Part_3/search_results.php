@@ -2,7 +2,7 @@
 <!-- HTML5 Compliant -->
 <html lang="en">
 
-<head>
+<head >
 
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
@@ -47,38 +47,38 @@
 
 </head>
 
-<body>
+<body >
 	<!-- header included from another file -->
 	<?php include 'header.php'; ?>
 
 	<!-- Actual Body Content -->
-	<?php
+	<?php 
 
 	include "./scripts/DotEnv.php";
 	(new DotEnv(__DIR__ . "/./scripts/.env"))->load();
-
+	
 	// DB connect to store
-	$databasename = getenv('DB_NAME');
-	$dbhost = getenv('DB_HOST');
-	$dbuser = getenv('DB_USER');
-	$dbpassword = getenv('DB_PASSWORD');
-	$conn = new mysqli($dbhost, $dbuser, $dbpassword, $databasename);
+    $databasename = getenv('DB_NAME');
+    $dbhost = getenv('DB_HOST');
+    $dbuser = getenv('DB_USER');
+    $dbpassword = getenv('DB_PASSWORD');
+    $conn = new mysqli($dbhost, $dbuser, $dbpassword, $databasename);
 
-	// error connecting to database
-	if ($conn->connect_error) {
-		if (isset($_SESSION["flash-error"])) {
-			unset($_SESSION["flash-error"]);
-		}
-		$_SESSION["flash-error"] = ["message" => "There was an error connecting to the database... please try again!"];
-		header("Location: /Project_Part_3/court_submission.php");
-		die();
-	}
+    // error connecting to database
+    if ($conn->connect_error) {
+        if (isset($_SESSION["flash-error"])) {
+          unset($_SESSION["flash-error"]);
+        }
+        $_SESSION["flash-error"] = ["message" => "There was an error connecting to the database... please try again!"];
+        header("Location: /Project_Part_3/court_submission.php");
+        die();
+      }	
 
-	$sql = "SELECT * FROM submitted_courts";
-	$result = $conn->query($sql);
+	  $sql = "SELECT * FROM submitted_courts";
+	  $result = $conn->query($sql);
 
-	//echo "<pre>";
-	//print_r($result->fetch_assoc());
+	  //echo "<pre>";
+	  //print_r($result->fetch_assoc());
 	?>
 
 
@@ -102,11 +102,32 @@
 								<div class="input-group-text">
 									<select data-trigger="" name="Rating">
 										<option placeholder="" value="">Rating</option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
+										<option>1+</option>
+										<option>2+</option>
+										<option>3+</option>
+										<option>4+</option>
 										<option>5</option>
+									</select>
+								</div>
+							</div>
+							<div class="input-field-popularity">
+								<div class="input-group-text">
+									<select data-trigger="" name="Popularity">
+										<option placeholder="" value="">Popularity</option>
+										<option>Mostly_Empty</option>
+										<option>Popular</option>
+										<option>Very_Popular</option>
+									</select>
+								</div>
+							</div>
+							<div class="input-field-currently_playing">
+								<div class="input-group-text">
+									<select data-trigger="" name="Currently_Playing">
+										<option placeholder="" value="">Currently_Playing</option>
+										<option>0</option>
+										<option>2+</option>
+										<option>5+</option>
+										<option>10+</option>
 									</select>
 								</div>
 							</div>
@@ -121,48 +142,48 @@
 				<div class="col-md-6 d-flex align-content-end animate__animated animate__slideInLeft">
 					<div class="row g-0">
 
-						<?php
-						if ($result->num_rows > 0) {
-							while ($row = $result->fetch_assoc()) { ?>
+					<?php 
+						if ($result->num_rows > 0){
+							while($row = $result->fetch_assoc()) { ?>
+						
 
-
-								<div class="card" id=<?php echo "card" . $row['id'] ?>>
-									<!-- div class="card-header">Popular</div> !-->
-									<img class="card-img-top" width="100%" height="100%" src=<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?> alt="Card image cap">
-									<div class="card-body">
-										<h5 class="card-title"><?php echo $row["name"] ?></h5>
-										<span class="bi bi-star-fill"></span>
-										<span class="bi bi-star-fill"></span>
-										<span class="bi bi-star-fill"></span>
-										<span class="bi bi-star-half"></span>
-										<span class="bi bi-star"></span>
-										<p><?php echo "Currently Playing: " . $row['playerCount'] ?></p>
-										<p class="card-text"> <?php echo $row['description'] ?> </p>
-										<a href="/Project_Part_3/individual_court.php?court=<?php echo $row['id'] ?>" class="btn btn-primary" id="pinkbg">Let's go!</a>
-									</div>
-								</div>
-								<!-- getting map marker data specific to search !-->
-								<script>
-									//data for map marker popup
-									var contentString =
-										'<div id="content">' +
-										'<div id="siteNotice">' +
-										"</div>" +
-										'<img id="card" style="padding-bottom:10px; margin-left:0;" width="100%" height="auto" src=' + "<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?>" + ">" +
-										'<h3 id="firstHeading" class="firstHeading"><a href=' + "/Project_Part_3/individual_court.php?court=" + <?php echo $row['id'] ?> + '>' + '<?php echo $row["name"] ?>' + '</b></a></h3>' +
-										'<div id="bodyContent" style="padding-top:10px">' +
-										'<p>' + '<?php echo $row['description'] ?>' +
-										"</p>" +
-										"</div>" +
-										"</div>";
-									//Title, Lat, Long, z-index, info
-									locations.push(new Array('<?php echo $row['name']; ?>', parseFloat('<?php echo $row['latitude']; ?>'), parseFloat('<?php echo $row['longitude']; ?>'), parseInt('<?php echo 1 ?>'), contentString))
-								</script>
-
+						<div class="card" id=<?php echo "card" . $row['id'] ?> >
+							<!-- div class="card-header">Popular</div> !-->
+							<img class="card-img-top" width="100%" height="100%" src= <?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?> alt="Card image cap">
+							<div class="card-body">
+								<h5 class="card-title"><?php echo $row["name"] ?></h5>
+								<span class="bi bi-star-fill"></span>
+								<span class="bi bi-star-fill"></span>
+								<span class="bi bi-star-fill"></span>
+								<span class="bi bi-star-half"></span>
+								<span class="bi bi-star"></span>
+								<p><?php echo "Currently Playing: " . $row['playerCount'] ?></p>
+								<p class="card-text"> <?php  echo $row['description'] ?> </p>
+								<a href="/Project_Part_3/individual_court.php?court=<?php echo $row['id']?>" class="btn btn-primary" id="pinkbg">Let's go!</a>
+							</div>
+						</div>
+						<!-- getting map marker data specific to search !-->
+						<script>
+							    //data for map marker popup
+	                        var contentString =
+                            '<div id="content">' +
+                            '<div id="siteNotice">' +
+                            "</div>" +
+                            '<img id="card" style="padding-bottom:10px; margin-left:0;" width="100%" height="auto" src='+ "<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?>" + ">" +
+                            '<h3 id="firstHeading" class="firstHeading"><a href=' + "/Project_Part_3/individual_court.php?court=" + <?php echo $row['id']?> + '>' + '<?php echo $row["name"] ?>' + '</b></a></h3>' +
+                            '<div id="bodyContent" style="padding-top:10px">' +
+                            '<p>' + '<?php  echo $row['description'] ?>' +
+                            "</p>" +
+                            "</div>" +
+                            "</div>";
+							//Title, Lat, Long, z-index, info
+							locations.push(new Array('<?php echo $row['name'];?>', parseFloat('<?php echo $row['latitude'];?>'), parseFloat('<?php echo $row['longitude'];?>'), parseInt('<?php echo 1?>'), contentString))
+						</script>
+						
 						<?php }
-						} else {
-							echo "<td colspan='2'> No data available </td>";
-						}
+						}	else {
+								echo "<td colspan='2'> No data available </td>";
+							} 
 						?>
 
 						<div aria-label="...">
@@ -183,7 +204,7 @@
 				<div class="col-md-6 animate__animated animate__slideInRight">
 					<div class="h-100">
 						<!-- <img width="100%" height="100%" alt="google map" src="assets/img/map-img.png"> -->
-						<div id="map"></div>
+						<div  id="map"></div>
 					</div>
 				</div>
 			</div>
@@ -196,7 +217,21 @@
 
 	<!-- Map Api -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly" async></script>
+	
+	<!-- Map Ball Bounce Animation -->
+	<script>
+		   // Map markers bounce on card image selection
 
+	for (let i = 1; i <= locations.length; i++) {
+        document.getElementById('card' + i).onmouseover = function(event){
+          mapmarkers[i-1].setAnimation(google.maps.Animation.BOUNCE);
+        }
+
+        document.getElementById('card' + i).onmouseout = function(event){
+          mapmarkers[i-1].setAnimation(null);
+        }
+    }
+	</script>
 	<!-- End Actual Body Content -->
 
 	<!-- footer included from another file -->

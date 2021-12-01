@@ -11,7 +11,7 @@
 		const uluru = { lat: 43.1570368, lng: -79.9113216 };
 		// The map, centered at that spot
 		const map = new google.maps.Map(document.getElementById("map"), {
-			zoom: 12,
+			zoom: 9,
 			center: uluru,
       gestureHandling: "greedy",
 		});
@@ -65,17 +65,7 @@
           }
     }
 
-    // Map markers bounce on card image selection
-
-    for (let i = 0; i < locations.length; i++) {
-        document.getElementById('card' + i).onmouseover = function(event){
-          mapmarkers[i].setAnimation(google.maps.Animation.BOUNCE);
-        }
-
-        document.getElementById('card' + i).onmouseout = function(event){
-          mapmarkers[i].setAnimation(null);
-        }
-    }
+ 
 
   //geolocation api to get current user location on map icon click on the search bar left hand side.
   var x = document.getElementById("userloc");

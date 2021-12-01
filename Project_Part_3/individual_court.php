@@ -67,6 +67,7 @@
 	<!-- AJAX script -->
 	<script src="assets/js/jquery.js"></script>
 	<script src="assets/js/handleCommentsAJAX.js"></script>
+	<script src="./assets/js/mapthings.js"></script>
 </head>
 
 <?php
@@ -166,7 +167,23 @@ if (isset($_GET['court'])) {
 									</div>
 								</div>
 							</div>
-
+							<!-- getting map marker data specific to search !-->
+							<script>
+									//data for map marker popup
+								var contentString =
+								'<div id="content">' +
+								'<div id="siteNotice">' +
+								"</div>" +
+								'<img id="card" style="padding-bottom:10px; margin-left:0;" width="100%" height="auto" src='+ "<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?>" + ">" +
+								'<h3 id="firstHeading" class="firstHeading"><a href=' + "/Project_Part_3/individual_court.php?court=" + <?php echo $row['id']?> + '>' + '<?php echo $row["name"] ?>' + '</b></a></h3>' +
+								'<div id="bodyContent" style="padding-top:10px">' +
+								'<p>' + '<?php  echo $row['description'] ?>' +
+								"</p>" +
+								"</div>" +
+								"</div>";
+								//Title, Lat, Long, z-index, info
+								locations.push(new Array('<?php echo $row['name'];?>', parseFloat('<?php echo $row['latitude'];?>'), parseFloat('<?php echo $row['longitude'];?>'), parseInt('<?php echo 1?>'), contentString))
+							</script>
 					<?php }
 			} else {
 				echo "<td colspan='2'> No data available </td>";
@@ -207,7 +224,7 @@ if (isset($_GET['court'])) {
 			<!-- End Actual Body Content -->
 			<!-- JS GetuserLocation Map -->
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly" async="false"></script>
-			<script src="./assets/js/mapthings.js"></script>
+			
 
 			<script>
 				$.ajax({
