@@ -143,7 +143,7 @@ if (isset($_GET['court'])) {
 				<div itemscope itemtype="https://schema.org/Place" class="col-md-9">
 					<div class="">
 						<picture>
-							<img style="width:100%" itemprop="photo" src="<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?> " alt="cool basketball court">
+							<img style="width:100%; padding-top:30px;" itemprop="photo" src="<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?> " alt="cool basketball court">
 						</picture>
 
 						<div class="well" style="padding-left:10px">

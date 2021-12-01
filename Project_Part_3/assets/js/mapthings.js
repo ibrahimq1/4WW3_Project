@@ -1,5 +1,7 @@
 	//global array that cointains map markers
   var mapmarkers = new Array();
+  var locations = new Array();
+  
   let resultsdata;
 
   // Initialize and add the map
@@ -15,46 +17,6 @@
 		});
         setMarkers(map);
     }
-
-    function getResultsData(data){
-      resultsdata = data;
-      console.log(resultsdata);
-    }
-
-    function getObjectData(data){
-      console.log(data);
-    }
-
-      //dummy data for map marker popup
-      const contentString =
-      '<div id="content">' +
-      '<div id="siteNotice">' +
-      "</div>" +
-      '<img id="card4" style="padding-bottom:10px; margin-left:0;" width="100%" height="auto" src="assets/img/ballcourt1.jpg" alt="Card image cap">' +
-      '<h3 id="firstHeading" class="firstHeading"><a href="./individual_court.php">Title</b></a></h3>' +
-      '<span class="bi bi-star-fill"></span>' +
-      '<span class="bi bi-star-fill"></span>' +
-      '<span class="bi bi-star-fill"></span>' +
-      '<span class="bi bi-star-half"></span>' +
-      '<span class="bi bi-star"></span>' +
-      '<div id="bodyContent" style="padding-top:10px">' +
-      '<p>Title, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' +
-      "</p>" +
-      "</div>" +
-      "</div>";
-      
-      // Title, Lat, Long, z-index, info
-      const locations = [
-          ["Title0", 43.2570368, -79.9113616, 4, contentString],
-          ["Title1", 43.1570368, -79.9423716, 5, contentString],
-          ["Title2", 43.1270368, -79.9513216, 3, contentString],
-          ["Title3", 43.1747368, -79.9136126, 2, contentString],
-          ["Title4", 43.1570368, -79.9613216, 1, contentString],
-        ];      
-
-
-
-
 
     function setMarkers(map) {
 
@@ -105,15 +67,15 @@
 
     // Map markers bounce on card image selection
 
-    // for (let i = 0; i < locations.length; i++) {
-    //     document.getElementById('card' + i).onmouseover = function(event){
-    //       mapmarkers[i].setAnimation(google.maps.Animation.BOUNCE);
-    //     }
+    for (let i = 0; i < locations.length; i++) {
+        document.getElementById('card' + i).onmouseover = function(event){
+          mapmarkers[i].setAnimation(google.maps.Animation.BOUNCE);
+        }
 
-    //     document.getElementById('card' + i).onmouseout = function(event){
-    //       mapmarkers[i].setAnimation(null);
-    //     }
-    // }
+        document.getElementById('card' + i).onmouseout = function(event){
+          mapmarkers[i].setAnimation(null);
+        }
+    }
 
   //geolocation api to get current user location on map icon click on the search bar left hand side.
   var x = document.getElementById("userloc");
