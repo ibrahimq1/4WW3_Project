@@ -139,10 +139,10 @@
 				<div class="col-md-3"></div>
 			</div>
 		</div>
-		<div class="container-fuild h-100">
+		<div class="container-fuild h-100" style="height: 100vh !important; overflow: scroll; overflow-x:hidden;">
 			<div class="row h-100 g-0">
 				<div class="col-md-6 d-flex align-content-end animate__animated animate__slideInLeft">
-					<div class="row g-0">
+					<div class="row g-0" style="width:100%;">
 
 						<?php
 						if ($result->num_rows > 0) {
