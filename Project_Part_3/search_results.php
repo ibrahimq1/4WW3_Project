@@ -2,7 +2,7 @@
 <!-- HTML5 Compliant -->
 <html lang="en">
 
-<head>
+<head >
 
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
@@ -42,7 +42,7 @@
 
 </head>
 
-<body>
+<body >
 	<!-- header included from another file -->
 	<?php include 'header.php'; ?>
 
@@ -74,8 +74,9 @@
 
 	  //echo "<pre>";
 	  //print_r($result->fetch_assoc());
-
 	?>
+
+
 
 	<section id="main">
 		<div class="container" style="padding-top:50px; padding-bottom:50px;">
@@ -153,7 +154,7 @@
 								<span class="bi bi-star"></span>
 								<p><?php echo "Currently Playing: " . $row['playerCount'] ?></p>
 								<p class="card-text"> <?php  echo $row['description'] ?> </p>
-								<a href="/Project_Part_3/individual_court.php" class="btn btn-primary" id="pinkbg">Let\'s go!</a>
+								<a href="/Project_Part_3/individual_court.php?court=<?php echo $row['id']?>" class="btn btn-primary" id="pinkbg">Let's go!</a>
 							</div>
 						</div>
 						
@@ -181,7 +182,7 @@
 				<div class="col-md-6 animate__animated animate__slideInRight">
 					<div class="h-100">
 						<!-- <img width="100%" height="100%" alt="google map" src="assets/img/map-img.png"> -->
-						<div id="map"></div>
+						<div  id="map"></div>
 					</div>
 				</div>
 			</div>
@@ -195,9 +196,6 @@
 	<!-- Map Api -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly" async></script>
 	<script src="./assets/js/mapthings.js"></script>
-
-
-
 	<!-- End Actual Body Content -->
 
 

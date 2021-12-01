@@ -69,8 +69,6 @@
 	<script src="assets/js/handleCommentsAJAX.js"></script>
 </head>
 
-</head>
-
 <?php
 
 include "./scripts/DotEnv.php";
@@ -116,6 +114,9 @@ if (isset($_GET['court'])) {
 <body>
 
 	<!-- Actual Body Content -->
+	<?php 
+		if ($result->num_rows > 0){
+			while($row = $result->fetch_assoc()) { ?>
 
 	<section id="main">
 		<!-- flash message is displayed using JQuery if errors occur from submitting comments through AJAX -->
@@ -129,7 +130,7 @@ if (isset($_GET['court'])) {
 					<!-- <img src="assets/img/map-img.png" alt="google map" class="img-thumbnail"> -->
 					<div id="map" style="height:300px"></div>
 					<div><a class="btn btn-xs btn-success" id="pinkbg" style="margin-bottom: 10px; margin-top: 10px">Update</a>
-						<h4>Currently <strong>15</strong> people playing!</h4>
+						<h4>Currently <strong><?php echo  $row['playerCount'] ?> </strong> people playing!</h4>
 						<video controls style="width:100%; margin-top:30px;" poster="assets/img/mobbg.png">
 							<source src="assets/img/ball.mp4" />
 						</video>
@@ -140,30 +141,34 @@ if (isset($_GET['court'])) {
 				<!-- second column contains actual individual object (basketball court) with comments -->
 				<!-- Schema.org place microdata -->
 				<div itemscope itemtype="https://schema.org/Place" class="col-md-9">
-					<div class="thumbnail">
+					<div class="">
 						<picture>
-							<source media="(min-width: 800px)" srcset="assets/img/ballcourt1.jpg, assets/img/ballcourt1-2x.jpg 2x">
-							<source media="(min-width: 450px)" srcset="assets/img/ballcourt1-512.jpg, assets/img/ballcourt1-512-2x.jpg 2x">
-							<img itemprop="photo" src="assets/img/ballcourt1.jpg" srcset="assets/img/ballcourt1-512.jpg" alt="cool basketball court">
+							<img style="width:100%" itemprop="photo" src="<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?> " alt="cool basketball court">
 						</picture>
 
 						<div class="well" style="padding-left:10px">
-							<h4 style="margin-top: 10px; color: #00BFFF"><a>Baller's Paradise Court</a></h4>
+							<h4 style="margin-top: 10px; color: #00BFFF"><a><?php echo  $row['name'] ?> </a></h4>
 
-							<p itemprop="slogan"><strong>Only for the best of the best. </strong></p>
+							<p itemprop="slogan"><strong> <?php echo  $row['description'] ?>  </strong></p>
 							<p>
 								<em>Submitted By: Frank Su</em>
 							</p>
 							<!-- Schema.org Place lat/long geolocation microdata -->
 							<div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
 								<p>
-									<em itemprop="address">Location: 123 Western Road, L8S3M1</em>
-								<p>Latitude: <em itemprop="latitude">43.26501</em></p>
-								<p>Longitude: <em itemprop="longitude">-79.93867</em></p>
+								<p><h6> Location: </h6></p>
+								<p>Latitude: <em itemprop="latitude"> <?php echo  $row['latitude'] ?> </em></p>
+								<p>Longitude: <em itemprop="longitude"><?php echo  $row['longitude'] ?> </em></p>
 								</p>
 							</div>
 						</div>
 					</div>
+
+					<?php }
+						}	else {
+								echo "<td colspan='2'> No data available </td>";
+							} 
+						?>
 
 					<!-- Comment section -->
 					<div class="well">
@@ -171,7 +176,7 @@ if (isset($_GET['court'])) {
 							<!-- when button is clicked, call AJAX script to post data to server -->
 							<button class="btn btn-success" type="submit" id="pinkbg" onclick="handleCommentSubmission(<?php echo $_GET['court']; ?>)">Add New Comment</button>
 							<div class="input-field-rating">
-								<div class="input-group-text">
+								<div class="btn input-group-text">
 									<select data-trigger="" name="courtRating" id="courtRating">
 										<option placeholder="" value="">Rating</option>
 										<option>1</option>
@@ -188,43 +193,82 @@ if (isset($_GET['court'])) {
 						</div>
 						<hr>
 						<div id="commentContainer">
-							<!-- An individual comment has author name, comment, and date commented -->
-							<!-- <div class="row" itemscope itemtype="https://schema.org/Review">
-								<div class="col-md-12">
-									<strong itemprop="author">Frank Su</strong>
-									</br>
-									<span class="bi bi-star-fill"></span>
-									<span class="bi bi-star-fill"></span>
-									<span class="bi bi-star-fill"></span>
-									<span class="bi bi-star"></span>
-									<span class="bi bi-star"></span>
-									<meta itemprop="reviewRating" content="3">
-									<span class="float-end" itemprop="datePublished">2021-04-03</span>
-									<p itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia perspiciatis repellat odit ipsa pariatur quisquam a laboriosam culpa maxime? Itaque!</p>
-								</div>
-							</div> -->
-
-
-
+							
 						</div>
 					</div>
-
 				</div>
 			</div>
+		</div>
+	</section>
+			
+	<!-- End Actual Body Content -->
+	<!-- JS GetuserLocation Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly" async="false"></script>
+	<script src="./assets/js/mapthings.js"></script>
 
+	<script>
+	
+	$.ajax({
+          url:
+            "/Project_Part_3/scripts/retrieve_comments.php?courtId=" + <?php echo $_GET['court'] ?>,
+          method: "GET",
+          data: JSON.stringify({
+            courtId: <?php echo $_GET['court'] ?>,
+          }),
+          datatype: "json",
+          success: function (response) {
+            let data = JSON.parse(response);
 
-			<section>
-				<!-- End Actual Body Content -->
+            // use JQuery to display error flash message on invidivudal_court.php
+            if (data.response_status === "error") {
+              let errorMessage1 = data.response_description;
+              // case where error message wasn't already displayed
+              if ($("#flash-error").css("display") == "none") {
+                $("#flash-error").css("display", "block");
+                $("#flash-error").html(errorMessage1);
+              }
+              // case where error message was already displayed, but with different error
+              else if ($("#flash-error").text() !== errorMessage1) {
+                $("#flash-error").html(errorMessage1);
+              }
+              return;
+            }
 
-				<!-- JS GetuserLocation Map -->
-				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly" async="false"></script>
-				<script src="./assets/js/mapthings.js"></script>
+            // otherwise use jquery to render comments
+            else {
+              let contentString;
+              comments = data.data;
+			  console.log(data.data);
 
-				<?php include "footer.php" ?>
+			  for(let i=0;i<comments.length; i++){
+				document.getElementById('commentContainer').innerHTML += 
+				'<div class="row" itemscope itemtype="https://schema.org/Review">' +
+					'<div class="col-md-12">' +
+						'<strong itemprop="author">' + comments[i].username +'</strong>' +
+						'</br>' +
+						'<span> Rating:' + comments[i].rating + '</span>' +
+						'<meta itemprop="reviewRating" content="3">' +
+						'<span class="float-end" itemprop="datePublished">2021-04-03</span>' +
+						'<p itemprop="reviewBody">' + comments[i].comment + '</p>' +
+					'</div>' +
+				'</div>' 
+			  }
+            }
+          },
+        });
+	</script>
 
+	<footer id="footer" class="fixed-bottom">
+	<div class="container">
+		<div class="copyright">
+		&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
+		</div>
+	</div>
+	</footer>
 </body>
 
 </html>
+
 
 
 

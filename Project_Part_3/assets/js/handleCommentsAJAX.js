@@ -1,7 +1,4 @@
 let comments;
-
-function loadInitialComments(courdId) {}
-
 function handleCommentSubmission(courtId) {
   // use jquery to get the comment and rating of the court
   let rating = $("#courtRating").find(":selected").text();
