@@ -112,10 +112,10 @@
 				<div class="col-md-3"></div>
 				<div class="col-md-6 align-self-center animate__animated animate__slideInDown">
 
-					<form>
+					<form method="get" action="/Project_Part_3/scripts/retrieve_courts.php">
 						<div class="input-group mb-3">
 							<span title="Use current location" onclick="getLocation()" class="input-group-text mobview" id="userloc"><i class="bi bi-geo-alt"></i></span>
-							<input type="text" class="form-control" id="searchString" name="location" placeholder="Search by Location">
+							<input type="text" class="form-control" id="searchString" name="location" placeholder="Search by latitude and longitude (i.e. -70.34,90.64)">
 							<div class="input-group-append d-flex">
 								<button class="input-group-text btn btn-primary" title="Search" id="pinkbg" type="submit"><i class="bi bi-search"></i></button>
 							</div>
@@ -123,34 +123,13 @@
 						<div class="flex-row d-flex justify-content-center">
 							<div class="input-field-rating">
 								<div class="input-group-text">
-									<select data-trigger="" name="Rating">
+									<select data-trigger="" name="rating">
 										<option placeholder="" value="">Rating</option>
-										<option>1+</option>
-										<option>2+</option>
-										<option>3+</option>
-										<option>4+</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
 										<option>5</option>
-									</select>
-								</div>
-							</div>
-							<div class="input-field-popularity">
-								<div class="input-group-text">
-									<select data-trigger="" name="Popularity">
-										<option placeholder="" value="">Popularity</option>
-										<option>Mostly_Empty</option>
-										<option>Popular</option>
-										<option>Very_Popular</option>
-									</select>
-								</div>
-							</div>
-							<div class="input-field-currently_playing">
-								<div class="input-group-text">
-									<select data-trigger="" name="Currently_Playing">
-										<option placeholder="" value="">Currently_Playing</option>
-										<option>0</option>
-										<option>2+</option>
-										<option>5+</option>
-										<option>10+</option>
 									</select>
 								</div>
 							</div>
