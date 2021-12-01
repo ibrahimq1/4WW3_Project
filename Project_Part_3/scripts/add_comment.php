@@ -12,6 +12,7 @@ if ($request_data) {
     if (isset($request_data->rating) &&  isset($request_data->comment)) {
       $rating = $request_data->rating;
       $comment = $request_data->comment;
+      $date = $request_data->date;
 
       // if rating was passed as string "Rating", means that no number was selected
       if ($rating === "Rating") {
@@ -52,7 +53,7 @@ if ($request_data) {
 
       // successfull connection
       else {
-        $insertCommentSql = "INSERT INTO `comments` (`comment`, `rating`, `username`, `courtId`) VALUES ('$comment', '$rating', '$username', '$courtId')";
+        $insertCommentSql = "INSERT INTO `comments` (`comment`, `rating`, `username`, `courtId`, `date`) VALUES ('$comment', '$rating', '$username', '$courtId', '$date')";
 
         // when there's error saving comment into database, return error response
         if (!$conn->query($insertCommentSql) === true) {
@@ -73,7 +74,10 @@ if ($request_data) {
   }
   // cannot add review if user is not logged in
   else {
-    echo "must be logged in to post review!";
+    $response['response_status'] = 'error';
+    $response['response_code'] = "400 Bad Request";
+    $response['response_description'] = "You must be logged in to submit a basketball court!";
+    echo json_encode($response);
   }
 }
 // invalid request, redirect back to individual court

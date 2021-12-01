@@ -114,61 +114,64 @@ if (isset($_GET['court'])) {
 <body>
 
 	<!-- Actual Body Content -->
-	<?php 
-		if ($result->num_rows > 0){
-			while($row = $result->fetch_assoc()) { ?>
+	<?php
+	if ($result->num_rows > 0) {
+		while ($row = $result->fetch_assoc()) { ?>
 
-	<section id="main">
-		<!-- flash message is displayed using JQuery if errors occur from submitting comments through AJAX -->
-		<div class='alert alert-danger' style='text-align: center; display: none; width: 100%' id='flash-error'></div>
-		<div class="container">
-			<div class="row">
+			<section id="main">
+				<!-- flash message is displayed using JQuery if errors occur from submitting comments through AJAX -->
+				<div class='alert alert-danger' style='text-align: center; display: none; width: 100%' id='flash-error'></div>
+				<div class='alert alert-success' style='text-align: center; display: none; width: 100%' id='flash-success'></div>
+				<div class="container">
+					<div class="row">
 
-				<!-- first column contains google maps pic (just a png for now)-->
-				<div class="col-md-3">
-					<p class="lead" style="margin-top: 50px; font-size: 30px"><b>Location</b></p>
-					<!-- <img src="assets/img/map-img.png" alt="google map" class="img-thumbnail"> -->
-					<div id="map" style="height:300px"></div>
-					<div><a class="btn btn-xs btn-success" id="pinkbg" style="margin-bottom: 10px; margin-top: 10px">Update</a>
-						<h4>Currently <strong><?php echo  $row['playerCount'] ?> </strong> people playing!</h4>
-						<video controls style="width:100%; margin-top:30px;" poster="assets/img/mobbg.png">
-							<source src="assets/img/ball.mp4" />
-						</video>
-					</div>
-
-				</div>
-
-				<!-- second column contains actual individual object (basketball court) with comments -->
-				<!-- Schema.org place microdata -->
-				<div itemscope itemtype="https://schema.org/Place" class="col-md-9">
-					<div class="">
-						<picture>
-							<img style="width:100%; padding-top:30px;" itemprop="photo" src="<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?> " alt="cool basketball court">
-						</picture>
-
-						<div class="well" style="padding-left:10px">
-							<h4 style="margin-top: 10px; color: #00BFFF"><a><?php echo  $row['name'] ?> </a></h4>
-
-							<p itemprop="slogan"><strong> <?php echo  $row['description'] ?>  </strong></p>
-							<p>
-								<em>Submitted By: Frank Su</em>
-							</p>
-							<!-- Schema.org Place lat/long geolocation microdata -->
-							<div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-								<p>
-								<p><h6> Location: </h6></p>
-								<p>Latitude: <em itemprop="latitude"> <?php echo  $row['latitude'] ?> </em></p>
-								<p>Longitude: <em itemprop="longitude"><?php echo  $row['longitude'] ?> </em></p>
-								</p>
+						<!-- first column contains google maps pic (just a png for now)-->
+						<div class="col-md-3">
+							<p class="lead" style="margin-top: 50px; font-size: 30px"><b>Location</b></p>
+							<!-- <img src="assets/img/map-img.png" alt="google map" class="img-thumbnail"> -->
+							<div id="map" style="height:300px"></div>
+							<div><a class="btn btn-xs btn-success" id="pinkbg" style="margin-bottom: 10px; margin-top: 10px">Update</a>
+								<h4>Currently <strong><?php echo  $row['playerCount'] ?> </strong> people playing!</h4>
+								<video controls style="width:100%; margin-top:30px;" poster="assets/img/mobbg.png">
+									<source src="assets/img/ball.mp4" />
+								</video>
 							</div>
+
 						</div>
-					</div>
+
+						<!-- second column contains actual individual object (basketball court) with comments -->
+						<!-- Schema.org place microdata -->
+						<div itemscope itemtype="https://schema.org/Place" class="col-md-9">
+							<div class="">
+								<picture>
+									<img style="width:100%; padding-top:30px;" itemprop="photo" src="<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?> " alt="cool basketball court">
+								</picture>
+
+								<div class="well" style="padding-left:10px">
+									<h4 style="margin-top: 10px; color: #00BFFF"><a><?php echo  $row['name'] ?> </a></h4>
+
+									<p itemprop="slogan"><strong> <?php echo  $row['description'] ?> </strong></p>
+									<p>
+										<em>Submitted By: Frank Su</em>
+									</p>
+									<!-- Schema.org Place lat/long geolocation microdata -->
+									<div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+										<p>
+										<p>
+										<h6> Location: </h6>
+										</p>
+										<p>Latitude: <em itemprop="latitude"> <?php echo  $row['latitude'] ?> </em></p>
+										<p>Longitude: <em itemprop="longitude"><?php echo  $row['longitude'] ?> </em></p>
+										</p>
+									</div>
+								</div>
+							</div>
 
 					<?php }
-						}	else {
-								echo "<td colspan='2'> No data available </td>";
-							} 
-						?>
+			} else {
+				echo "<td colspan='2'> No data available </td>";
+			}
+					?>
 
 					<!-- Comment section -->
 					<div class="well">
@@ -193,78 +196,86 @@ if (isset($_GET['court'])) {
 						</div>
 						<hr>
 						<div id="commentContainer">
-							
+
+						</div>
+					</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-			
-	<!-- End Actual Body Content -->
-	<!-- JS GetuserLocation Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly" async="false"></script>
-	<script src="./assets/js/mapthings.js"></script>
+			</section>
 
-	<script>
-	
-	$.ajax({
-          url:
-            "/Project_Part_3/scripts/retrieve_comments.php?courtId=" + <?php echo $_GET['court'] ?>,
-          method: "GET",
-          data: JSON.stringify({
-            courtId: <?php echo $_GET['court'] ?>,
-          }),
-          datatype: "json",
-          success: function (response) {
-            let data = JSON.parse(response);
+			<!-- End Actual Body Content -->
+			<!-- JS GetuserLocation Map -->
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly" async="false"></script>
+			<script src="./assets/js/mapthings.js"></script>
 
-            // use JQuery to display error flash message on invidivudal_court.php
-            if (data.response_status === "error") {
-              let errorMessage1 = data.response_description;
-              // case where error message wasn't already displayed
-              if ($("#flash-error").css("display") == "none") {
-                $("#flash-error").css("display", "block");
-                $("#flash-error").html(errorMessage1);
-              }
-              // case where error message was already displayed, but with different error
-              else if ($("#flash-error").text() !== errorMessage1) {
-                $("#flash-error").html(errorMessage1);
-              }
-              return;
-            }
+			<script>
+				$.ajax({
+					url: "/Project_Part_3/scripts/retrieve_comments.php?courtId=" + <?php echo $_GET['court'] ?>,
+					method: "GET",
+					data: JSON.stringify({
+						courtId: <?php echo $_GET['court'] ?>,
+					}),
+					datatype: "json",
+					success: function(response) {
+						let data = JSON.parse(response);
 
-            // otherwise use jquery to render comments
-            else {
-              let contentString;
-              comments = data.data;
-			  console.log(data.data);
+						// use JQuery to display error flash message on invidivudal_court.php
+						if (data.response_status === "error") {
+							let errorMessage1 = data.response_description;
+							// case where error message wasn't already displayed
+							if ($("#flash-error").css("display") == "none") {
+								$("#flash-error").css("display", "block");
+								$("#flash-error").html(errorMessage1);
+							}
+							// case where error message was already displayed, but with different error
+							else if ($("#flash-error").text() !== errorMessage1) {
+								$("#flash-error").html(errorMessage1);
+							}
+							return;
+						}
 
-			  for(let i=0;i<comments.length; i++){
-				document.getElementById('commentContainer').innerHTML += 
-				'<div class="row" itemscope itemtype="https://schema.org/Review">' +
-					'<div class="col-md-12">' +
-						'<strong itemprop="author">' + comments[i].username +'</strong>' +
-						'</br>' +
-						'<span> Rating:' + comments[i].rating + '</span>' +
-						'<meta itemprop="reviewRating" content="3">' +
-						'<span class="float-end" itemprop="datePublished">2021-04-03</span>' +
-						'<p itemprop="reviewBody">' + comments[i].comment + '</p>' +
-					'</div>' +
-				'</div>' 
-			  }
-            }
-          },
-        });
-	</script>
+						// otherwise use jquery to render comments
+						else {
+							let contentString;
+							comments = data.data;
 
-	<footer id="footer" class="fixed-bottom">
-	<div class="container">
-		<div class="copyright">
-		&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
-		</div>
-	</div>
-	</footer>
+							for (let i = 0; i < comments.length; i++) {
+								document.getElementById("commentContainer").innerHTML +=
+									'<div id=' +
+									comments[i].id +
+									' class="row" itemscope itemtype="https://schema.org/Review">' +
+									'<div class="col-md-12">' +
+									'<strong itemprop="author">' +
+									comments[i].username +
+									"</strong>" +
+									"</br>" +
+									"<span> Rating:" +
+									comments[i].rating +
+									"</span>" +
+									'<meta itemprop="reviewRating" content="3">' +
+									'<span class="float-end" itemprop="datePublished">' +
+									comments[i].date +
+									"</span>" +
+									'<p itemprop="reviewBody">' +
+									comments[i].comment +
+									"</p>" +
+									"</div>" +
+									"</div>";
+							}
+
+						}
+					},
+				});
+			</script>
+
+			<footer id="footer" class="fixed-bottom">
+				<div class="container">
+					<div class="copyright">
+						&copy; Copyright <strong><span>Moila</span></strong>. All Rights Reserved - Designed by <a href="#">Quazi Rafid Ibrahim</a> & <a href="#">Frank Su</a>
+					</div>
+				</div>
+			</footer>
 </body>
 
 </html>
