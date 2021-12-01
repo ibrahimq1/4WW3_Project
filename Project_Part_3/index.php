@@ -63,7 +63,7 @@
 					<div class="letsfindcourts">
 						<h1 class="letsfindcourts-text">Welcome to Moila!</h1>
 					</div>
-					<form>
+					<form method="get" action="/Project_Part_3/scripts/retrieve_courts.php">
 						<div class="input-group mb-3">
 							<span title="Use current location" onclick="getLocation()" class="input-group-text mobview" id="userloc"><i class="bi bi-geo-alt"></i></span>
 							<input type="text" class="form-control" id="searchString" name="location" placeholder="Search by Location">
@@ -81,27 +81,6 @@
 										<option>3+</option>
 										<option>4+</option>
 										<option>5</option>
-									</select>
-								</div>
-							</div>
-							<div class="input-field-popularity">
-								<div class="input-group-text">
-									<select data-trigger="" name="popularity">
-										<option placeholder="" value="">Popularity</option>
-										<option>Mostly_Empty</option>
-										<option>Popular</option>
-										<option>Very_Popular</option>
-									</select>
-								</div>
-							</div>
-							<div class="input-field-currently_playing">
-								<div class="input-group-text">
-									<select data-trigger="" name="currently_playing">
-										<option placeholder="" value="">Currently_Playing</option>
-										<option>0</option>
-										<option>2+</option>
-										<option>5+</option>
-										<option>10+</option>
 									</select>
 								</div>
 							</div>
