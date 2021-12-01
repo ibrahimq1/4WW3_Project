@@ -74,30 +74,7 @@
 		die();
 	}
 
-	// check for $_SESSION['courtsToDisplay]: if it is set, it means we were redirected from search query
-	if (isset($_SESSION["courtsToDisplay"])) {
-		$courtIdArray = $_SESSION["courtsToDisplay"];
-
-		// first have to convert php array to sql array
-		$sqlArray = "(";
-		for ($i = 0; $i < count($courtIdArray); $i++) {
-			if ($i === count($courtIdArray) - 1) {
-				$sqlArray = $sqlArray . $courtIdArray[$i];
-			} else {
-				$sqlArray = $sqlArray . $courtIdArray[$i] . ",";
-			}
-			if ($i === count($courtIdArray) - 1) {
-				$sqlArray = $sqlArray . ")";
-			}
-		}
-		$sql = "SELECT * FROM submitted_courts WHERE id in " . $sqlArray;
-	}
-
-	// otherwise, we just load all of the courts from the database
-	else {
-		$sql = "SELECT * FROM submitted_courts";
-	}
-
+	$sql = "SELECT * FROM submitted_courts";
 	$result = $conn->query($sql);
 
 	//echo "<pre>";
@@ -125,10 +102,10 @@
 								<div class="input-group-text">
 									<select data-trigger="" name="Rating">
 										<option placeholder="" value="">Rating</option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
+										<option>1+</option>
+										<option>2+</option>
+										<option>3+</option>
+										<option>4+</option>
 										<option>5</option>
 									</select>
 								</div>
