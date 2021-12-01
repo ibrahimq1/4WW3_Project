@@ -1,3 +1,7 @@
+let comments;
+
+function loadInitialComments(courdId) {}
+
 function handleCommentSubmission(courtId) {
   // use jquery to get the comment and rating of the court
   let rating = $("#courtRating").find(":selected").text();
@@ -19,11 +23,17 @@ function handleCommentSubmission(courtId) {
     success: function (response) {
       let data = JSON.parse(response);
 
-      // use JQuery to display flash message on invidivudal_court.php
+      // use JQuery to display error flash message on invidivudal_court.php
       if (data.response_status === "error") {
         let errorMessage = data.response_description;
+
+        // case where error message wasn't already displayed
         if ($("#flash-error").css("display") == "none") {
           $("#flash-error").css("display", "block");
+          $("#flash-error").html(errorMessage);
+        }
+        // case where error message was already displayed, but with different error
+        else if ($("#flash-error").text() !== errorMessage) {
           $("#flash-error").html(errorMessage);
         }
         return;
@@ -46,14 +56,25 @@ function handleCommentSubmission(courtId) {
           success: function (response) {
             let data = JSON.parse(response);
 
-            // use JQuery to display flash message on invidivudal_court.php
+            // use JQuery to display error flash message on invidivudal_court.php
             if (data.response_status === "error") {
               let errorMessage1 = data.response_description;
+              // case where error message wasn't already displayed
               if ($("#flash-error").css("display") == "none") {
                 $("#flash-error").css("display", "block");
                 $("#flash-error").html(errorMessage1);
               }
+              // case where error message was already displayed, but with different error
+              else if ($("#flash-error").text() !== errorMessage1) {
+                $("#flash-error").html(errorMessage1);
+              }
               return;
+            }
+
+            // otherwise use jquery to render comments
+            else {
+              let contentString;
+              comments = data.data;
             }
           },
         });

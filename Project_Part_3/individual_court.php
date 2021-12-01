@@ -187,55 +187,40 @@ if (isset($_GET['court'])) {
 							</div>
 						</div>
 						<hr>
+						<div id="commentContainer">
+							<!-- An individual comment has author name, comment, and date commented -->
+							<!-- <div class="row" itemscope itemtype="https://schema.org/Review">
+								<div class="col-md-12">
+									<strong itemprop="author">Frank Su</strong>
+									</br>
+									<span class="bi bi-star-fill"></span>
+									<span class="bi bi-star-fill"></span>
+									<span class="bi bi-star-fill"></span>
+									<span class="bi bi-star"></span>
+									<span class="bi bi-star"></span>
+									<meta itemprop="reviewRating" content="3">
+									<span class="float-end" itemprop="datePublished">2021-04-03</span>
+									<p itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia perspiciatis repellat odit ipsa pariatur quisquam a laboriosam culpa maxime? Itaque!</p>
+								</div>
+							</div> -->
 
-						<!-- An individual comment has author name, comment, and date commented -->
-						<div class="row" itemscope itemtype="https://schema.org/Review">
-							<div class="col-md-12">
-								<strong itemprop="author">Frank Su</strong>
-								</br>
-								<span class="bi bi-star-fill"></span>
-								<span class="bi bi-star-fill"></span>
-								<span class="bi bi-star-fill"></span>
-								<span class="bi bi-star"></span>
-								<span class="bi bi-star"></span>
-								<!-- microdata for review rating and body -->
-								<meta itemprop="reviewRating" content="3">
-								<span class="float-end" itemprop="datePublished">2021-04-03</span>
-								<p itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia perspiciatis repellat odit ipsa pariatur quisquam a laboriosam culpa maxime? Itaque!</p>
-							</div>
-						</div>
 
-						<!-- Another individual comment -->
-						<div class="row" itemscope itemtype="https://schema.org/Review">
-							<div class="col-md-12">
-								<strong itemprop="author">Rafid Ibrahim</strong>
-								</br>
-								<span class="bi bi-star-fill"></span>
-								<span class="bi bi-star-fill"></span>
-								<span class="bi bi-star-fill"></span>
-								<span class="bi bi-star-half"></span>
-								<span class="bi bi-star"></span>
-								<!-- microdata for review rating and body -->
-								<meta itemprop="reviewRating" content="3.5">
-								<span class="float-end" itemprop="datePublished">2021-09-01</span>
-								<p itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia perspiciatis repellat odit ipsa pariatur quisquam a laboriosam culpa maxime? Itaque!</p>
-							</div>
+
 						</div>
 					</div>
+
 				</div>
-
 			</div>
-		</div>
 
 
-		<section>
-			<!-- End Actual Body Content -->
+			<section>
+				<!-- End Actual Body Content -->
 
-			<!-- JS GetuserLocation Map -->
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly" async="false"></script>
-			<script src="./assets/js/mapthings.js"></script>
+				<!-- JS GetuserLocation Map -->
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbCe_n6mC5FSZWkVB-5AlK9W61Qi6s2gw&callback=initMap&libraries=&v=weekly" async="false"></script>
+				<script src="./assets/js/mapthings.js"></script>
 
-			<?php include "footer.php" ?>
+				<?php include "footer.php" ?>
 
 </body>
 
