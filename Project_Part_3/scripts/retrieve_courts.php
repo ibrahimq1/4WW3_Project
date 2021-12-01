@@ -54,7 +54,14 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $courtIdArray[] = $row['id'];
       }
 
-      
+      // set session variable with the array of courtIds
+      if (isset($_SESSION["courtsToDisplay"])) {
+        unset($_SESSION["courtsToDisplay"]);
+      }
+      $_SESSION['courtsToDisplay'] = $courtIdArray;
+
+      header("Location: /Project_Part_3/search_results.php");
+      die();
     }
   }
 } else {
