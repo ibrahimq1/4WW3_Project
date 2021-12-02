@@ -267,7 +267,7 @@ if (isset($_GET['court'])) {
 									comments[i].username +
 									"</strong>" +
 									"</br>" +
-									"<span> Rating:" +
+									"<span> Rating: " +
 									comments[i].rating +
 									"</span>" +
 									'<meta itemprop="reviewRating" content="3">' +

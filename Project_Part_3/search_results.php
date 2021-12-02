@@ -151,14 +151,29 @@
 
 								<div class="card" id=<?php echo "card" . $row['id'] ?>>
 									<!-- div class="card-header">Popular</div> !-->
-									<img class="card-img-top" width="100%" height="100%" src=<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?> alt="Card image cap">
+									<img class="card-img-top" style="min-width:50%; min-height:50%; max-height:50%;" src=<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?> alt="Card image cap">
 									<div class="card-body">
 										<h5 class="card-title"><?php echo $row["name"] ?></h5>
-										<span class="bi bi-star-fill"></span>
-										<span class="bi bi-star-fill"></span>
-										<span class="bi bi-star-fill"></span>
-										<span class="bi bi-star-half"></span>
-										<span class="bi bi-star"></span>
+										<?php
+										if ($row['rating'] != NULL && $row['rating'] > 0){
+											
+											$numstars;
+											
+											for($i = 1; $i <= $row['rating']; $i++){
+												echo '<span class="bi bi-star-fill"></span>';
+												$numstars = $i;
+											}
+											
+											$unfilled = 5 - $numstars;
+
+											for($i = 0; $i < $unfilled; $i++){
+												echo '<span class="bi bi-star"></span>';
+											}
+										}
+										else {
+										echo '<span>No rating yet.</span>';
+										}
+										?>
 										<p><?php echo "Currently Playing: " . $row['playerCount'] ?></p>
 										<p class="card-text"> <?php echo $row['description'] ?> </p>
 										<a href="/Project_Part_3/individual_court.php?court=<?php echo $row['id'] ?>" class="btn btn-primary" id="pinkbg">Let's go!</a>
