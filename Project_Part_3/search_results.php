@@ -102,7 +102,7 @@
 					<div class="row g-0" style="width:100%;">
 
 						<?php
-						if ($result->num_rows > 0) {
+						if (!empty($result) && $result->num_rows > 0) {
 							while ($row = $result->fetch_assoc()) { ?>
 
 
