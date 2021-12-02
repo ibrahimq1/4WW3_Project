@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 // check for $_SESSION['courtsToDisplay]: if it is set, it means we were redirected from search query
 if (isset($_SESSION["courtsToDisplay"])) {
     $courtIdArray = $_SESSION["courtsToDisplay"];
-
+    unset($_SESSION["courtsToDisplay"]);
     // first have to convert php array to sql array
     $sqlArray = "(";
     for ($i = 0; $i < count($courtIdArray); $i++) {
@@ -47,4 +47,3 @@ $result = $conn->query($sql);
 
 //echo "<pre>";
 //print_r($result->fetch_assoc());
-?>
