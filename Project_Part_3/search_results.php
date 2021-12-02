@@ -54,7 +54,17 @@
 
 	<!-- Actual Body Content -->
 	<section id="main">
+		<?php
+		if (isset($_SESSION["flash-error"])) {
+			vprintf("<div class='alert alert-danger' style='text-align: center;'>%s</div>", $_SESSION["flash-error"]);
+			unset($_SESSION["flash-error"]);
+		}
+		if (isset($_SESSION["flash-success"])) {
+			vprintf("<div class='alert alert-success' style='text-align: center;'>%s</div>", $_SESSION["flash-success"]);
+			unset($_SESSION["flash-success"]);
+		} ?>
 		<div class="container" style="padding-top:50px; padding-bottom:50px;">
+			<!-- check to see if flash message is set, if so display it -->
 			<div class="row">
 				<div class="col-md-3"></div>
 				<div class="col-md-6 align-self-center animate__animated animate__slideInDown">
@@ -104,23 +114,22 @@
 
 										<!-- Dynamic Rating -->
 										<?php
-										if ($row['rating'] != NULL && $row['rating'] > 0){
-											
+										if ($row['rating'] != NULL && $row['rating'] > 0) {
+
 											$numstars;
-											
-											for($i = 1; $i <= $row['rating']; $i++){
+
+											for ($i = 1; $i <= $row['rating']; $i++) {
 												echo '<span class="bi bi-star-fill"></span>';
 												$numstars = $i;
 											}
-											
+
 											$unfilled = 5 - $numstars;
 
-											for($i = 0; $i < $unfilled; $i++){
+											for ($i = 0; $i < $unfilled; $i++) {
 												echo '<span class="bi bi-star"></span>';
 											}
-										}
-										else {
-										echo '<span>No rating yet.</span>';
+										} else {
+											echo '<span>No rating yet.</span>';
 										}
 										?>
 										<p><?php echo "Currently Playing: " . $row['playerCount'] ?></p>
@@ -203,6 +212,7 @@
 	<?php include 'footer.php'; ?>
 
 </body>
+
 </html>
 
 

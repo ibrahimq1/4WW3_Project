@@ -47,6 +47,14 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // get a list of courtIds that satisfy the search query
     if ($result = $conn->query($retrieveCourtsSql)) {
 
+      // set success flash message if user was searching only by rating
+      if (empty($location) && !empty($rating)) {
+        if (isset($_SESSION["flash-success"])) {
+          unset($_SESSION["flash-success"]);
+        }
+        $_SESSION["flash-success"] = ["message" => "Displaying all courts with rating greater than or equal to " . $rating];
+      }
+
       $courtIdArray = array();
 
       // loop through result object, populate array with rows
