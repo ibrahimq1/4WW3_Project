@@ -70,21 +70,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // get a list of courtIds that satisfy the search query
     if ($result = $conn->query($retrieveCourtsSql)) {
 
-      // set success flash message if user was searching only by rating
-      if (empty($location) && !empty($rating)) {
-        if (isset($_SESSION["flash-success"])) {
-          unset($_SESSION["flash-success"]);
-        }
-        $_SESSION["flash-success"] = ["message" => "Displaying all courts with rating greater than or equal to " . $rating];
-      }
-      // set success flash message if user was seasrching only by location
-      else if (empty($rating) && !empty($location)) {
-        if (isset($_SESSION["flash-success"])) {
-          unset($_SESSION["flash-success"]);
-        }
-        $_SESSION["flash-success"] = ["message" => "Displaying all courts less than 50km away from latitude:  " . $startingLatitude . " and longitude: " . $startingLongitude];
-      }
-
       $courtIdArray = array();
       $distanceArray = array();
 
@@ -102,6 +87,35 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
       }
       if (isset($_SESSION["courtDistances"])) {
         unset($_SESSION["courtDistances"]);
+      }
+
+      // set success flash message if user was searching only by rating
+      if (empty($location) && !empty($rating)) {
+        if (empty($courtIdArray)) {
+          if (isset($_SESSION["flash-error"])) {
+            unset($_SESSION["flash-error"]);
+          }
+          $_SESSION["flash-error"] = ["message" => "There are no courts with rating greater than or equal to " . $rating];
+        } else {
+          if (isset($_SESSION["flash-success"])) {
+            unset($_SESSION["flash-success"]);
+          }
+          $_SESSION["flash-success"] = ["message" => "Displaying all courts with rating greater than or equal to " . $rating];
+        }
+      }
+      // set success flash message if user was seasrching only by location
+      else if (empty($rating) && !empty($location)) {
+        if (empty($courtIdArray)) {
+          if (isset($_SESSION["flash-error"])) {
+            unset($_SESSION["flash-error"]);
+          }
+          $_SESSION["flash-error"] = ["message" => "There are no courts less than 50km away from latitude:  " . $startingLatitude . " and longitude: " . $startingLongitude];
+        } else {
+          if (isset($_SESSION["flash-success"])) {
+            unset($_SESSION["flash-success"]);
+          }
+          $_SESSION["flash-success"] = ["message" => "Displaying all courts less than 50km away from latitude:  " . $startingLatitude . " and longitude: " . $startingLongitude];
+        }
       }
 
       $_SESSION['courtDistances'] = $distanceArray;
