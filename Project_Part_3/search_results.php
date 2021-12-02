@@ -50,62 +50,9 @@
 <body>
 	<!-- header included from another file -->
 	<?php include 'header.php'; ?>
+	<?php include './scripts/search_results_script.php'; ?>
 
 	<!-- Actual Body Content -->
-	<?php
-
-	include "./scripts/DotEnv.php";
-	(new DotEnv(__DIR__ . "/./scripts/.env"))->load();
-
-	// DB connect to store
-	$databasename = getenv('DB_NAME');
-	$dbhost = getenv('DB_HOST');
-	$dbuser = getenv('DB_USER');
-	$dbpassword = getenv('DB_PASSWORD');
-	$conn = new mysqli($dbhost, $dbuser, $dbpassword, $databasename);
-
-	// error connecting to database
-	if ($conn->connect_error) {
-		if (isset($_SESSION["flash-error"])) {
-			unset($_SESSION["flash-error"]);
-		}
-		$_SESSION["flash-error"] = ["message" => "There was an error connecting to the database... please try again!"];
-		header("Location: /Project_Part_3/court_submission.php");
-		die();
-	}
-
-	// check for $_SESSION['courtsToDisplay]: if it is set, it means we were redirected from search query
-	if (isset($_SESSION["courtsToDisplay"])) {
-		$courtIdArray = $_SESSION["courtsToDisplay"];
-
-		// first have to convert php array to sql array
-		$sqlArray = "(";
-		for ($i = 0; $i < count($courtIdArray); $i++) {
-			if ($i === count($courtIdArray) - 1) {
-				$sqlArray = $sqlArray . $courtIdArray[$i];
-			} else {
-				$sqlArray = $sqlArray . $courtIdArray[$i] . ",";
-			}
-			if ($i === count($courtIdArray) - 1) {
-				$sqlArray = $sqlArray . ")";
-			}
-		}
-		$sql = "SELECT * FROM submitted_courts WHERE id in " . $sqlArray;
-	}
-
-	// otherwise, we just load all of the courts from the database
-	else {
-		$sql = "SELECT * FROM submitted_courts";
-	}
-
-	$result = $conn->query($sql);
-
-	//echo "<pre>";
-	//print_r($result->fetch_assoc());
-	?>
-
-
-
 	<section id="main">
 		<div class="container" style="padding-top:50px; padding-bottom:50px;">
 			<div class="row">
@@ -154,6 +101,8 @@
 									<img class="card-img-top" style="min-width:50%; min-height:50%; max-height:50%;" src=<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?> alt="Card image cap">
 									<div class="card-body">
 										<h5 class="card-title"><?php echo $row["name"] ?></h5>
+
+										<!-- Dynamic Rating -->
 										<?php
 										if ($row['rating'] != NULL && $row['rating'] > 0){
 											
@@ -238,7 +187,6 @@
 	<!-- Map Ball Bounce Animation -->
 	<script>
 		// Map markers bounce on card image selection
-
 		for (let i = 1; i <= locations.length; i++) {
 			document.getElementById('card' + i).onmouseover = function(event) {
 				mapmarkers[i - 1].setAnimation(google.maps.Animation.BOUNCE);
@@ -255,7 +203,6 @@
 	<?php include 'footer.php'; ?>
 
 </body>
-
 </html>
 
 
