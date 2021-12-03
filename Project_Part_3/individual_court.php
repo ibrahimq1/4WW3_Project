@@ -112,13 +112,13 @@
 							}	
 							?>
 
-							<div>
+							<div id="playercounter">
 								<h4>Currently <strong><?php echo  $row['playerCount'] ?> </strong> people playing!</h4>
 								<video controls style="width:100%; margin-top:30px;" poster="assets/img/mobbg.png">
 									<source src="assets/img/ball.mp4" />
 								</video>
 							</div>
-
+							
 						</div>
 
 						<!-- second column contains actual individual object (basketball court) with comments -->
@@ -131,11 +131,29 @@
 
 								<div class="well" style="padding-left:10px">
 									<h4 style="margin-top: 10px; color: #00BFFF"><a><?php echo  $row['name'] ?> </a></h4>
+									
+									<?php 
 
-									<p itemprop="slogan"><strong> <?php echo  $row['description'] ?> </strong></p>
-									<p>
-										<em>Submitted By: Frank Su</em>
-									</p>
+										if ($row['rating'] != NULL && $row['rating'] > 0) {
+
+											$numstars;
+
+											for ($i = 1; $i <= $row['rating']; $i++) {
+												echo '<span class="bi bi-star-fill"></span>';
+												$numstars = $i;
+											}
+
+											$unfilled = 5 - $numstars;
+
+											for ($i = 0; $i < $unfilled; $i++) {
+												echo '<span class="bi bi-star"></span>';
+											}
+										} else {
+											echo '<span>No rating yet.</span>';
+										}
+									?>
+									
+									<p itemprop="slogan"><strong><p>Description:</p> <?php echo  $row['description'] ?> </strong></p>
 									<!-- Schema.org Place lat/long geolocation microdata -->
 									<div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
 										<p>
@@ -166,9 +184,9 @@
 								locations.push(new Array('<?php echo $row['name'];?>', parseFloat('<?php echo $row['latitude'];?>'), parseFloat('<?php echo $row['longitude'];?>'), parseInt('<?php echo 1?>'), contentString))
 							</script>
 					<?php }
-			} else {
-				echo "<td colspan='2'> No data available </td>";
-			}
+						} else {
+							echo "<td colspan='2'> No data available </td>";
+						}
 					?>
 
 					<!-- Comment section -->

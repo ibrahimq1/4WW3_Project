@@ -46,17 +46,19 @@
 	<!-- Actual Body Content -->
 
 	<section class="mobbg" id="main">
-		<?php
+
+	<?php
 
 		if (isset($_SESSION["flash-success"])) {
-			vprintf("<div class='alert alert-success' style='text-align: center; position: relative; z-index: 10'>%s</div>", $_SESSION["flash-success"]);
+			vprintf("<div class='alert alert-success' style='text-align: center; position: relative; z-index: 1 !important;'>%s</div>", $_SESSION["flash-success"]);
 			unset($_SESSION["flash-success"]);
 		}
 		if (isset($_SESSION["flash-error"])) {
-			vprintf("<div class='alert alert-error' style='text-align: center; position: relative; z-index: 10'>%s</div>", $_SESSION["flash-error"]);
+			vprintf("<div class='alert alert-error' style='text-align: center; position: relative; z-index: 1 !important;'>%s</div>", $_SESSION["flash-error"]);
 			unset($_SESSION["flash-error"]);
 		}
-		?>
+	?>
+
 		<video autoplay muted loop id="mp4Video" class="overlay">
 			<source src="assets/img/ball.mp4" type="video/mp4">
 		</video>
@@ -68,6 +70,7 @@
 					<div class="letsfindcourts">
 						<h1 class="letsfindcourts-text">Welcome to Moila!</h1>
 					</div>
+
 					<form method="get" action="/Project_Part_3/scripts/retrieve_courts.php">
 						<div class="input-group mb-3">
 							<span title="Use current location" onclick="getLocation()" class="input-group-text mobview" id="userloc"><i class="bi bi-geo-alt"></i></span>

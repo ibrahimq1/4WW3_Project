@@ -18,32 +18,24 @@ Computer Science 4WW3_Projects
   c. any additional notes to the marker.
 
   **Note**
+  - database model file on base directory /datamodel.sql
+  - All core functional requirements completed. 
+  - Addon Task 3 completed: Please see individual courts comments loading withtout page refresh. 
+  - Images are grabbed from Amazon S3 bucket.
 
-  - The pages are .php instead of .html. Hope that is fine. You can see live demo on https://moila.app/Project_part_3/ [No php was actually used]
-  - We didn't edit to .html because since we started with .php, it will require me to change all links everywhere for just submission purposes. (Hope that is okay :])
   - Above and beyond attempts:
     - We made the map markers correspond to the items shown in the search results page.
     - The markers bounce upon hover of the items in the search results page.
+    - PlayerCount update on Individual court submission page
     - The page is hosted on amazon EC2 instance
     - SSL cert installed and functional using Let's Encrypt. https://moila.app/Project_part_3/
-    - Database is also functional https://moila.app/phpmyadmin/ [not used in this part of the project]
+    - Dynamic data grabbed from our MYSQL database https://moila.app/phpmyadmin/
   - 10+ Animations added
   - Form validation shown in two ways, bootstrap specific on https://moila.app/Project_part_3/court_submission.php
     and using raw javascript https://moila.app/Project_part_3/user_registration.php
   - On https://moila.app/Project_part_3/user_registration.php page, the errors display on screen depending on condition not met.
-
-  **Animation**
-
-  - Logo bounces on home screen.
-  - Logo text also bounces.
-  - Welcome text zooms in
-  - Search component slides down on search results page
-  - cards slide in from left on search results page
-  - map slides in from right on search results page
-  - Form Submission slides in from top on individual object page
-  - Form Submission slides in from top on register page
-  - Balls bounce on hover on results page indicating location of card on map
-  - On mobile, on click of any card shows map and bounce animation
+  - Flash errors on each page for error handling. 
+  
 
   **Extral resources credit for images/logos**
 

@@ -21,7 +21,7 @@
         ?>
           <li class="login-btn"><a href="/Project_Part_3/login.php">Login</a></li>
         <?php } else { ?>
-          <li class="login-btn"><a href="/Project_Part_3/scripts/logout_user.php">logout</a></li>
+          <li class="login-btn"><a href="/Project_Part_3/scripts/logout_user.php">Logout</a></li>
           <span class="float-end" style="color: white; margin-left: 50px; margin-right: 5px">Logged in as: <?php echo $_SESSION["username"]; ?></span>
 
         <?php } ?>

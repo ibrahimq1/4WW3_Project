@@ -17,7 +17,7 @@ $s3Client = new S3Client([
     'secret' =>  getenv('S3_SECRET')
 ]
 ]);
-
+session_start();
 // Check if the form was submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check if file was uploaded without errors
@@ -72,7 +72,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           } else {
             echo "Error: " . $addCourtSql . "<br>" . $conn->error;
           }
-          
           $conn->close();
       }
 
@@ -95,6 +94,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             'Body'   => fopen($file_Path, 'r'),
             'ACL'    => 'public-read', // make file 'public'
             ]);
+            
             header("Location: /Project_Part_3/court_submission.php");
 
             
@@ -106,15 +106,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo $e->getMessage();
             }
             //echo "Your file was uploaded successfully.";
+            if (isset($_SESSION["flash-success"])) {
+              unset($_SESSION["flash-success"]);
+            }
+            $_SESSION["flash-success"] = ["message" => "Submitted!"];
             header("Location: /Project_Part_3/court_submission.php");
-
+            die();
         }
     } 
     } else{
         echo "Error: There was a problem uploading your file. Please try again."; 
         }
-
-
 
     } else{
         echo "Error: " . $_FILES["anyfile"]["error"];
