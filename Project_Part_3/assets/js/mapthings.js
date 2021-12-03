@@ -8,10 +8,10 @@
 	function initMap() {
 		// The default location for a random spot in hamilton
         
-		const uluru = { lat: 43.1570368, lng: -79.9113216 };
+		const uluru = { lat: 42.9070368, lng: -79.9113216 };
 		// The map, centered at that spot
 		const map = new google.maps.Map(document.getElementById("map"), {
-			zoom: 9,
+			zoom: 10,
 			center: uluru,
       gestureHandling: "greedy",
 		});
@@ -64,22 +64,3 @@
             mapmarkers.push(marker);
           }
     }
-
- 
-
-  //geolocation api to get current user location on map icon click on the search bar left hand side.
-  var x = document.getElementById("userloc");
-	var y = document.getElementById("searchString");
-
-	function getLocation() {
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(showPosition);
-		} else {
-			y.value = "Geolocation is not supported by this browser.";
-		}
-		}
-
-	function showPosition(position) {
-		y.value = position.coords.latitude + "," + position.coords.longitude;
-		console.log(position.coords.latitude + "," + position.coords.longitude);
-	}

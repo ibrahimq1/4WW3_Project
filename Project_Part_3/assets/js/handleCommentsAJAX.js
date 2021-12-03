@@ -103,6 +103,16 @@ function handleCommentSubmission(courtId) {
               //loop through comments, append to comment container
               for (let i = 0; i < comments.length; i++) {
                 if (!renderedCommentIds.includes(parseInt(comments[i].id))) {
+                    rating="";
+                    stars = 0;
+                    for(k=0; k < comments[i].rating; k++){
+                      rating += '<span class="bi bi-star-fill"></span>';
+                      stars+= 1;
+                    }
+                    for(k=0; k < 5 - stars; k++){
+                      rating+= '<span class="bi bi-star"></span>';
+                    }
+
                   document.getElementById("commentContainer").innerHTML +=
                     "<div id=" +
                     comments[i].id +
@@ -113,7 +123,7 @@ function handleCommentSubmission(courtId) {
                     "</strong>" +
                     "</br>" +
                     "<span> Rating:" +
-                    comments[i].rating +
+                    rating +
                     "</span>" +
                     '<meta itemprop="reviewRating" content="3">' +
                     '<span class="float-end" itemprop="datePublished">' +

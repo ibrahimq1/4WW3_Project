@@ -91,7 +91,28 @@
 							<p class="lead" style="margin-top: 50px; font-size: 30px"><b>Location</b></p>
 							<!-- <img src="assets/img/map-img.png" alt="google map" class="img-thumbnail"> -->
 							<div id="map" style="height:300px"></div>
-							<div><a class="btn btn-xs btn-success" id="pinkbg" style="margin-bottom: 10px; margin-top: 10px">Update</a>
+							
+							<!-- updating number of players playing (keeping bootstrap classes) -->
+							<form method="POST" style="padding-top:20px;">
+								<div class="form-group">
+									<label for="numberofplayers">Number of Players</label>
+									<input type="text" class="form-control" id="updateNumber" name="updateNumber" aria-describedby="players" placeholder="How many?">
+									<small id="emailHelp" class="form-text text-muted">Update number of players and refresh.</small>
+									</br>
+									<input class="btn btn-xs btn-success" id="pinkbg" type="submit" style="margin-bottom: 10px; margin-top: 10px" />
+								</div>
+							</form>
+							
+							<?php 
+							if(isset($_POST['updateNumber'])){
+								$rating_update = $_POST['updateNumber']; 
+								$id = $row['id'];
+								$update = "UPDATE submitted_courts SET playerCount=$rating_update WHERE id=$id";
+								$conn->query($update);
+							}	
+							?>
+
+							<div>
 								<h4>Currently <strong><?php echo  $row['playerCount'] ?> </strong> people playing!</h4>
 								<video controls style="width:100%; margin-top:30px;" poster="assets/img/mobbg.png">
 									<source src="assets/img/ball.mp4" />
@@ -173,7 +194,6 @@
 						</div>
 						<hr>
 						<div id="commentContainer">
-
 						</div>
 					</div>
 						</div>
@@ -216,8 +236,20 @@
 						else {
 							let contentString;
 							comments = data.data;
+							
 
 							for (let i = 0; i < comments.length; i++) {
+								rating="";
+								stars = 0;
+								for(j=0; j < comments[i].rating; j++){
+									rating += '<span class="bi bi-star-fill"></span>';
+									stars+= 1;
+								}
+								
+								for(j=0; j < 5 - stars; j++){
+									rating+= '<span class="bi bi-star"></span>';
+								}
+								
 								document.getElementById("commentContainer").innerHTML +=
 									'<div id=' +
 									comments[i].id +
@@ -228,7 +260,7 @@
 									"</strong>" +
 									"</br>" +
 									"<span> Rating: " +
-									comments[i].rating +
+									rating +
 									"</span>" +
 									'<meta itemprop="reviewRating" content="3">' +
 									'<span class="float-end" itemprop="datePublished">' +
@@ -241,9 +273,17 @@
 									"</div>";
 							}
 
+							$( "#addComment" ).load(window.location.href + '#addComment');
 						}
 					},
 				});
+			</script>
+			
+			<script>
+			// Prevent Confirm Re-submission dialoge 
+			if ( window.history.replaceState ) {
+			window.history.replaceState( null, null, window.location.href );
+			}
 			</script>
 
 			<footer id="footer" class="fixed-bottom">
