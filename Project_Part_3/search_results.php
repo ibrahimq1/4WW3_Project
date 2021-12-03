@@ -106,9 +106,9 @@
 							while ($row = $result->fetch_assoc()) { ?>
 
 
-								<div class="card" id=<?php echo "card" . $row['id'] ?>>
+								<div class="card" style="display: table;" id=<?php echo "card" . $row['id'] ?>>
 									<!-- div class="card-header">Popular</div> !-->
-									<img class="card-img-top" style="min-width:50%; min-height:50%; max-height:50%;" src=<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?> alt="Card image cap">
+									<img class="card-img-top" style="" src=<?php echo "https://4ww3-media.s3.ca-central-1.amazonaws.com" . $row['audioRef'] ?> alt="Card image cap">
 									<div class="card-body">
 										<h5 class="card-title"><?php echo $row["name"] ?></h5>
 
